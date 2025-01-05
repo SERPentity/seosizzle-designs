@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { useToast } from "../components/ui/use-toast";
 import { Loader2, CheckCircle2 } from "lucide-react";
+import Confetti from 'react-confetti';
 
 const SEOAudit = () => {
   const [url, setUrl] = useState("");
   const [email, setEmail] = useState("");
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [showConfetti, setShowConfetti] = useState(false);
   const { toast } = useToast();
 
   const simulateAnalysis = () => {
@@ -35,11 +37,14 @@ const SEOAudit = () => {
       } else {
         clearInterval(interval);
         setIsAnalyzing(false);
+        setShowConfetti(true);
         toast({
           title: "Analysis Complete!",
           description: "Your comprehensive SEO report will be sent to your email shortly, including your current Google rankings and keyword positions.",
           duration: 5000,
         });
+        // Hide confetti after 5 seconds
+        setTimeout(() => setShowConfetti(false), 5000);
       }
     }, 2000);
   };
@@ -59,6 +64,12 @@ const SEOAudit = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      {showConfetti && <Confetti 
+        width={window.innerWidth}
+        height={window.innerHeight}
+        recycle={false}
+        numberOfPieces={200}
+      />}
       <Navigation />
       
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
