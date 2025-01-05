@@ -7,6 +7,7 @@ import LocationServices from "../../../components/locations/seo/LocationServices
 import LocationFAQ from "../../../components/locations/seo/LocationFAQ";
 import CaseStudiesLink from "../../../components/locations/seo/CaseStudiesLink";
 import { MapPin } from "lucide-react";
+import BirminghamTestimonials from "../../../components/locations/seo/BirminghamTestimonials";
 
 const NewcastleSEO = () => {
   return (
@@ -42,6 +43,7 @@ const NewcastleSEO = () => {
       <NewcastleHero />
       <LocationKeyContent cityName="Newcastle" />
       <LocationServices cityName="Newcastle" />
+      <BirminghamTestimonials />
 
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
