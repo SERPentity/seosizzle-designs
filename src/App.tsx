@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Locations from "./pages/Locations";
 import TechnicalSEO from "./pages/TechnicalSEO";
 import LocalSEO from "./pages/LocalSEO";
+import ContentStrategy from "./pages/ContentStrategy";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/technical-seo" element={<TechnicalSEO />} />
           <Route path="/local-seo" element={<LocalSEO />} />
+          <Route path="/content-strategy" element={<ContentStrategy />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
