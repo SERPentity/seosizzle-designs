@@ -6,25 +6,20 @@ const TestimonialsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Client Success Stories</h2>
-          <p className="text-xl text-gray-300">Example testimonials showcasing potential results</p>
+          <p className="text-xl text-gray-300">Real results from our satisfied clients</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              quote: "Example: SEOsnafu transformed our online presence. Our traffic increased by 200% in just 3 months!",
-              author: "Example Client",
-              role: "Marketing Director"
+              quote: "Working with Martin and His team has propelled Bio UK Fuels online presence to new heights, reaching over 10k visitors per month and generating over 4000 leads from new customers in 12 months",
+              author: "Tony Reynolds",
+              role: "Director, Bio UK Fuels"
             },
             {
-              quote: "Example: The best investment we've made. Their web design work is outstanding and the results speak for themselves.",
-              author: "Example Client",
-              role: "CEO"
-            },
-            {
-              quote: "Example: Professional, responsive, and incredibly skilled. They delivered beyond our expectations.",
-              author: "Example Client",
-              role: "E-commerce Manager"
+              quote: "Their SEO expertise completely transformed our online presence. We've eliminated dependency on paid ads and now generate consistent organic leads at zero cost.",
+              author: "Tom Abbott",
+              role: "Director, The Stair Guys Ltd"
             }
           ].map((testimonial, index) => (
             <div 
