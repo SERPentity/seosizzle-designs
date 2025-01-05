@@ -60,7 +60,13 @@ const About = () => {
                     <div className="flex flex-col items-center justify-center space-y-4 text-center text-white">
                       <AlertOctagon className="w-12 h-12 text-yellow-300 animate-pulse" />
                       <h3 className="text-xl font-bold">Curious About Our Name?</h3>
-                      <p className="text-base">Click to reveal the military origin of "SNAFU"<br /><span className="text-yellow-300">(Contains explicit content)</span></p>
+                      <p className="text-base">
+                        Discover how a bold WWII military term perfectly captures 
+                        the state of modern websites - and why it inspired our mission 
+                        to transform digital chaos into success.
+                        <br />
+                        <span className="text-yellow-300">(Contains explicit content)</span>
+                      </p>
                     </div>
                     <div className="text-sm text-yellow-200 text-center animate-bounce mt-2">
                       Click to flip →
