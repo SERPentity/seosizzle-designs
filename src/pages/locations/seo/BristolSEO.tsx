@@ -6,14 +6,16 @@ import LocationKeyContent from "../../../components/locations/seo/LocationKeyCon
 import LocationServices from "../../../components/locations/seo/LocationServices";
 import LocationFAQ from "../../../components/locations/seo/LocationFAQ";
 import CaseStudiesLink from "../../../components/locations/seo/CaseStudiesLink";
-import { MapPin } from "lucide-react";
 
 const BristolSEO = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
         <title>Bristol SEO Services | Expert SEO Agency Bristol</title>
-        <meta name="description" content="Leading Bristol SEO agency delivering proven results. Our expert SEO services help Bristol businesses achieve top Google rankings. Free SEO audit available." />
+        <meta 
+          name="description" 
+          content="Leading Bristol SEO agency delivering proven results. Our expert SEO services help Bristol businesses achieve top Google rankings. Free SEO audit available." 
+        />
         <script type="application/ld+json">
           {`
             {
@@ -25,7 +27,7 @@ const BristolSEO = () => {
                 "@type": "City",
                 "name": "Bristol"
               },
-              "priceRange": "££",
+              "priceRange": "Monthly SEO packages start from £360 per month with guaranteed ROI through increased traffic and conversions",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Bristol",
@@ -42,34 +44,6 @@ const BristolSEO = () => {
       <BristolHero />
       <LocationKeyContent cityName="Bristol" />
       <LocationServices cityName="Bristol" />
-
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Areas We Serve in Bristol</h2>
-          <div className="grid md:grid-cols-4 gap-4 text-center">
-            {[
-              "Bristol City Centre",
-              "Clifton",
-              "Redland",
-              "Southville",
-              "Bedminster",
-              "St Pauls",
-              "Stokes Croft",
-              "Temple Meads",
-              "Harbourside",
-              "Gloucester Road",
-              "Fishponds",
-              "Horfield"
-            ].map((area) => (
-              <div key={area} className="backdrop-blur-sm bg-white/5 p-4 rounded-lg border border-white/10">
-                <MapPin className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-                <span>{area}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <LocationFAQ cityName="Bristol" />
       <CaseStudiesLink />
     </div>
