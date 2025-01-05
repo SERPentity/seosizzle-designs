@@ -52,7 +52,7 @@ const Index = () => {
         
         {/* Main Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center min-h-screen">
-          <div className="space-y-6 sm:space-y-8 max-w-4xl pt-16 md:pt-0">
+          <div className="space-y-6 sm:space-y-8 max-w-4xl pt-8 md:pt-0">
             {/* Hero Content */}
             <p className="text-lg text-gray-300 animate-fade-up px-2 sm:px-0">
               Transform Your Online Presence
