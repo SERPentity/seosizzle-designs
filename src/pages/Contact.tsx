@@ -1,8 +1,48 @@
 import Navigation from "../components/Navigation";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Mail, Phone, ArrowRight } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { useToast } from "../components/ui/use-toast";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "../components/ui/form";
+
+const formSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type FormValues = z.infer<typeof formSchema>;
 
 const Contact = () => {
+  const { toast } = useToast();
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = (data: FormValues) => {
+    // Here you would typically send the data to your backend
+    console.log("Form submitted:", data);
+    toast({
+      title: "Message sent!",
+      description: "We'll get back to you as soon as possible.",
+    });
+    form.reset();
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
@@ -22,39 +62,70 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-8 rounded-2xl animate-fade-up">
               <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-300">Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white"
-                    placeholder="Your name"
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-gray-300">Name</FormLabel>
+                        <FormControl>
+                          <input
+                            {...field}
+                            className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white"
+                            placeholder="Your name"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-300">Email</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white"
-                    placeholder="your@email.com"
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-gray-300">Email</FormLabel>
+                        <FormControl>
+                          <input
+                            {...field}
+                            type="email"
+                            className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white"
+                            placeholder="your@email.com"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-300">Message</label>
-                  <textarea
-                    className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white"
-                    rows={4}
-                    placeholder="How can we help?"
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-gray-300">Message</FormLabel>
+                        <FormControl>
+                          <textarea
+                            {...field}
+                            className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white"
+                            rows={4}
+                            placeholder="How can we help?"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center"
-                >
-                  Send Message
-                  <ArrowRight className="ml-2" />
-                </button>
-              </form>
+                  <button
+                    type="submit"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center"
+                  >
+                    Send Message
+                    <ArrowRight className="ml-2" />
+                  </button>
+                </form>
+              </Form>
             </div>
 
             <div className="space-y-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
