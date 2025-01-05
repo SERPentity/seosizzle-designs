@@ -2,7 +2,7 @@ import { Toaster } from "src/components/ui/toaster";
 import { Toaster as Sonner } from "src/components/ui/sonner";
 import { TooltipProvider } from "src/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import CookieConsent from "./components/CookieConsent";
@@ -57,56 +57,54 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/locations" element={<Locations />} />
-          <Route path="/contact" element={<Contact />} />
-          
-          {/* SEO Services Routes */}
-          <Route path="/seo" element={<SEOServices />} />
-          <Route path="/seo/technical-seo" element={<TechnicalSEO />} />
-          <Route path="/seo/local-seo" element={<LocalSEO />} />
-          <Route path="/seo/content-strategy" element={<ContentStrategy />} />
-          <Route path="/seo/audit" element={<SEOAudit />} />
-          <Route path="/seo/competitor-analysis" element={<CompetitorAnalysis />} />
-          <Route path="/seo/link-building" element={<LinkBuilding />} />
-          <Route path="/seo/social-media" element={<SocialMedia />} />
-          
-          {/* Web Design Routes */}
-          <Route path="/web-design" element={<WebDesign />} />
-          <Route path="/web-design/responsive-design" element={<ResponsiveDesign />} />
-          <Route path="/web-design/ux-design" element={<UXDesign />} />
-          <Route path="/web-design/ecommerce" element={<EcommerceDesign />} />
-          <Route path="/web-design/service-business" element={<ServiceBusiness />} />
-          
-          {/* Case Studies */}
-          <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/case-studies/stair-guys-ltd" element={<StairGuysCase />} />
-          <Route path="/case-studies/bio-uk-fuels" element={<BioUKFuelsCase />} />
-          
-          {/* Legal Pages */}
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-          
-          {/* Location Pages */}
-          <Route path="/locations/seo/london" element={<LondonSEO />} />
-          <Route path="/locations/seo/birmingham" element={<BirminghamSEO />} />
-          <Route path="/locations/seo/manchester" element={<ManchesterSEO />} />
-          <Route path="/locations/web-design/london" element={<LondonWebDesign />} />
-          <Route path="/locations/seo/bristol" element={<BristolSEO />} />
-          <Route path="/locations/seo/sheffield" element={<SheffieldSEO />} />
-          <Route path="/locations/seo/leeds" element={<LeedsSEO />} />
-          <Route path="/locations/seo/liverpool" element={<LiverpoolSEO />} />
-          <Route path="/locations/seo/newcastle" element={<NewcastleSEO />} />
-          <Route path="/locations/seo/southampton" element={<SouthamptonSEO />} />
-        </Routes>
-        <CookieConsent />
-        <Footer />
-      </BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/locations" element={<Locations />} />
+        <Route path="/contact" element={<Contact />} />
+        
+        {/* SEO Services Routes */}
+        <Route path="/seo" element={<SEOServices />} />
+        <Route path="/seo/technical-seo" element={<TechnicalSEO />} />
+        <Route path="/seo/local-seo" element={<LocalSEO />} />
+        <Route path="/seo/content-strategy" element={<ContentStrategy />} />
+        <Route path="/seo/audit" element={<SEOAudit />} />
+        <Route path="/seo/competitor-analysis" element={<CompetitorAnalysis />} />
+        <Route path="/seo/link-building" element={<LinkBuilding />} />
+        <Route path="/seo/social-media" element={<SocialMedia />} />
+        
+        {/* Web Design Routes */}
+        <Route path="/web-design" element={<WebDesign />} />
+        <Route path="/web-design/responsive-design" element={<ResponsiveDesign />} />
+        <Route path="/web-design/ux-design" element={<UXDesign />} />
+        <Route path="/web-design/ecommerce" element={<EcommerceDesign />} />
+        <Route path="/web-design/service-business" element={<ServiceBusiness />} />
+        
+        {/* Case Studies */}
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/case-studies/stair-guys-ltd" element={<StairGuysCase />} />
+        <Route path="/case-studies/bio-uk-fuels" element={<BioUKFuelsCase />} />
+        
+        {/* Legal Pages */}
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+        
+        {/* Location Pages */}
+        <Route path="/locations/seo/london" element={<LondonSEO />} />
+        <Route path="/locations/seo/birmingham" element={<BirminghamSEO />} />
+        <Route path="/locations/seo/manchester" element={<ManchesterSEO />} />
+        <Route path="/locations/web-design/london" element={<LondonWebDesign />} />
+        <Route path="/locations/seo/bristol" element={<BristolSEO />} />
+        <Route path="/locations/seo/sheffield" element={<SheffieldSEO />} />
+        <Route path="/locations/seo/leeds" element={<LeedsSEO />} />
+        <Route path="/locations/seo/liverpool" element={<LiverpoolSEO />} />
+        <Route path="/locations/seo/newcastle" element={<NewcastleSEO />} />
+        <Route path="/locations/seo/southampton" element={<SouthamptonSEO />} />
+      </Routes>
+      <CookieConsent />
+      <Footer />
     </TooltipProvider>
   </QueryClientProvider>
 );
