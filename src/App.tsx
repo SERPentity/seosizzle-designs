@@ -15,6 +15,10 @@ import SEOAudit from "./pages/SEOAudit";
 import CompetitorAnalysis from "./pages/CompetitorAnalysis";
 import LinkBuilding from "./pages/LinkBuilding";
 import SocialMedia from "./pages/SocialMedia";
+import WebDesign from "./pages/WebDesign";
+import ResponsiveDesign from "./pages/ResponsiveDesign";
+import UXDesign from "./pages/UXDesign";
+import EcommerceDesign from "./pages/EcommerceDesign";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +41,10 @@ const App = () => (
           <Route path="/competitor-analysis" element={<CompetitorAnalysis />} />
           <Route path="/link-building" element={<LinkBuilding />} />
           <Route path="/social-media" element={<SocialMedia />} />
+          <Route path="/web-design" element={<WebDesign />} />
+          <Route path="/responsive-design" element={<ResponsiveDesign />} />
+          <Route path="/ux-design" element={<UXDesign />} />
+          <Route path="/ecommerce-design" element={<EcommerceDesign />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
