@@ -9,7 +9,7 @@ const CaseStudies = () => {
       title: "The Stair Guys Ltd",
       description: "How we helped a local stair installation company achieve #1 rankings and increase their keyword visibility by 350+ terms in just 6 months",
       industry: "Home Improvement",
-      image: "https://images.unsplash.com/photo-1439337153520-7082a56a81f4?auto=format&fit=crop&w=800&q=80",
+      image: "/lovable-uploads/e8dce3f1-6ee8-44ed-a3a1-e4cd46489d54.png",
       slug: "stair-guys-ltd"
     },
     {
