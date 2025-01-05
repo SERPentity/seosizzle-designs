@@ -42,7 +42,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <p className="text-center text-gray-400">&copy; {new Date().getFullYear()} SEOsnafu. All rights reserved.</p>
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-gray-400">&copy; {new Date().getFullYear()} SEOsnafu. All rights reserved.</p>
+            <div className="flex gap-4 mt-4 sm:mt-0">
+              <Link to="/privacy-policy" className="text-gray-400 hover:text-blue-400">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="text-gray-400 hover:text-blue-400">Terms of Service</Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

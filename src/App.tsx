@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
+import CookieConsent from "./components/CookieConsent";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import About from "./pages/About";
@@ -25,6 +26,8 @@ import ServiceBusiness from "./pages/ServiceBusiness";
 import CaseStudies from "./pages/CaseStudies";
 import StairGuysCase from "./pages/StairGuysCase";
 import BioUKFuelsCase from "./pages/BioUKFuelsCase";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import LondonSEO from "./pages/locations/seo/LondonSEO";
 import BirminghamSEO from "./pages/locations/seo/BirminghamSEO";
 import ManchesterSEO from "./pages/locations/seo/ManchesterSEO";
@@ -66,6 +69,8 @@ const App = () => (
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/stair-guys-ltd" element={<StairGuysCase />} />
           <Route path="/case-studies/bio-uk-fuels" element={<BioUKFuelsCase />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/seo-services/london" element={<LondonSEO />} />
           <Route path="/seo-services/birmingham" element={<BirminghamSEO />} />
           <Route path="/seo-services/manchester" element={<ManchesterSEO />} />
@@ -77,6 +82,7 @@ const App = () => (
           <Route path="/seo-services/newcastle" element={<NewcastleSEO />} />
           <Route path="/seo-services/southampton" element={<SouthamptonSEO />} />
         </Routes>
+        <CookieConsent />
         <Footer />
       </BrowserRouter>
     </TooltipProvider>
