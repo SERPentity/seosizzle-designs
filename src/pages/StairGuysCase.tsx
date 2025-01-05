@@ -60,43 +60,36 @@ const StairGuysCase = () => {
 
           {/* SEMrush Data Visualization Section */}
           <div className="space-y-12 mt-16">
-            {/* Keyword Rankings Graph */}
-            <div className="rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 p-6">
-              <h3 className="text-2xl font-bold mb-4">Keyword Growth Over Time</h3>
-              <div className="aspect-[16/9] w-full">
+            {/* Organic Traffic Growth */}
+            <div className="rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 p-8">
+              <h3 className="text-2xl font-bold mb-6">Organic Traffic Growth</h3>
+              <div className="relative aspect-[21/9] w-full bg-black/40 rounded-lg overflow-hidden">
                 <img 
-                  src="/semrush-keyword-graph.png" 
-                  alt="SEMrush Keyword Growth Graph"
-                  className="w-full h-full object-contain rounded-lg"
+                  src="/lovable-uploads/7dfadee9-ea44-47f5-b68c-ac67a6184d9e.png"
+                  alt="SEMrush Organic Traffic Growth"
+                  className="w-full h-full object-contain absolute inset-0"
                 />
               </div>
-              <p className="mt-4 text-gray-400 text-sm">Source: SEMrush Analytics</p>
+              <div className="mt-4 flex items-center justify-between text-sm">
+                <p className="text-gray-400">Source: SEMrush Analytics</p>
+                <p className="text-blue-400">507 Monthly Organic Visitors</p>
+              </div>
             </div>
 
-            {/* Traffic Overview */}
-            <div className="rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 p-6">
-              <h3 className="text-2xl font-bold mb-4">Traffic Distribution</h3>
-              <div className="aspect-[16/9] w-full">
+            {/* Keyword Rankings Distribution */}
+            <div className="rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 p-8">
+              <h3 className="text-2xl font-bold mb-6">Keyword Rankings Growth</h3>
+              <div className="relative aspect-[21/9] w-full bg-black/40 rounded-lg overflow-hidden">
                 <img 
-                  src="/semrush-traffic-graph.png" 
-                  alt="SEMrush Traffic Distribution"
-                  className="w-full h-full object-contain rounded-lg"
+                  src="/lovable-uploads/7ce63f4a-ae11-44af-81fe-fde16f1dc085.png"
+                  alt="SEMrush Keyword Rankings Distribution"
+                  className="w-full h-full object-contain absolute inset-0"
                 />
               </div>
-              <p className="mt-4 text-gray-400 text-sm">Source: SEMrush Analytics</p>
-            </div>
-
-            {/* Position Tracking */}
-            <div className="rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 p-6">
-              <h3 className="text-2xl font-bold mb-4">Keyword Position Tracking</h3>
-              <div className="aspect-[16/9] w-full">
-                <img 
-                  src="/semrush-position-tracking.png" 
-                  alt="SEMrush Position Tracking"
-                  className="w-full h-full object-contain rounded-lg"
-                />
+              <div className="mt-4 flex items-center justify-between text-sm">
+                <p className="text-gray-400">Source: SEMrush Analytics</p>
+                <p className="text-blue-400">593 Total Keywords</p>
               </div>
-              <p className="mt-4 text-gray-400 text-sm">Source: SEMrush Analytics</p>
             </div>
           </div>
 
