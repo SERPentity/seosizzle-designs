@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Navigation from "../components/Navigation";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { ArrowRight } from "lucide-react";
@@ -23,6 +24,21 @@ const CaseStudies = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>SEO Success Stories & Case Studies | SEO Snafu</title>
+        <meta name="description" content="Discover how we've helped businesses achieve remarkable growth through SEO. Real results, real businesses - see our proven track record of success." />
+        <meta property="og:title" content="SEO Success Stories & Case Studies | SEO Snafu" />
+        <meta property="og:description" content="Discover how we've helped businesses achieve remarkable growth through SEO. Real results, real businesses - see our proven track record of success." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="og:image:alt" content="Data analytics dashboard showing successful SEO campaign results for our clients" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="SEO Success Stories & Case Studies | SEO Snafu" />
+        <meta property="twitter:description" content="Discover how we've helped businesses achieve remarkable growth through SEO. Real results, real businesses - see our proven track record of success." />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="twitter:image:alt" content="Data analytics dashboard showing successful SEO campaign results for our clients" />
+        <link rel="canonical" href="https://seosnafu.co.uk/case-studies" />
+      </Helmet>
+      
       <Navigation />
       <Breadcrumbs />
       

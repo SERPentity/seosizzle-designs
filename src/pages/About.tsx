@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Navigation from "../components/Navigation";
 import { CheckCircle, AlertOctagon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,6 +21,21 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>About SEO Snafu | Expert SEO & Web Design Services</title>
+        <meta name="description" content="Meet Martin Simpkins, a serial entrepreneur with proven success in SEO and digital marketing. Learn how we transform underperforming websites into SEO powerhouses." />
+        <meta property="og:title" content="About SEO Snafu | Expert SEO & Web Design Services" />
+        <meta property="og:description" content="Meet Martin Simpkins, a serial entrepreneur with proven success in SEO and digital marketing. Learn how we transform underperforming websites into SEO powerhouses." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="og:image:alt" content="Professional workspace showing Martin Simpkins' entrepreneurial journey in SEO and digital marketing" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="About SEO Snafu | Expert SEO & Web Design Services" />
+        <meta property="twitter:description" content="Meet Martin Simpkins, a serial entrepreneur with proven success in SEO and digital marketing. Learn how we transform underperforming websites into SEO powerhouses." />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="twitter:image:alt" content="Professional workspace showing Martin Simpkins' entrepreneurial journey in SEO and digital marketing" />
+        <link rel="canonical" href="https://seosnafu.co.uk/about" />
+      </Helmet>
+      
       <Navigation />
       
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">

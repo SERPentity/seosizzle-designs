@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Navigation from "../components/Navigation";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Mail, Phone, ArrowRight } from "lucide-react";
@@ -45,6 +46,20 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Contact SEO Snafu | Get Expert SEO & Web Design Help</title>
+        <meta name="description" content="Ready to transform your website's performance? Contact our SEO experts today. Get in touch for professional SEO and web design services that deliver results." />
+        <meta property="og:title" content="Contact SEO Snafu | Get Expert SEO & Web Design Help" />
+        <meta property="og:description" content="Ready to transform your website's performance? Contact our SEO experts today. Get in touch for professional SEO and web design services that deliver results." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="og:image:alt" content="Modern office space representing our professional SEO and web design services" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Contact SEO Snafu | Get Expert SEO & Web Design Help" />
+        <meta property="twitter:description" content="Ready to transform your website's performance? Contact our SEO experts today. Get in touch for professional SEO and web design services that deliver results." />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="twitter:image:alt" content="Modern office space representing our professional SEO and web design services" />
+        <link rel="canonical" href="https://seosnafu.co.uk/contact" />
+      </Helmet>
       <Navigation />
       <Breadcrumbs />
       
