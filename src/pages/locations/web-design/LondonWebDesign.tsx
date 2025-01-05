@@ -178,8 +178,8 @@ const LondonWebDesign = () => {
               <h3 className="text-xl font-semibold mb-4">How much does a website cost in London?</h3>
               <p className="text-gray-300">
                 Website costs in London vary based on your specific requirements. Our projects typically 
-                range from £5,000 for basic business websites to £20,000+ for complex e-commerce solutions. 
-                Contact us for a detailed quote.
+                start from £1,000+, with pricing dependent on the project scope and complexity. Complex e-commerce solutions 
+                may cost £20,000 or more. Contact us for a detailed quote tailored to your needs.
               </p>
             </div>
             <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
