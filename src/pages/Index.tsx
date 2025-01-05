@@ -15,15 +15,15 @@ const Index = () => {
   const backgroundImages = [
     {
       url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80",
-      alt: "Professional workspace with laptop showing SEO analytics dashboard, highlighting digital marketing expertise"
+      alt: "Professional workspace with laptop showing SEO analytics dashboard"
     },
     {
       url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=80",
-      alt: "Modern development environment with code displayed on screen, representing web development and SEO optimization"
+      alt: "Modern development environment with code displayed on screen"
     },
     {
       url: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=2000&q=80",
-      alt: "Team collaboration on digital marketing strategy, showcasing SEO and web design solutions"
+      alt: "Team collaboration on digital marketing strategy"
     }
   ];
 
@@ -35,7 +35,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="min-h-screen bg-black text-white">
       <Navigation />
       <Breadcrumbs />
       
@@ -64,25 +64,21 @@ const Index = () => {
         {/* Main Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center min-h-screen">
           <div className="space-y-6 sm:space-y-8 max-w-4xl pt-8 md:pt-0">
-            {/* Hero Content */}
-            <p className="text-lg text-gray-300 animate-fade-up px-2 sm:px-0">
+            <p className="text-lg text-gray-300 animate-fade-up">
               Transform Your Online Presence
             </p>
             
-            {/* Main Heading */}
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold leading-tight animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.2s" }}>
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold leading-tight animate-fade-up" style={{ animationDelay: "0.2s" }}>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
                 Expert SEO & Web Design Solutions
               </span>
             </h1>
 
-            {/* Subheading */}
-            <p className="text-lg sm:text-xl text-gray-300 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.3s" }}>
+            <p className="text-lg sm:text-xl text-gray-300 animate-fade-up" style={{ animationDelay: "0.3s" }}>
               Boost your rankings and captivate your audience with stunning designs that convert
             </p>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.4s" }}>
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               <Link
                 to="/services"
                 className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-full overflow-hidden hover:scale-105 transition-all duration-300 text-center"
@@ -95,7 +91,7 @@ const Index = () => {
               </Link>
               
               <Link
-                to="/seo-audit"
+                to="/seo/audit"
                 className="group px-6 sm:px-8 py-3 sm:py-4 border border-white/30 rounded-full hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
                 Get Free SEO Audit
@@ -103,8 +99,7 @@ const Index = () => {
               </Link>
             </div>
 
-            {/* Key Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-20 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.5s" }}>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-20 animate-fade-up" style={{ animationDelay: "0.5s" }}>
               <div className="backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10">
                 <h3 className="text-lg sm:text-xl font-semibold mb-2">SEO Excellence</h3>
                 <p className="text-sm sm:text-base text-gray-400">Data-driven strategies to boost your search rankings</p>
