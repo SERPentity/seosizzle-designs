@@ -3,21 +3,21 @@ import { Award } from "lucide-react";
 const BirminghamTestimonials = () => {
   const testimonials = [
     {
-      quote: "Their SEO expertise has transformed our online presence in Birmingham. Our organic traffic has increased by 150% in just 6 months.",
-      author: "David Thompson",
-      role: "Director, Birmingham Business Solutions"
+      quote: "Working with Martin and His team has propelled Bio UK Fuels online presence to new heights, reaching over 10k visitors per month and generating over 4000 leads from new customers in 12 months",
+      author: "Tony Reynolds",
+      role: "Director, Bio UK Fuels"
     },
     {
-      quote: "The best SEO agency in Birmingham. They helped us achieve top rankings for our key services and significantly increased our local customer base.",
-      author: "Sarah Mitchell",
-      role: "Marketing Manager, Midlands Tech Ltd"
+      quote: "Their SEO expertise completely transformed our online presence. We've eliminated dependency on paid ads and now generate consistent organic leads at zero cost.",
+      author: "Tom Abbott",
+      role: "Director, The Stair Guys Ltd"
     }
   ];
 
   return (
     <section className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12">What Our Birmingham Clients Say</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <div 
