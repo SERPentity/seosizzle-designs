@@ -4,10 +4,6 @@ export const mainNavItems = [
     path: "/",
   },
   {
-    name: "Services",
-    path: "/services",
-  },
-  {
     name: "About",
     path: "/about",
   },
@@ -55,6 +51,11 @@ export const serviceMenuItems = [
         description: "Build authority with quality backlinks",
         path: "/link-building",
       },
+      {
+        name: "London SEO Services",
+        description: "Expert SEO services in London",
+        path: "/seo-services/london",
+      },
     ],
   },
   {
@@ -86,9 +87,9 @@ export const serviceMenuItems = [
         path: "/service-business",
       },
       {
-        name: "Case Studies",
-        description: "See our success stories",
-        path: "/case-studies",
+        name: "London Web Design",
+        description: "Professional web design in London",
+        path: "/web-design/london",
       },
     ],
   },
