@@ -6,10 +6,10 @@ const StatsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { number: "500+", label: "Clients Served" },
-            { number: "98%", label: "Client Satisfaction" },
-            { number: "250%", label: "Average ROI" },
-            { number: "24/7", label: "Support" }
+            { number: "350%", label: "Average Traffic Increase" },
+            { number: "4,000+", label: "Monthly Leads Generated" },
+            { number: "10x", label: "Lead Generation Growth" },
+            { number: "593+", label: "Keywords Ranked" }
           ].map((stat, index) => (
             <div 
               key={index}
