@@ -12,13 +12,14 @@ const Navigation = () => {
 
   return (
     <header className="fixed w-full z-50">
-      <div className="backdrop-blur-md bg-black/80 border-b border-white/10">
+      <nav className="backdrop-blur-md bg-black/80 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link 
                 to="/" 
                 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"
+                aria-label="SEOsnafu - Home"
               >
                 SEOsnafu
               </Link>
@@ -31,6 +32,7 @@ const Navigation = () => {
                   key={item.name}
                   to={item.path}
                   className="text-gray-300 hover:text-white transition-all duration-300"
+                  aria-label={item.name}
                 >
                   {item.name}
                 </Link>
@@ -56,7 +58,8 @@ const Navigation = () => {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-white transition-colors"
-                aria-label="Toggle menu"
+                aria-label={isOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isOpen}
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -66,7 +69,7 @@ const Navigation = () => {
           {/* Mobile Navigation Menu */}
           {isOpen && <MobileMenu setIsOpen={setIsOpen} />}
         </div>
-      </div>
+      </nav>
     </header>
   );
 };

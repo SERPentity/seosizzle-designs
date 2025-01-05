@@ -41,6 +41,7 @@ const Index = () => {
         <title>SEOsnafu | Expert SEO & Web Design Services UK</title>
         <meta name="description" content="Transform your online presence with SEOsnafu's expert SEO and web design services. Get higher rankings and stunning websites that convert." />
         <link rel="canonical" href="https://seosnafu.co.uk" />
+        <meta name="robots" content="index, follow" />
       </Helmet>
 
       <Navigation />
@@ -69,7 +70,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20" />
         
         {/* Main Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center min-h-screen">
+        <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center min-h-screen">
           <div className="space-y-6 sm:space-y-8 max-w-4xl pt-8 md:pt-0">
             {/* Hero Content */}
             <p className="text-lg text-gray-300 animate-fade-up px-2 sm:px-0">
@@ -112,21 +113,21 @@ const Index = () => {
 
             {/* Key Features */}
             <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-20 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.5s" }}>
-              <div className="backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10">
+              <article className="backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10">
                 <h3 className="text-lg sm:text-xl font-semibold mb-2">SEO Excellence</h3>
                 <p className="text-sm sm:text-base text-gray-400">Data-driven strategies to boost your search rankings</p>
-              </div>
-              <div className="backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10">
+              </article>
+              <article className="backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10">
                 <h3 className="text-lg sm:text-xl font-semibold mb-2">Creative Design</h3>
                 <p className="text-sm sm:text-base text-gray-400">Stunning websites that capture your brand essence</p>
-              </div>
-              <div className="backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10">
+              </article>
+              <article className="backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10">
                 <h3 className="text-lg sm:text-xl font-semibold mb-2">Results Driven</h3>
                 <p className="text-sm sm:text-base text-gray-400">Measurable improvements in traffic and conversions</p>
-              </div>
+              </article>
             </section>
           </div>
-        </div>
+        </section>
         
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
