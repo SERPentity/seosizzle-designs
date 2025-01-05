@@ -19,10 +19,10 @@ const StairGuysCase = () => {
               ← Back to Case Studies
             </Link>
             <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-6">
-              The Stair Guys Ltd Success Story
+              Revolutionizing Online Presence - The Stair Guys Journey
             </h1>
             <p className="text-xl text-gray-300">
-              How we transformed a local stair installation company's online presence and doubled their qualified leads
+              How we took The Stair Guys from zero to ranking for over 350 keywords in 6 months
             </p>
           </div>
 
@@ -41,18 +41,18 @@ const StairGuysCase = () => {
               {[
                 {
                   icon: <ChartBar className="text-blue-400" size={32} />,
-                  stat: "200%",
-                  label: "Increase in Qualified Leads"
+                  stat: "350+",
+                  label: "Keywords Ranked"
                 },
                 {
                   icon: <Star className="text-yellow-400" size={32} />,
                   stat: "#1",
-                  label: "Ranking for 'Stair Installation'"
+                  label: "Google Rankings"
                 },
                 {
                   icon: <Award className="text-purple-400" size={32} />,
-                  stat: "150%",
-                  label: "Increase in Organic Traffic"
+                  stat: "6",
+                  label: "Months to Success"
                 }
               ].map((item, index) => (
                 <div 
@@ -70,21 +70,22 @@ const StairGuysCase = () => {
             <div className="prose prose-invert max-w-none animate-fade-up">
               <h2 className="text-3xl font-bold mb-6">The Challenge</h2>
               <p className="text-gray-300">
-                The Stair Guys Ltd came to us with a common problem: despite their excellent craftsmanship and service, 
-                they were struggling to reach potential customers online. Their website was outdated, and they weren't 
-                ranking for important local search terms related to stair installation and renovation.
+                The primary challenge was clear: they needed a digital platform that had the strength to compete in the highly competitive online market. The Stair Guys Ltd needed to transition from great offline success to a strong online presence to compete with established industry leaders who had been fixtures in the industry for decades.
               </p>
             </div>
 
             {/* Solution */}
             <div className="prose prose-invert max-w-none animate-fade-up">
               <h2 className="text-3xl font-bold mb-6">Our Solution</h2>
+              <p className="text-gray-300">
+                We developed a comprehensive strategy focused on:
+              </p>
               <ul className="space-y-4 text-gray-300">
-                <li>Comprehensive local SEO strategy targeting specific service areas</li>
-                <li>Complete website redesign with focus on user experience and conversion optimization</li>
-                <li>Creation of detailed service pages for each type of stair installation and renovation</li>
-                <li>Implementation of a review management system to showcase customer testimonials</li>
-                <li>Development of a content strategy focusing on educational content about stair design and installation</li>
+                <li>Creating a new website with modern design and optimal user experience</li>
+                <li>Implementing a comprehensive SEO strategy to help them punch above their weight online</li>
+                <li>Developing content-driven SEO strategies that established them as an industry authority</li>
+                <li>Targeting and optimizing for strategic keywords to compete with established brands</li>
+                <li>Building a strong digital foundation to support long-term growth</li>
               </ul>
             </div>
 
@@ -92,15 +93,28 @@ const StairGuysCase = () => {
             <div className="prose prose-invert max-w-none animate-fade-up">
               <h2 className="text-3xl font-bold mb-6">The Results</h2>
               <p className="text-gray-300">
-                Within 6 months of implementing our strategy, The Stair Guys Ltd saw remarkable improvements:
+                Within just 6 months, The Stair Guys Ltd achieved remarkable results:
               </p>
               <ul className="space-y-4 text-gray-300">
-                <li>Achieved #1 ranking for "stair installation" in their primary service area</li>
-                <li>200% increase in qualified leads through organic search</li>
-                <li>150% increase in organic traffic</li>
-                <li>Expanded service area due to increased online visibility</li>
-                <li>Improved conversion rate from 2% to 5% on service pages</li>
+                <li>Ranked number one on Google for multiple search terms</li>
+                <li>Achieved rankings for over 350 keywords</li>
+                <li>Secured over 20 target keywords in Google's top 10 within 6 months</li>
+                <li>Successfully competed with established industry leaders</li>
+                <li>Transformed from a local business to a recognized industry authority</li>
               </ul>
+            </div>
+
+            {/* Testimonial */}
+            <div className="bg-white/5 rounded-2xl p-8 animate-fade-up">
+              <blockquote className="text-xl text-gray-300 italic mb-6">
+                "We noticed an increase in leads within weeks of working with Martin and his team! Working alongside Martin has opened my eyes to what is possible for my business online. My company is now on the first page of Google and is competing with the top staircase brands in the industry."
+              </blockquote>
+              <div className="flex items-center">
+                <div className="ml-4">
+                  <div className="font-semibold">Tom Abbott</div>
+                  <div className="text-gray-400">Director, The Stair Guys Ltd</div>
+                </div>
+              </div>
             </div>
 
             {/* CTA */}
