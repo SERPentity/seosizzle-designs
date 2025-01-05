@@ -21,10 +21,6 @@ export const mainNavItems = [
   },
 ];
 
-// Extract services from serviceMenuItems for direct use
-export const seoServices = serviceMenuItems[0].items;
-export const webDesignServices = serviceMenuItems[1].items;
-
 export const serviceMenuItems = [
   {
     title: "SEO Services",
@@ -97,3 +93,7 @@ export const serviceMenuItems = [
     ],
   },
 ];
+
+// Extract services from serviceMenuItems after its definition
+export const seoServices = serviceMenuItems[0].items;
+export const webDesignServices = serviceMenuItems[1].items;
