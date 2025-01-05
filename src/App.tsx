@@ -19,6 +19,7 @@ import WebDesign from "./pages/WebDesign";
 import ResponsiveDesign from "./pages/ResponsiveDesign";
 import UXDesign from "./pages/UXDesign";
 import EcommerceDesign from "./pages/EcommerceDesign";
+import ServiceBusiness from "./pages/ServiceBusiness";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/responsive-design" element={<ResponsiveDesign />} />
           <Route path="/ux-design" element={<UXDesign />} />
           <Route path="/ecommerce-design" element={<EcommerceDesign />} />
+          <Route path="/service-business" element={<ServiceBusiness />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
