@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
+import type { PageContext } from './types';
 
-const Context = React.createContext<any>(undefined);
+const Context = React.createContext<PageContext | undefined>(undefined);
 
 export function PageContextProvider({ 
   pageContext,
   children
 }: { 
-  pageContext: any;
+  pageContext: PageContext;
   children: React.ReactNode;
 }) {
   return (
@@ -18,5 +19,6 @@ export function PageContextProvider({
 
 export function usePageContext() {
   const pageContext = useContext(Context);
+  if (!pageContext) throw new Error('usePageContext() must be used within a PageContextProvider');
   return pageContext;
 }

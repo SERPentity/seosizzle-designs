@@ -4,14 +4,17 @@ import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server';
 import type { PageContextServer } from './types';
 import { StaticRouter } from 'react-router-dom/server';
 import App from '../App';
+import { PageShell } from './PageShell';
 
 export async function render(pageContext: PageContextServer) {
   const { urlPathname } = pageContext;
   
   const pageHtml = renderToString(
-    <StaticRouter location={urlPathname || '/'}>
-      <App />
-    </StaticRouter>
+    <PageShell pageContext={pageContext}>
+      <StaticRouter location={urlPathname || '/'}>
+        <App />
+      </StaticRouter>
+    </PageShell>
   );
 
   return escapeInject`<!DOCTYPE html>
