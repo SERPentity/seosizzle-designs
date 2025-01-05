@@ -21,6 +21,8 @@ import ResponsiveDesign from "./pages/ResponsiveDesign";
 import UXDesign from "./pages/UXDesign";
 import EcommerceDesign from "./pages/EcommerceDesign";
 import ServiceBusiness from "./pages/ServiceBusiness";
+import CaseStudies from "./pages/CaseStudies";
+import StairGuysCase from "./pages/StairGuysCase";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +51,8 @@ const App = () => (
           <Route path="/ux-design" element={<UXDesign />} />
           <Route path="/ecommerce-design" element={<EcommerceDesign />} />
           <Route path="/service-business" element={<ServiceBusiness />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/case-studies/stair-guys-ltd" element={<StairGuysCase />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
