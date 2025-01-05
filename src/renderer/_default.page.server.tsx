@@ -1,15 +1,17 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { PageShell } from './PageShell';
 import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server';
 import type { PageContextServer } from './types';
+import { StaticRouter } from 'react-router-dom/server';
+import App from '../App';
 
 export async function render(pageContext: PageContextServer) {
-  const { Page } = pageContext;
+  const { urlPathname } = pageContext;
+  
   const pageHtml = renderToString(
-    <PageShell pageContext={pageContext}>
-      <Page />
-    </PageShell>
+    <StaticRouter location={urlPathname || '/'}>
+      <App />
+    </StaticRouter>
   );
 
   return escapeInject`<!DOCTYPE html>
@@ -19,13 +21,13 @@ export async function render(pageContext: PageContextServer) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="SEO Snafu - Expert SEO & Web Design Services. Transform your online presence with data-driven SEO strategies and stunning web design solutions." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://seosnafu.co.uk${pageContext.urlPathname || ''}" />
+        <link rel="canonical" href="https://seosnafu.co.uk${urlPathname || ''}" />
         
         <!-- Open Graph Tags -->
         <meta property="og:title" content="SEO Snafu | SEO & Web Design Services" />
         <meta property="og:description" content="Transform your online presence with expert SEO services and stunning web design solutions." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://seosnafu.co.uk${pageContext.urlPathname || ''}" />
+        <meta property="og:url" content="https://seosnafu.co.uk${urlPathname || ''}" />
         <meta property="og:image" content="https://seosnafu.co.uk/og-image.png" />
         
         <!-- Twitter Card Tags -->
