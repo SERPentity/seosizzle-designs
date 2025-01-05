@@ -1,34 +1,18 @@
 import Navigation from "../../components/Navigation";
-import { ArrowRight, Search, BarChart, Target, Users } from "lucide-react";
-import { Link } from "react-router-dom";
-import Breadcrumbs from "../../components/Breadcrumbs";
+import { Helmet } from "react-helmet";
 
 const CompetitorAnalysis = () => {
-  const features = [
-    {
-      icon: Search,
-      title: "Keyword Gap Analysis",
-      description: "Identify untapped keyword opportunities"
-    },
-    {
-      icon: BarChart,
-      title: "Performance Metrics",
-      description: "Compare key performance indicators"
-    },
-    {
-      icon: Target,
-      title: "Content Strategy Review",
-      description: "Analyze competitor content success"
-    },
-    {
-      icon: Users,
-      title: "Market Position Analysis",
-      description: "Understand your competitive advantage"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Competitor Analysis Services | SEO Competition Research</title>
+        <meta name="description" content="Expert competitor analysis services to understand your market position. Comprehensive competitor research and gap analysis." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="og:image:alt" content="Business analytics dashboard showing competitive analysis and market trends" />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="twitter:image:alt" content="Business analytics dashboard showing competitive analysis and market trends" />
+      </Helmet>
+      
       <Navigation />
       <Breadcrumbs />
       

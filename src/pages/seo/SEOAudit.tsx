@@ -2,6 +2,7 @@ import Navigation from "../../components/Navigation";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Breadcrumbs from "../../components/Breadcrumbs";
+import { Helmet } from "react-helmet";
 
 const SEOAudit = () => {
   const auditFeatures = [
@@ -17,6 +18,15 @@ const SEOAudit = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>SEO Audit Services | Comprehensive Website Analysis</title>
+        <meta name="description" content="Expert SEO audit services to identify and fix technical issues. Complete website analysis and optimization recommendations." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="og:image:alt" content="SEO audit report with website analysis and performance metrics" />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="twitter:image:alt" content="SEO audit report with website analysis and performance metrics" />
+      </Helmet>
+      
       <Navigation />
       <Breadcrumbs />
       

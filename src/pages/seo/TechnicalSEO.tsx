@@ -2,64 +2,19 @@ import Navigation from "../../components/Navigation";
 import { CheckCircle, ArrowRight, Code, Gauge, Smartphone, Database, Search, Settings, Shield, BarChart } from "lucide-react";
 import { Link } from "react-router-dom";
 import Breadcrumbs from "../../components/Breadcrumbs";
+import { Helmet } from "react-helmet";
 
 const TechnicalSEO = () => {
-  const features = [
-    {
-      icon: Code,
-      title: "Site Structure Optimization",
-      description: "Improve your website's architecture and internal linking for better crawlability and indexing",
-      benefits: [
-        "Enhanced crawl efficiency",
-        "Improved site hierarchy",
-        "Better link equity distribution",
-        "Optimized URL structure"
-      ]
-    },
-    {
-      icon: Gauge,
-      title: "Speed Optimization",
-      description: "Boost your website's loading speed and Core Web Vitals scores",
-      benefits: [
-        "Faster page load times",
-        "Improved user experience",
-        "Better mobile performance",
-        "Higher conversion rates"
-      ]
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Optimization",
-      description: "Ensure your website performs flawlessly across all devices",
-      benefits: [
-        "Responsive design implementation",
-        "Mobile-first indexing ready",
-        "Touch-friendly navigation",
-        "Accelerated mobile pages"
-      ]
-    },
-    {
-      icon: Database,
-      title: "Technical Infrastructure",
-      description: "Build a solid technical foundation for your website",
-      benefits: [
-        "Schema markup implementation",
-        "XML sitemap optimization",
-        "Robots.txt configuration",
-        "SSL and security setup"
-      ]
-    }
-  ];
-
-  const stats = [
-    { value: "47%", label: "of consumers expect websites to load in 2 seconds or less" },
-    { value: "40%", label: "of users abandon websites that take more than 3 seconds to load" },
-    { value: "88%", label: "of users are less likely to return after a bad experience" },
-    { value: "3x", label: "increase in conversions with optimal site speed" }
-  ];
-
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Technical SEO Services | Expert SEO Agency</title>
+        <meta name="description" content="Expert technical SEO services to boost your website's performance. Core Web Vitals optimization, site speed improvements, and technical audits." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="og:image:alt" content="Technical dashboard showing website performance metrics and code analysis" />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="twitter:image:alt" content="Technical dashboard showing website performance metrics and code analysis" />
+      </Helmet>
       <Navigation />
       <Breadcrumbs />
       
@@ -101,38 +56,136 @@ const TechnicalSEO = () => {
           <section className="mb-20">
             <h2 className="text-3xl font-bold mb-8 text-center">Our Technical SEO Services</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (
-                <div 
-                  key={index}
-                  className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl"
-                >
-                  <div className="mb-4">
-                    <feature.icon className="w-12 h-12 text-blue-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-gray-400">
-                        <CheckCircle className="text-blue-400 mr-2" size={16} />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
+              <div 
+                className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl"
+              >
+                <div className="mb-4">
+                  <Code className="w-12 h-12 text-blue-400" />
                 </div>
-              ))}
+                <h3 className="text-xl font-semibold mb-2">Site Structure Optimization</h3>
+                <p className="text-gray-300 mb-4">Improve your website's architecture and internal linking for better crawlability and indexing</p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Enhanced crawl efficiency</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Improved site hierarchy</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Better link equity distribution</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Optimized URL structure</span>
+                  </li>
+                </ul>
+              </div>
+              <div 
+                className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl"
+              >
+                <div className="mb-4">
+                  <Gauge className="w-12 h-12 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Speed Optimization</h3>
+                <p className="text-gray-300 mb-4">Boost your website's loading speed and Core Web Vitals scores</p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Faster page load times</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Improved user experience</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Better mobile performance</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Higher conversion rates</span>
+                  </li>
+                </ul>
+              </div>
+              <div 
+                className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl"
+              >
+                <div className="mb-4">
+                  <Smartphone className="w-12 h-12 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Mobile Optimization</h3>
+                <p className="text-gray-300 mb-4">Ensure your website performs flawlessly across all devices</p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Responsive design implementation</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Mobile-first indexing ready</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Touch-friendly navigation</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Accelerated mobile pages</span>
+                  </li>
+                </ul>
+              </div>
+              <div 
+                className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl"
+              >
+                <div className="mb-4">
+                  <Database className="w-12 h-12 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Technical Infrastructure</h3>
+                <p className="text-gray-300 mb-4">Build a solid technical foundation for your website</p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Schema markup implementation</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>XML sitemap optimization</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>Robots.txt configuration</span>
+                  </li>
+                  <li className="flex items-center text-gray-400">
+                    <CheckCircle className="text-blue-400 mr-2" size={16} />
+                    <span>SSL and security setup</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
 
           <section className="mb-20">
             <h2 className="text-3xl font-bold mb-8 text-center">Performance Statistics</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
-                <div key={index} className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>
-                  <p className="text-gray-300">{stat.label}</p>
-                </div>
-              ))}
+              <div key={0} className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-2">47%</div>
+                <p className="text-gray-300">of consumers expect websites to load in 2 seconds or less</p>
+              </div>
+              <div key={1} className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
+                <p className="text-gray-300">of users abandon websites that take more than 3 seconds to load</p>
+              </div>
+              <div key={2} className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-2">88%</div>
+                <p className="text-gray-300">of users are less likely to return after a bad experience</p>
+              </div>
+              <div key={3} className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-2">3x</div>
+                <p className="text-gray-300">increase in conversions with optimal site speed</p>
+              </div>
             </div>
           </section>
 

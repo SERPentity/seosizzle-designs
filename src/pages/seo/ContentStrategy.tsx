@@ -9,42 +9,11 @@ const ContentStrategy = () => {
     <div className="min-h-screen bg-black text-white">
       <Helmet>
         <title>Content Strategy Services | SEO Content Creation & Strategy</title>
-        <meta 
-          name="description" 
-          content="Expert content strategy services to boost your SEO rankings. Data-driven content creation, keyword research, and content optimization services. Free content audit available." 
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://seosnafu.co.uk/seo/content-strategy" />
-        
-        <meta property="og:title" content="Content Strategy Services | SEO Content Creation & Strategy" />
-        <meta property="og:description" content="Expert content strategy services to boost your SEO rankings. Data-driven content creation, keyword research, and content optimization services." />
-        <meta property="og:url" content="https://seosnafu.co.uk/seo/content-strategy" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_GB" />
-        
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Content Strategy Services",
-              "description": "Expert content strategy services to boost your SEO rankings",
-              "provider": {
-                "@type": "Organization",
-                "name": "SEO Snafu",
-                "url": "https://seosnafu.co.uk"
-              },
-              "areaServed": "United Kingdom",
-              "serviceType": "Content Strategy",
-              "offers": {
-                "@type": "Offer",
-                "price": "${basePrice.replace('£', '')}",
-                "priceCurrency": "GBP",
-                "availability": "https://schema.org/InStock"
-              }
-            }
-          `}
-        </script>
+        <meta name="description" content="Expert content strategy services to boost your SEO rankings. Data-driven content creation, keyword research, and content optimization services." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="og:image:alt" content="Content calendar and strategy planning session with laptop and notebooks" />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="twitter:image:alt" content="Content calendar and strategy planning session with laptop and notebooks" />
       </Helmet>
 
       <Navigation />

@@ -1,15 +1,22 @@
 import Navigation from "../../components/Navigation";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 const LocalSEO = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Local SEO Services | Dominate Local Search Results</title>
+        <meta name="description" content="Expert local SEO services to help your business dominate local search results. Google Business Profile optimization, local citations, and more." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="og:image:alt" content="Local business map with location markers and search results interface" />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?auto=format&fit=crop&w=2000&q=80" />
+        <meta property="twitter:image:alt" content="Local business map with location markers and search results interface" />
+      </Helmet>
       <Navigation />
       <Breadcrumbs />
       
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <main className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-up">
             <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-6">
@@ -72,7 +79,7 @@ const LocalSEO = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };
