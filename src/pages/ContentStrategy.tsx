@@ -43,8 +43,8 @@ const ContentStrategy = () => {
       
       <main className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <section className="text-center mb-16 animate-fade-up">
-            <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-6">
+          <section className="text-center mb-24 animate-fade-up">
+            <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-8">
               Content Strategy Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
