@@ -14,13 +14,13 @@ export default defineConfig(({ mode }) => ({
     ssr({
       prerender: true,
       includeAssetsImportedByServer: true,
-      extensions: ['.page'] // This is the correct format for vite-plugin-ssr extensions
+      extensions: ['page'] // Remove the dot to fix the extension error
     }),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"), // Changed from 'src' to '@'
+      "~": path.resolve(__dirname, "./src"), // Changed from '@' to '~' to comply with vite-plugin-ssr
     },
   },
 }));
