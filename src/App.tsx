@@ -12,6 +12,9 @@ import TechnicalSEO from "./pages/TechnicalSEO";
 import LocalSEO from "./pages/LocalSEO";
 import ContentStrategy from "./pages/ContentStrategy";
 import SEOAudit from "./pages/SEOAudit";
+import CompetitorAnalysis from "./pages/CompetitorAnalysis";
+import LinkBuilding from "./pages/LinkBuilding";
+import SocialMedia from "./pages/SocialMedia";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +34,9 @@ const App = () => (
           <Route path="/local-seo" element={<LocalSEO />} />
           <Route path="/content-strategy" element={<ContentStrategy />} />
           <Route path="/seo-audit" element={<SEOAudit />} />
+          <Route path="/competitor-analysis" element={<CompetitorAnalysis />} />
+          <Route path="/link-building" element={<LinkBuilding />} />
+          <Route path="/social-media" element={<SocialMedia />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
