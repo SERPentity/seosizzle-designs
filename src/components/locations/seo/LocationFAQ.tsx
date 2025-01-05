@@ -13,7 +13,7 @@ const LocationFAQ: FC<LocationFAQProps> = ({ cityName }) => {
           <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
             <h3 className="text-xl font-bold mb-4">How much does SEO cost in {cityName}?</h3>
             <p className="text-gray-300">
-              Monthly SEO packages start from £360 per month.
+              Monthly SEO packages start from £360 per month. Our proven strategies deliver measurable ROI through increased organic traffic, higher rankings, and improved conversions. We track and report on key metrics monthly to demonstrate the value and results of your investment.
             </p>
           </div>
           <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
