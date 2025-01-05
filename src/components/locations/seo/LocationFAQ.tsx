@@ -13,7 +13,7 @@ const LocationFAQ: FC<LocationFAQProps> = ({ cityName }) => {
           <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
             <h3 className="text-xl font-bold mb-4">How much does SEO cost in {cityName}?</h3>
             <p className="text-gray-300">
-              SEO services in {cityName} typically range from £1,000 to £10,000+ per month, depending on your business needs, competition level, and campaign objectives. We offer customized packages tailored to your specific requirements and budget.
+              Monthly SEO packages start from £360 per month.
             </p>
           </div>
           <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
