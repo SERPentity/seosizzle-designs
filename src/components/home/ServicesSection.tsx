@@ -24,8 +24,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="pt-32 pb-16 sm:py-24 bg-gradient-to-b from-black to-primary mt-[-4rem] sm:mt-0">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-gradient-to-b from-black to-primary">
+      {/* Add top spacing to prevent overlap */}
+      <div className="w-full h-24 bg-black" /> 
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">SEO-First Approach</h2>
           <p className="text-lg sm:text-xl text-gray-300">Every website we build is designed to rank and convert from day one</p>
