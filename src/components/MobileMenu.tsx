@@ -11,6 +11,20 @@ const MobileMenu = ({ setIsOpen }: MobileMenuProps) => {
   const [isSEOOpen, setIsSEOOpen] = useState(false);
   const [isWebDesignOpen, setIsWebDesignOpen] = useState(false);
 
+  const handleSEOClick = () => {
+    setIsSEOOpen(!isSEOOpen);
+    if (!isSEOOpen) {
+      setIsWebDesignOpen(false);
+    }
+  };
+
+  const handleWebDesignClick = () => {
+    setIsWebDesignOpen(!isWebDesignOpen);
+    if (!isWebDesignOpen) {
+      setIsSEOOpen(false);
+    }
+  };
+
   return (
     <div className="md:hidden animate-fade-in">
       <div className="pt-2 pb-3 space-y-1 backdrop-blur-md bg-black/80 rounded-lg mt-2 mb-4 max-h-[80vh] overflow-y-auto">
@@ -31,7 +45,7 @@ const MobileMenu = ({ setIsOpen }: MobileMenuProps) => {
         {/* SEO Services Section */}
         <div className="px-4 py-2">
           <button 
-            onClick={() => setIsSEOOpen(!isSEOOpen)}
+            onClick={handleSEOClick}
             className="flex items-center justify-between w-full px-4 py-3 text-gray-300 hover:text-white transition-colors rounded-lg text-lg font-semibold"
           >
             SEO Services
@@ -57,7 +71,7 @@ const MobileMenu = ({ setIsOpen }: MobileMenuProps) => {
         {/* Web Design Services Section */}
         <div className="px-4 py-2">
           <button 
-            onClick={() => setIsWebDesignOpen(!isWebDesignOpen)}
+            onClick={handleWebDesignClick}
             className="flex items-center justify-between w-full px-4 py-3 text-gray-300 hover:text-white transition-colors rounded-lg text-lg font-semibold"
           >
             Web Design Services
