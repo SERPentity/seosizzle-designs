@@ -5,6 +5,7 @@ import type { PageContextServer } from './types';
 import { StaticRouter } from 'react-router-dom/server';
 import App from '../App';
 import { PageShell } from './PageShell';
+import { Helmet } from 'react-helmet';
 
 export async function render(pageContext: PageContextServer) {
   const { urlPathname } = pageContext;
@@ -17,9 +18,15 @@ export async function render(pageContext: PageContextServer) {
     </PageShell>
   );
 
-  return escapeInject`<!DOCTYPE html>
-    <html lang="en">
+  // Get head tags from React Helmet
+  const helmet = Helmet.renderStatic();
+
+  const documentHtml = escapeInject`<!DOCTYPE html>
+    <html ${helmet.htmlAttributes.toString()}>
       <head>
+        ${dangerouslySkipEscape(helmet.title.toString())}
+        ${dangerouslySkipEscape(helmet.meta.toString())}
+        ${dangerouslySkipEscape(helmet.link.toString())}
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="SEO Snafu - Expert SEO & Web Design Services. Transform your online presence with data-driven SEO strategies and stunning web design solutions." />
@@ -38,12 +45,17 @@ export async function render(pageContext: PageContextServer) {
         <meta name="twitter:title" content="SEO Snafu | SEO & Web Design Services" />
         <meta name="twitter:description" content="Transform your online presence with expert SEO services and stunning web design solutions." />
         <meta name="twitter:image" content="https://seosnafu.co.uk/og-image.png" />
-        
-        <title>SEO Snafu | SEO & Web Design Services</title>
-        <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
         <div id="root">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`;
+
+  return {
+    documentHtml,
+    pageContext: {
+      // This helps search engines understand the page's title
+      title: helmet.title.toString() || 'SEO Snafu | Expert SEO & Web Design Services'
+    }
+  };
 }
