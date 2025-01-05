@@ -1,4 +1,4 @@
-import { cn } from "src/lib/utils"
+import { cn } from "$/lib/utils"
 import * as React from "react"
 
 const Card = React.forwardRef<
@@ -75,4 +75,11 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = "CardFooter"
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+}
