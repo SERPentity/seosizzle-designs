@@ -32,6 +32,9 @@ import LondonWebDesign from "./pages/locations/web-design/LondonWebDesign";
 import BristolSEO from "./pages/locations/seo/BristolSEO";
 import SheffieldSEO from "./pages/locations/seo/SheffieldSEO";
 import LeedsSEO from "./pages/locations/seo/LeedsSEO";
+import LiverpoolSEO from "./pages/locations/seo/LiverpoolSEO";
+import NewcastleSEO from "./pages/locations/seo/NewcastleSEO";
+import SouthamptonSEO from "./pages/locations/seo/SouthamptonSEO";
 
 const queryClient = new QueryClient();
 
@@ -70,6 +73,9 @@ const App = () => (
           <Route path="/seo-services/bristol" element={<BristolSEO />} />
           <Route path="/seo-services/sheffield" element={<SheffieldSEO />} />
           <Route path="/seo-services/leeds" element={<LeedsSEO />} />
+          <Route path="/seo-services/liverpool" element={<LiverpoolSEO />} />
+          <Route path="/seo-services/newcastle" element={<NewcastleSEO />} />
+          <Route path="/seo-services/southampton" element={<SouthamptonSEO />} />
         </Routes>
         <Footer />
       </BrowserRouter>

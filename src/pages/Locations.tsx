@@ -36,6 +36,21 @@ const Locations = () => {
       description: "Tailored SEO services for Leeds businesses"
     },
     { 
+      name: "Liverpool SEO Services", 
+      path: "/seo-services/liverpool",
+      description: "Results-driven SEO services for Liverpool businesses"
+    },
+    { 
+      name: "Newcastle SEO Services", 
+      path: "/seo-services/newcastle",
+      description: "Professional SEO solutions for Newcastle businesses"
+    },
+    { 
+      name: "Southampton SEO Services", 
+      path: "/seo-services/southampton",
+      description: "Effective SEO strategies for Southampton businesses"
+    },
+    { 
       name: "London Web Design", 
       path: "/web-design/london",
       description: "Professional web design services in London"
