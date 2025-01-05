@@ -84,7 +84,7 @@ const Index = () => {
               </Link>
               
               <Link
-                to="/contact"
+                to="/seo-audit"
                 className="group px-6 sm:px-8 py-3 sm:py-4 border border-white/30 rounded-full hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
                 Get Free SEO Audit
