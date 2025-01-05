@@ -60,33 +60,33 @@ const About = () => {
                     <AlertOctagon className="w-16 h-16 text-yellow-300 animate-pulse" />
                     <h3 className="text-2xl font-bold">Curious About Our Name?</h3>
                     <p className="text-lg">Click to reveal the military origin of "SNAFU"<br /><span className="text-yellow-300">(Contains explicit content)</span></p>
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-yellow-200 animate-bounce">
+                    <div className="text-sm text-yellow-200 animate-bounce">
                       Click to flip →
                     </div>
                   </div>
                 </div>
 
                 {/* Back of card */}
-                <div className={`absolute w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg ${
+                <div className={`absolute w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-8 ${
                   !isFlipped ? "invisible" : ""
                 }`}>
-                  <div className="text-white space-y-4 p-8 h-full flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-4 text-yellow-300">SNAFU Explained</h3>
+                  <div className="flex flex-col justify-between h-full">
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-yellow-300">SNAFU Explained</h3>
                       <p className="text-gray-200 leading-relaxed">
                         SNAFU is a military acronym that stands for "Situation Normal: All F***ed Up." 
                         It originated during WWII, reflecting how chaos was the normal state of affairs.
                       </p>
-                      <p className="text-gray-200 leading-relaxed mt-4">
+                      <p className="text-gray-200 leading-relaxed">
                         In the context of websites, it's sadly still relevant - most sites are in a 
                         state of SEO chaos. That's where we come in: we transform this "normal" 
                         situation into exceptional results.
                       </p>
-                      <p className="text-yellow-300 font-bold mt-4 text-lg">
+                      <p className="text-yellow-300 font-bold text-lg">
                         We take websites from F*cked Up to Fixed Up!
                       </p>
                     </div>
-                    <div className="text-sm text-yellow-200 text-center animate-bounce mt-2">
+                    <div className="text-sm text-yellow-200 text-center animate-bounce">
                       Click to flip back →
                     </div>
                   </div>
