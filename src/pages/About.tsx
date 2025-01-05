@@ -24,12 +24,17 @@ const About = () => {
             <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-6">
               About SEOsnafu
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're a team of passionate digital experts committed to helping businesses succeed online
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
+              Real Business Experience. Real SEO Results.
+            </p>
+            <h2 className="text-3xl font-bold text-purple-400 mb-6">
+              Transforming SEO Performance
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              We transform underperforming websites into SEO powerhouses. While 99% of websites never make it to page one, we specialize in breaking that cycle and putting our clients ahead of the competition.
             </p>
           </article>
 
-          {/* Adding the Flipping Card here */}
           <FlippingCard />
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
