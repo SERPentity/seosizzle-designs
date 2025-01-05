@@ -19,7 +19,7 @@ const SEOAudit = () => {
       "Checking mobile responsiveness...",
       "Scanning content structure...",
       "Evaluating page speed...",
-      "Reviewing backlink profile..."
+      "Analyzing keyword rankings..."
     ];
 
     let currentStep = 0;
@@ -37,7 +37,7 @@ const SEOAudit = () => {
         setIsAnalyzing(false);
         toast({
           title: "Analysis Complete!",
-          description: "We'll send your detailed SEO audit report via email shortly.",
+          description: "Your comprehensive SEO report will be sent to your email shortly, including your current Google rankings and keyword positions.",
           duration: 5000,
         });
       }
@@ -67,8 +67,11 @@ const SEOAudit = () => {
             <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-6">
               Free SEO Audit Tool
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300 mb-4">
               Get a comprehensive analysis of your website's SEO performance and discover opportunities for improvement
+            </p>
+            <p className="text-lg text-gray-400">
+              Receive a detailed report including your current Google rankings and complete keyword position analysis
             </p>
           </div>
 
@@ -136,15 +139,15 @@ const SEOAudit = () => {
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-gray-300">
                 <div className="flex items-start space-x-3">
                   <CheckCircle2 className="h-5 w-5 text-green-400 shrink-0" />
+                  <span>Complete Google Rankings Report</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-400 shrink-0" />
+                  <span>Keyword Position Analysis</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-400 shrink-0" />
                   <span>Technical SEO Analysis</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-400 shrink-0" />
-                  <span>Content Optimization Check</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-400 shrink-0" />
-                  <span>Mobile Responsiveness Test</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle2 className="h-5 w-5 text-green-400 shrink-0" />
