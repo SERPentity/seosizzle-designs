@@ -11,45 +11,67 @@ const Breadcrumbs = () => {
     "link-building": "Link Building",
     "responsive-design": "Responsive Design",
     "seo-audit": "SEO Audit",
+    "technical-seo": "Technical SEO",
+    "content-strategy": "Content Strategy",
+    "competitor-analysis": "Competitor Analysis",
+    "social-media": "Social Media",
+    "web-design": "Web Design",
+    "ux-design": "UX Design",
+    "ecommerce-design": "Ecommerce Design",
+    "service-business": "Service Business",
+    "case-studies": "Case Studies",
     "services": "Services",
     "locations": "Locations",
+    "contact": "Contact",
+    "about": "About",
     "london": "London",
-    "manchester": "Manchester"
+    "manchester": "Manchester",
+    "birmingham": "Birmingham",
+    "leeds": "Leeds",
+    "liverpool": "Liverpool",
+    "bristol": "Bristol",
+    "sheffield": "Sheffield",
+    "newcastle": "Newcastle",
+    "southampton": "Southampton",
+    "seo-services": "SEO Services",
   };
 
   return (
-    <nav className="flex items-center space-x-2 text-sm text-gray-400 px-4 sm:px-6 lg:px-8 py-4 max-w-7xl mx-auto">
-      <Link 
-        to="/" 
-        className="flex items-center hover:text-white transition-colors"
-      >
-        <Home size={16} />
-      </Link>
-      
-      {pathnames.length > 0 && (
-        <ChevronRight size={16} className="text-gray-600" />
-      )}
+    <nav className="relative z-10 bg-black/50 backdrop-blur-sm border-b border-white/10">
+      <div className="flex items-center space-x-2 text-sm text-gray-400 px-4 sm:px-6 lg:px-8 py-4 max-w-7xl mx-auto">
+        <Link 
+          to="/" 
+          className="flex items-center hover:text-white transition-colors"
+          aria-label="Home"
+        >
+          <Home size={16} />
+        </Link>
+        
+        {pathnames.length > 0 && (
+          <ChevronRight size={16} className="text-gray-600" />
+        )}
 
-      {pathnames.map((name, index) => {
-        const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
-        const isLast = index === pathnames.length - 1;
+        {pathnames.map((name, index) => {
+          const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
+          const isLast = index === pathnames.length - 1;
 
-        return (
-          <div key={name} className="flex items-center">
-            <Link
-              to={routeTo}
-              className={`hover:text-white transition-colors ${
-                isLast ? "text-white" : ""
-              }`}
-            >
-              {nameMap[name] || name.charAt(0).toUpperCase() + name.slice(1)}
-            </Link>
-            {!isLast && (
-              <ChevronRight size={16} className="text-gray-600 ml-2" />
-            )}
-          </div>
-        );
-      })}
+          return (
+            <div key={name} className="flex items-center">
+              <Link
+                to={routeTo}
+                className={`hover:text-white transition-colors ${
+                  isLast ? "text-white" : ""
+                }`}
+              >
+                {nameMap[name] || name.charAt(0).toUpperCase() + name.slice(1)}
+              </Link>
+              {!isLast && (
+                <ChevronRight size={16} className="text-gray-600 ml-2" />
+              )}
+            </div>
+          );
+        })}
+      </div>
     </nav>
   );
 };
