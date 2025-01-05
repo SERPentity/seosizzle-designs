@@ -22,7 +22,7 @@ const Contact = () => {
               Contact Us
             </h1>
             <p className="text-lg text-gray-300 mb-4">
-              We’d love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to help.
+              We'd love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to help.
             </p>
             <p className="text-lg text-gray-300 mb-8">
               Fill out the form below or reach out to us directly at <a href="mailto:info@seosnafu.co.uk" className="text-blue-400">info@seosnafu.co.uk</a>.
@@ -42,7 +42,7 @@ const Contact = () => {
             </div>
             <div className="mt-4">
               <label htmlFor="message" className="block text-sm font-medium text-gray-300">Message</label>
-              <textarea id="message" rows="4" required className="mt-1 block w-full p-2 rounded-md bg-black border border-white/10 focus:border-blue-500 focus:ring focus:ring-blue-500/50"></textarea>
+              <textarea id="message" rows={4} required className="mt-1 block w-full p-2 rounded-md bg-black border border-white/10 focus:border-blue-500 focus:ring focus:ring-blue-500/50"></textarea>
             </div>
             <button type="submit" className="mt-4 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:opacity-90 transition-opacity">
               Send Message
