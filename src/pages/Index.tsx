@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Search, Globe, Users, ChartBar, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import { useState, useEffect } from "react";
@@ -7,9 +7,9 @@ const Index = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const backgroundImages = [
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80", // SEO analytics image
-    "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80", // Web design workspace
-    "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=2000&q=80"  // Digital marketing
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80",
+    "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80",
+    "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=2000&q=80"
   ];
 
   useEffect(() => {
@@ -105,6 +105,139 @@ const Index = () => {
         
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
+      </section>
+
+      {/* Services Section */}
+      <section className="py-24 bg-gradient-to-b from-black to-primary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
+            <p className="text-xl text-gray-300">Comprehensive digital solutions for your business</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Search className="text-blue-400" size={32} />,
+                title: "SEO Optimization",
+                description: "Boost your search rankings with data-driven SEO strategies"
+              },
+              {
+                icon: <Globe className="text-purple-400" size={32} />,
+                title: "Web Design",
+                description: "Beautiful, responsive websites that convert visitors"
+              },
+              {
+                icon: <ChartBar className="text-pink-400" size={32} />,
+                title: "Analytics & Reporting",
+                description: "Detailed insights into your website's performance"
+              }
+            ].map((service, index) => (
+              <div 
+                key={index}
+                className="group p-8 rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
+              >
+                <div className="mb-4">{service.icon}</div>
+                <h3 className="text-2xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <Link 
+                  to="/services" 
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-24 bg-primary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { number: "500+", label: "Clients Served" },
+              { number: "98%", label: "Client Satisfaction" },
+              { number: "250%", label: "Average ROI" },
+              { number: "24/7", label: "Support" }
+            ].map((stat, index) => (
+              <div 
+                key={index}
+                className="text-center p-6 rounded-lg backdrop-blur-sm bg-white/5 border border-white/10"
+              >
+                <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-gradient-to-b from-primary to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Client Success Stories</h2>
+            <p className="text-xl text-gray-300">What our clients say about us</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "SEOsnafu transformed our online presence. Our traffic increased by 200% in just 3 months!",
+                author: "Sarah Johnson",
+                role: "Marketing Director"
+              },
+              {
+                quote: "The best investment we've made. Their web design work is outstanding and the results speak for themselves.",
+                author: "Michael Chen",
+                role: "CEO"
+              },
+              {
+                quote: "Professional, responsive, and incredibly skilled. They delivered beyond our expectations.",
+                author: "Emma Williams",
+                role: "E-commerce Manager"
+              }
+            ].map((testimonial, index) => (
+              <div 
+                key={index}
+                className="p-8 rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10"
+              >
+                <div className="mb-6">
+                  <Award className="text-yellow-400" size={32} />
+                </div>
+                <blockquote className="text-lg text-gray-300 mb-6">"{testimonial.quote}"</blockquote>
+                <div className="text-white font-semibold">{testimonial.author}</div>
+                <div className="text-gray-400">{testimonial.role}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Grow Your Business?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Get started with a free SEO audit and discover how we can help you achieve your digital goals
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-white rounded-full hover:opacity-90 transition-opacity"
+            >
+              Get Your Free SEO Audit
+            </Link>
+            <Link
+              to="/services"
+              className="px-8 py-4 border border-white/30 text-white rounded-full hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
       </section>
     </div>
   );
