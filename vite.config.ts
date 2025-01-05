@@ -16,14 +16,14 @@ export default defineConfig(({ mode }) => ({
       includeAssetsImportedByServer: true,
       extensions: [{
         npmPackageName: 'vite-plugin-ssr',
-        pageFilesSrc: 'page'
+        pageFilesSrc: 'page/*'
       }]
     }),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
-      "$": path.resolve(__dirname, "./src"), // Using $ as the special character prefix
+      "$": path.resolve(__dirname, "./src"),
     },
   },
 }));
