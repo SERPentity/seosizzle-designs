@@ -4,7 +4,7 @@ import CaseHero from "../components/case-studies/CaseHero";
 import CaseStats from "../components/case-studies/CaseStats";
 import CaseContent from "../components/case-studies/CaseContent";
 import { Link } from "react-router-dom";
-import { ChartBarIcon, ChartLineUp, Globe, Percent } from "lucide-react";
+import { ChartLine, Globe, Percent } from "lucide-react";
 
 const BioUKFuelsCase = () => {
   const solution = [
@@ -26,7 +26,7 @@ const BioUKFuelsCase = () => {
 
   const stats = [
     {
-      icon: <ChartLineUp className="text-green-400" size={32} />,
+      icon: <ChartLine className="text-green-400" size={32} />,
       stat: "4.5K+",
       label: "Monthly Visitors"
     },
