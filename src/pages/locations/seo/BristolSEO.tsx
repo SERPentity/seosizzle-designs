@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet";
 import Navigation from "../../../components/Navigation";
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import BristolHero from "../../../components/locations/seo/BristolHero";
+import BristolServices from "../../../components/locations/seo/BristolServices";
+import BristolFAQ from "../../../components/locations/seo/BristolFAQ";
 import CaseStudiesLink from "../../../components/locations/seo/CaseStudiesLink";
 import { MapPin } from "lucide-react";
 
@@ -11,6 +13,26 @@ const BristolSEO = () => {
       <Helmet>
         <title>Bristol SEO Services | Expert SEO Agency Bristol</title>
         <meta name="description" content="Leading Bristol SEO agency delivering proven results. Our expert SEO services help Bristol businesses achieve top Google rankings. Free SEO audit available." />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Bristol SEO Services",
+              "description": "Expert SEO services in Bristol helping businesses achieve top Google rankings",
+              "areaServed": {
+                "@type": "City",
+                "name": "Bristol"
+              },
+              "priceRange": "££",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bristol",
+                "addressCountry": "UK"
+              }
+            }
+          `}
+        </script>
       </Helmet>
 
       <Navigation />
@@ -46,6 +68,8 @@ const BristolSEO = () => {
         </div>
       </section>
 
+      <BristolServices />
+
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">Areas We Serve in Bristol</h2>
@@ -73,6 +97,7 @@ const BristolSEO = () => {
         </div>
       </section>
 
+      <BristolFAQ />
       <CaseStudiesLink />
     </div>
   );
