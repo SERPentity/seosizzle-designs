@@ -12,10 +12,16 @@ const BristolSEO = () => {
     <div className="min-h-screen bg-black text-white">
       <Helmet>
         <title>Bristol SEO Services | Expert SEO Agency Bristol</title>
-        <meta 
-          name="description" 
-          content="Leading Bristol SEO agency delivering proven results. Our expert SEO services help Bristol businesses achieve top Google rankings. Free SEO audit available." 
-        />
+        <meta name="description" content="Leading Bristol SEO agency delivering proven results. Our expert SEO services help Bristol businesses achieve top Google rankings. Free SEO audit available." />
+        <meta property="og:title" content="Bristol SEO Services | Expert SEO Agency Bristol" />
+        <meta property="og:description" content="Leading Bristol SEO agency delivering proven results. Our expert SEO services help Bristol businesses achieve top Google rankings." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1493397212122-2b85dda8106b" />
+        <meta property="og:image:alt" content="Bristol modern architecture featuring unique building designs" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1493397212122-2b85dda8106b" />
+        <meta property="twitter:image:alt" content="Bristol modern architecture featuring unique building designs" />
+        <link rel="canonical" href="https://yourdomain.com/seo-services/bristol" />
         <script type="application/ld+json">
           {`
             {

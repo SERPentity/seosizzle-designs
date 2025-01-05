@@ -11,8 +11,16 @@ const LondonWebDesign = () => {
       <Helmet>
         <title>Web Design Agency London | Professional Website Design Services</title>
         <meta name="description" content="Award-winning London web design agency creating stunning, conversion-focused websites. Expert WordPress development, e-commerce solutions & responsive design. Get a free consultation." />
+        <meta property="og:title" content="Web Design Agency London | Professional Website Design Services" />
+        <meta property="og:description" content="Award-winning London web design agency creating stunning, conversion-focused websites. Expert WordPress development, e-commerce solutions & responsive design." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1433832597046-4f10e10ac764" />
+        <meta property="og:image:alt" content="London skyline featuring modern architectural marvels" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1433832597046-4f10e10ac764" />
+        <meta property="twitter:image:alt" content="London skyline featuring modern architectural marvels" />
         <meta name="keywords" content="london web design, web design agency london, wordpress development london, ecommerce website design london, responsive web design" />
-        <link rel="canonical" href="https://seosizzle.com/web-design/london" />
+        <link rel="canonical" href="https://yourdomain.com/web-design/london" />
       </Helmet>
       
       <Navigation />

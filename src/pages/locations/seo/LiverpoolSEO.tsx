@@ -14,6 +14,15 @@ const LiverpoolSEO = () => {
       <Helmet>
         <title>Liverpool SEO Services | Expert SEO Agency Liverpool</title>
         <meta name="description" content="Leading Liverpool SEO agency delivering proven results. Our expert SEO services help Liverpool businesses achieve top Google rankings. Free SEO audit available." />
+        <meta property="og:title" content="Liverpool SEO Services | Expert SEO Agency Liverpool" />
+        <meta property="og:description" content="Leading Liverpool SEO agency delivering proven results. Our expert SEO services help Liverpool businesses achieve top Google rankings." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1496307653780-42ee777d4833" />
+        <meta property="og:image:alt" content="Liverpool waterfront skyline featuring iconic architecture" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1496307653780-42ee777d4833" />
+        <meta property="twitter:image:alt" content="Liverpool waterfront skyline featuring iconic architecture" />
+        <link rel="canonical" href="https://yourdomain.com/seo-services/liverpool" />
         <script type="application/ld+json">
           {`
             {

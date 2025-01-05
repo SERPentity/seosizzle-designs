@@ -12,6 +12,15 @@ const BirminghamSEO = () => {
       <Helmet>
         <title>Birmingham SEO Services | Expert SEO Agency Birmingham</title>
         <meta name="description" content="Leading Birmingham SEO agency delivering proven results. Our expert SEO services help Birmingham businesses achieve top Google rankings. Free SEO audit available." />
+        <meta property="og:title" content="Birmingham SEO Services | Expert SEO Agency Birmingham" />
+        <meta property="og:description" content="Leading Birmingham SEO agency delivering proven results. Our expert SEO services help Birmingham businesses achieve top Google rankings." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1460574283810-2aab119d8511" />
+        <meta property="og:image:alt" content="Birmingham cityscape featuring modern architecture and business district" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1460574283810-2aab119d8511" />
+        <meta property="twitter:image:alt" content="Birmingham cityscape featuring modern architecture and business district" />
+        <link rel="canonical" href="https://yourdomain.com/seo-services/birmingham" />
         <script type="application/ld+json">
           {`
             {
