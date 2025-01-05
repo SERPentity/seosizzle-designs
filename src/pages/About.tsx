@@ -41,7 +41,7 @@ const About = () => {
           </div>
 
           {/* SNAFU Explanation Card */}
-          <div className="max-w-md mx-auto mb-16">
+          <div className="max-w-md mx-auto mb-16 relative z-10">
             <div className="relative preserve-3d cursor-pointer" style={{ perspective: "1000px" }}>
               <Card
                 className={`w-full p-6 transition-transform duration-700 transform-style-preserve-3d relative ${
@@ -50,10 +50,10 @@ const About = () => {
                 onClick={() => setIsFlipped(!isFlipped)}
               >
                 {/* Front of card */}
-                <div className={`absolute w-full h-full backface-hidden ${
+                <div className={`absolute w-full h-full backface-hidden bg-white rounded-lg ${
                   isFlipped ? "invisible" : ""
                 }`}>
-                  <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                  <div className="flex flex-col items-center justify-center space-y-4 text-center h-full">
                     <AlertOctagon className="w-12 h-12 text-yellow-500" />
                     <h3 className="text-xl font-bold text-gray-800">What does SNAFU mean?</h3>
                     <p className="text-gray-600">Click to reveal the military origin<br />(Contains explicit content)</p>
@@ -61,10 +61,10 @@ const About = () => {
                 </div>
 
                 {/* Back of card */}
-                <div className={`absolute w-full h-full backface-hidden rotate-y-180 ${
+                <div className={`absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg ${
                   !isFlipped ? "invisible" : ""
                 }`}>
-                  <div className="text-gray-800 space-y-4">
+                  <div className="text-gray-800 space-y-4 p-4">
                     <h3 className="text-xl font-bold mb-2">SNAFU Explained</h3>
                     <p>
                       SNAFU is a military acronym that stands for "Situation Normal: All F***ed Up." 
