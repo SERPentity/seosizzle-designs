@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Locations from "./pages/Locations";
 import TechnicalSEO from "./pages/TechnicalSEO";
+import LocalSEO from "./pages/LocalSEO";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/locations" element={<Locations />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/technical-seo" element={<TechnicalSEO />} />
+          <Route path="/local-seo" element={<LocalSEO />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
