@@ -86,7 +86,7 @@ const About = () => {
                         We take websites from F*cked Up to Fixed Up!
                       </p>
                     </div>
-                    <div className="text-sm text-yellow-200 text-center animate-bounce">
+                    <div className="text-sm text-yellow-200 text-center animate-bounce mt-2">
                       Click to flip back →
                     </div>
                   </div>
