@@ -9,8 +9,8 @@ const LondonClientTestimonials = () => {
     },
     {
       quote: "Their SEO expertise completely transformed our online presence. We've eliminated dependency on paid ads and now generate consistent organic leads at zero cost.",
-      author: "John Smith",
-      role: "Owner, The Stair Guys Ltd"
+      author: "Tom Abbott",
+      role: "Director, The Stair Guys Ltd"
     }
   ];
 
