@@ -8,6 +8,7 @@ import TestimonialsSection from "../components/home/TestimonialsSection";
 import CTASection from "../components/home/CTASection";
 import { useState, useEffect } from "react";
 import Breadcrumbs from "../components/Breadcrumbs";
+import { Helmet } from "react-helmet";
 
 const Index = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -35,12 +36,18 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <main className="min-h-screen bg-black text-white overflow-hidden">
+      <Helmet>
+        <title>SEOsnafu | Expert SEO & Web Design Services UK</title>
+        <meta name="description" content="Transform your online presence with SEOsnafu's expert SEO and web design services. Get higher rankings and stunning websites that convert." />
+        <link rel="canonical" href="https://seosnafu.co.uk" />
+      </Helmet>
+
       <Navigation />
       <Breadcrumbs />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen pt-16 md:pt-0">
+      <article className="relative min-h-screen pt-16 md:pt-0">
         {/* Background Images */}
         {backgroundImages.map((image, index) => (
           <div
@@ -77,12 +84,12 @@ const Index = () => {
             </h1>
 
             {/* Subheading */}
-            <p className="text-lg sm:text-xl text-gray-300 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.3s" }}>
+            <h2 className="text-lg sm:text-xl text-gray-300 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.3s" }}>
               Boost your rankings and captivate your audience with stunning designs that convert
-            </p>
+            </h2>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.4s" }}>
+            <nav className="flex flex-col sm:flex-row gap-4 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.4s" }}>
               <Link
                 to="/services"
                 className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-full overflow-hidden hover:scale-105 transition-all duration-300 text-center"
@@ -101,10 +108,10 @@ const Index = () => {
                 Get Free SEO Audit
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-            </div>
+            </nav>
 
             {/* Key Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-20 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.5s" }}>
+            <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-20 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.5s" }}>
               <div className="backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10">
                 <h3 className="text-lg sm:text-xl font-semibold mb-2">SEO Excellence</h3>
                 <p className="text-sm sm:text-base text-gray-400">Data-driven strategies to boost your search rankings</p>
@@ -117,20 +124,20 @@ const Index = () => {
                 <h3 className="text-lg sm:text-xl font-semibold mb-2">Results Driven</h3>
                 <p className="text-sm sm:text-base text-gray-400">Measurable improvements in traffic and conversions</p>
               </div>
-            </div>
+            </section>
           </div>
         </div>
         
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
-      </section>
+      </article>
 
       <ServicesSection />
       <WhyUsSection />
       <StatsSection />
       <TestimonialsSection />
       <CTASection />
-    </div>
+    </main>
   );
 };
 
