@@ -13,9 +13,18 @@ const Index = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const backgroundImages = [
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80",
-    "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80",
-    "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=2000&q=80"
+    {
+      url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80",
+      alt: "Professional workspace with laptop showing SEO analytics dashboard, highlighting digital marketing expertise"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=80",
+      alt: "Modern development environment with code displayed on screen, representing web development and SEO optimization"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=2000&q=80",
+      alt: "Team collaboration on digital marketing strategy, showcasing SEO and web design solutions"
+    }
   ];
 
   useEffect(() => {
@@ -40,10 +49,12 @@ const Index = () => {
               currentImageIndex === index ? "opacity-40" : "opacity-0"
             }`}
             style={{
-              backgroundImage: `url(${image})`,
+              backgroundImage: `url(${image.url})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
+            role="img"
+            aria-label={image.alt}
           />
         ))}
         
