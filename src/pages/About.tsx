@@ -12,8 +12,15 @@ const About = () => {
             <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-6">
               About SEOsnafu
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
               Leading the way in SEO and web design excellence
+            </p>
+            <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500 mb-4 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+              From Situation F*cked Up to Situation Fixed Up
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
+              We transform underperforming websites into SEO powerhouses. While 99% of websites never make it to page one, 
+              we specialize in breaking that cycle and putting our clients ahead of the competition.
             </p>
           </div>
 
