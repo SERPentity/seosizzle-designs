@@ -42,39 +42,50 @@ const About = () => {
 
           {/* SNAFU Explanation Card */}
           <div className="max-w-md mx-auto mb-16 relative z-10">
-            <div className="relative preserve-3d cursor-pointer" style={{ perspective: "1000px" }}>
+            <div 
+              className="relative preserve-3d cursor-pointer hover:scale-105 transition-transform duration-300" 
+              style={{ perspective: "1000px", height: "300px" }}
+              onClick={() => setIsFlipped(!isFlipped)}
+            >
               <Card
-                className={`w-full p-6 transition-transform duration-700 transform-style-preserve-3d relative ${
+                className={`absolute w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
                   isFlipped ? "rotate-y-180" : ""
                 }`}
-                onClick={() => setIsFlipped(!isFlipped)}
               >
                 {/* Front of card */}
-                <div className={`absolute w-full h-full backface-hidden bg-white rounded-lg ${
+                <div className={`absolute w-full h-full backface-hidden bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 ${
                   isFlipped ? "invisible" : ""
                 }`}>
-                  <div className="flex flex-col items-center justify-center space-y-4 text-center h-full">
-                    <AlertOctagon className="w-12 h-12 text-yellow-500" />
-                    <h3 className="text-xl font-bold text-gray-800">What does SNAFU mean?</h3>
-                    <p className="text-gray-600">Click to reveal the military origin<br />(Contains explicit content)</p>
+                  <div className="flex flex-col items-center justify-center space-y-6 text-center h-full text-white">
+                    <AlertOctagon className="w-16 h-16 text-yellow-300 animate-pulse" />
+                    <h3 className="text-2xl font-bold">Curious About Our Name?</h3>
+                    <p className="text-lg">Click to reveal the military origin of "SNAFU"<br /><span className="text-yellow-300">(Contains explicit content)</span></p>
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-yellow-200 animate-bounce">
+                      Click to flip →
+                    </div>
                   </div>
                 </div>
 
                 {/* Back of card */}
-                <div className={`absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg ${
+                <div className={`absolute w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg ${
                   !isFlipped ? "invisible" : ""
                 }`}>
-                  <div className="text-gray-800 space-y-4 p-4">
-                    <h3 className="text-xl font-bold mb-2">SNAFU Explained</h3>
-                    <p>
-                      SNAFU is a military acronym that stands for "Situation Normal: All F***ed Up." 
-                      It originated during WWII, reflecting how chaos was the normal state of affairs.
-                    </p>
-                    <p>
-                      In the context of websites, it's sadly still relevant - most sites are in a 
-                      state of SEO chaos. That's where we come in: we transform this "normal" 
-                      situation into exceptional results.
-                    </p>
+                  <div className="text-white space-y-4 p-8 h-full flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-4 text-yellow-300">SNAFU Explained</h3>
+                      <p className="text-gray-200 leading-relaxed">
+                        SNAFU is a military acronym that stands for "Situation Normal: All F***ed Up." 
+                        It originated during WWII, reflecting how chaos was the normal state of affairs.
+                      </p>
+                      <p className="text-gray-200 leading-relaxed mt-4">
+                        In the context of websites, it's sadly still relevant - most sites are in a 
+                        state of SEO chaos. That's where we come in: we transform this "normal" 
+                        situation into exceptional results.
+                      </p>
+                    </div>
+                    <div className="text-sm text-yellow-200 text-center animate-bounce">
+                      Click to flip back →
+                    </div>
                   </div>
                 </div>
               </Card>
