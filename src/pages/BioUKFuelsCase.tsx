@@ -1,7 +1,6 @@
 import Navigation from "../components/Navigation";
 import Breadcrumbs from "../components/Breadcrumbs";
 import CaseHero from "../components/case-studies/CaseHero";
-import CaseStats from "../components/case-studies/CaseStats";
 import CaseContent from "../components/case-studies/CaseContent";
 import { Link } from "react-router-dom";
 import { ChartLine, Globe, Percent } from "lucide-react";
@@ -26,17 +25,17 @@ const BioUKFuelsCase = () => {
 
   const stats = [
     {
-      icon: <ChartLine className="text-green-400" size={32} />,
+      icon: <ChartLine className="text-green-500" size={32} />,
       stat: "4.5K+",
       label: "Monthly Visitors"
     },
     {
-      icon: <Globe className="text-green-400" size={32} />,
+      icon: <Globe className="text-green-500" size={32} />,
       stat: "437",
       label: "Referring Domains"
     },
     {
-      icon: <Percent className="text-green-400" size={32} />,
+      icon: <Percent className="text-green-500" size={32} />,
       stat: "100%",
       label: "Non-Branded Traffic"
     }
@@ -55,7 +54,6 @@ const BioUKFuelsCase = () => {
             image="/lovable-uploads/12058831-a3de-4815-a87e-dbf5c93b0263.png"
           />
 
-          {/* Custom Stats Section */}
           <div className="grid md:grid-cols-3 gap-8 animate-fade-up my-16">
             {stats.map((item, index) => (
               <div 
@@ -69,22 +67,21 @@ const BioUKFuelsCase = () => {
             ))}
           </div>
 
-          {/* Traffic Analysis Section */}
           <div className="grid md:grid-cols-2 gap-8 my-16">
             <div className="rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 p-8">
               <h3 className="text-2xl font-bold mb-6">Traffic Distribution</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-gray-300">UK Traffic</span>
-                  <span className="text-green-400">42%</span>
+                  <span className="text-green-500">42%</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-300">US Traffic</span>
-                  <span className="text-green-400">42%</span>
+                  <span className="text-green-500">42%</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-300">Other Regions</span>
-                  <span className="text-green-400">16%</span>
+                  <span className="text-green-500">16%</span>
                 </div>
               </div>
             </div>
@@ -94,15 +91,15 @@ const BioUKFuelsCase = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-gray-300">Authority Score</span>
-                  <span className="text-green-400">23</span>
+                  <span className="text-green-500">23</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-300">Keywords</span>
-                  <span className="text-green-400">1K+ Total</span>
+                  <span className="text-green-500">1K+ Total</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-300">Monthly Growth</span>
-                  <span className="text-green-400">10.9%</span>
+                  <span className="text-green-500">10.9%</span>
                 </div>
               </div>
             </div>
@@ -114,7 +111,6 @@ const BioUKFuelsCase = () => {
             results={results}
           />
 
-          {/* Testimonial */}
           <div className="bg-white/5 rounded-2xl p-8 animate-fade-up mt-16">
             <blockquote className="text-xl text-gray-300 italic mb-6">
               "Through strategic SEO and technical excellence, we've achieved consistent organic growth and established ourselves as the industry leader in cooking oil collection. The focus on non-branded traffic has been particularly valuable for our lead generation efforts."
@@ -127,11 +123,10 @@ const BioUKFuelsCase = () => {
             </div>
           </div>
 
-          {/* CTA */}
           <div className="text-center mt-16 animate-fade-up">
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-green-500 rounded-full hover:opacity-90 transition-opacity"
+              className="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-700 rounded-full transition-colors"
             >
               Transform Your Business Today
             </Link>
