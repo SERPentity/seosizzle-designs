@@ -113,12 +113,12 @@ const BioUKFuelsCase = () => {
 
           <div className="bg-white/5 rounded-2xl p-8 animate-fade-up mt-16">
             <blockquote className="text-xl text-gray-300 italic mb-6">
-              "Through strategic SEO and technical excellence, we've achieved consistent organic growth and established ourselves as the industry leader in cooking oil collection. The focus on non-branded traffic has been particularly valuable for our lead generation efforts."
+              "Working with Martin and His team has propelled Bio UK Fuels online presence to new heights, reaching over 10k visitors per month and generating over 4000 leads from new customers in 12 months"
             </blockquote>
             <div className="flex items-center">
               <div className="ml-4">
-                <div className="font-semibold">Operations Director</div>
-                <div className="text-gray-400">Bio UK Fuels</div>
+                <div className="font-semibold">Tony Reynolds</div>
+                <div className="text-gray-400">Director, Bio UK Fuels</div>
               </div>
             </div>
           </div>
