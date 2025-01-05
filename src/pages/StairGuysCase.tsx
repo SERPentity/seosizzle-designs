@@ -32,7 +32,7 @@ const StairGuysCase = () => {
           <CaseHero 
             title="Revolutionizing Online Presence - The Stair Guys Journey"
             description="How we took The Stair Guys from zero to ranking for over 350 keywords in 6 months"
-            image="https://images.unsplash.com/photo-1439337153520-7082a56a81f4?auto=format&fit=crop&w=1400&q=80"
+            image="/lovable-uploads/d2a9804f-afdf-46e7-bd6e-7213b2384dbb.png"
           />
 
           <CaseStats />
