@@ -29,7 +29,7 @@ const About = () => {
               Real Business Experience. Real SEO Results.
             </p>
             <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500 mb-4 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-              From Chaos to Success
+              Transforming SEO Performance
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
               We transform underperforming websites into SEO powerhouses. While 99% of websites never make it to page one, 
