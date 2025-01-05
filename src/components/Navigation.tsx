@@ -7,7 +7,8 @@ import MobileMenu from "./MobileMenu";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSEOOpen, setIsSEOOpen] = useState(false);
+  const [isWebDesignOpen, setIsWebDesignOpen] = useState(false);
 
   return (
     <nav className="fixed w-full z-50">
@@ -35,7 +36,19 @@ const Navigation = () => {
                 </Link>
               ))}
               
-              <ServicesDropdown isOpen={isServicesOpen} setIsOpen={setIsServicesOpen} />
+              <ServicesDropdown 
+                type="seo"
+                isOpen={isSEOOpen} 
+                setIsOpen={setIsSEOOpen}
+                onOpen={() => setIsWebDesignOpen(false)}
+              />
+              
+              <ServicesDropdown 
+                type="webdesign"
+                isOpen={isWebDesignOpen} 
+                setIsOpen={setIsWebDesignOpen}
+                onOpen={() => setIsSEOOpen(false)}
+              />
             </div>
 
             {/* Mobile Navigation Button */}
