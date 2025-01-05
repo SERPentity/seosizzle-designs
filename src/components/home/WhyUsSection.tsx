@@ -1,5 +1,6 @@
 import { Shield, Target, Zap, ChartBarIcon, Frown, Smile } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
+import { Link } from "react-router-dom";
 
 const WhyUsSection = () => {
   return (
@@ -8,6 +9,12 @@ const WhyUsSection = () => {
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl font-bold text-white mb-4">Why "SEOsnafu"?</h2>
           <p className="text-xl text-gray-300">Because the state of most websites' rankings is... well, let's just say there's room for improvement!</p>
+          <Link 
+            to="/about" 
+            className="inline-block mt-4 text-blue-400 hover:text-blue-300 transition-colors duration-300"
+          >
+            Curious about the meaning behind SNAFU? Click to find out →
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
