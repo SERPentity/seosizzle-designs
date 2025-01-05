@@ -2,9 +2,9 @@ import { Helmet } from "react-helmet";
 import Navigation from "../../../components/Navigation";
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import LondonHero from "../../../components/locations/seo/LondonHero";
-import LondonTestimonials from "../../../components/locations/seo/LondonTestimonials";
-import { ArrowRight, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import LondonClientTestimonials from "../../../components/locations/seo/LondonClientTestimonials";
+import CaseStudiesLink from "../../../components/locations/seo/CaseStudiesLink";
+import { MapPin } from "lucide-react";
 
 const LondonSEO = () => {
   return (
@@ -68,7 +68,7 @@ const LondonSEO = () => {
         </div>
       </section>
 
-      <LondonTestimonials />
+      <LondonClientTestimonials />
 
       {/* Core SEO Services */}
       <section className="py-20 relative">
@@ -222,24 +222,7 @@ const LondonSEO = () => {
         </div>
       </section>
       
-      {/* CTA Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10 inline-block">
-            <h2 className="text-2xl font-bold mb-4">Ready to Dominate London's Search Results?</h2>
-            <p className="text-lg text-gray-300 mb-6">
-              Get a comprehensive SEO audit of your website and discover opportunities for growth
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:opacity-90 transition-all duration-300"
-            >
-              Start Your SEO Journey
-              <ArrowRight className="ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CaseStudiesLink />
     </div>
   );
 };
