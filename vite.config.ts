@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
     ssr({
       prerender: true,
       includeAssetsImportedByServer: true,
-      extensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+      extensions: ['.page.tsx', '.page.ts', '.page.jsx', '.page.js'],
     }),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
