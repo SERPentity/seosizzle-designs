@@ -1,6 +1,7 @@
 import { ArrowRight, Search, Globe, Users, ChartBar, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
+import ServicesSection from "../components/home/ServicesSection";
 import { useState, useEffect } from "react";
 
 const Index = () => {
@@ -23,7 +24,7 @@ const Index = () => {
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <Navigation />
       
-      {/* Hero Section with Dynamic Background */}
+      {/* Hero Section */}
       <section className="relative h-screen">
         {/* Background Images */}
         {backgroundImages.map((image, index) => (
@@ -108,49 +109,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-gradient-to-b from-black to-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-xl text-gray-300">Comprehensive digital solutions for your business</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Search className="text-blue-400" size={32} />,
-                title: "SEO Optimization",
-                description: "Boost your search rankings with data-driven SEO strategies"
-              },
-              {
-                icon: <Globe className="text-purple-400" size={32} />,
-                title: "Web Design",
-                description: "Beautiful, responsive websites that convert visitors"
-              },
-              {
-                icon: <ChartBar className="text-pink-400" size={32} />,
-                title: "Analytics & Reporting",
-                description: "Detailed insights into your website's performance"
-              }
-            ].map((service, index) => (
-              <div 
-                key={index}
-                className="group p-8 rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-2xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <Link 
-                  to="/services" 
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServicesSection />
 
       {/* Stats Section */}
       <section className="py-24 bg-primary">
