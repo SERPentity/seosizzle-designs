@@ -1,7 +1,20 @@
 import Navigation from "../components/Navigation";
 import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 const About = () => {
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = (data: any) => {
+    console.log(data);
+    toast.success("Message sent successfully!");
+    reset();
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
@@ -74,6 +87,42 @@ const About = () => {
               on rankings – I focus on generating real leads and revenue for your business. This comprehensive approach 
               is why my clients consistently achieve outstanding results.
             </p>
+          </div>
+
+          {/* Contact Form Section */}
+          <div className="mt-16 backdrop-blur-sm bg-white/5 border border-white/10 p-8 rounded-2xl animate-fade-up">
+            <h2 className="text-2xl font-bold mb-6 text-center">Get in Touch</h2>
+            <form onSubmit={handleSubmit(onSubmit)} className="max-w-2xl mx-auto space-y-6">
+              <div>
+                <Input
+                  {...register("name")}
+                  placeholder="Your Name"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                />
+              </div>
+              <div>
+                <Input
+                  {...register("email")}
+                  type="email"
+                  placeholder="Your Email"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                />
+              </div>
+              <div>
+                <Textarea
+                  {...register("message")}
+                  placeholder="Your Message"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                  rows={4}
+                />
+              </div>
+              <Button
+                type="submit"
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90"
+              >
+                Send Message
+              </Button>
+            </form>
           </div>
         </div>
       </div>
