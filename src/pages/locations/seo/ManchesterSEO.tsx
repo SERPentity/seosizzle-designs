@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import Navigation from "../../../components/Navigation";
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import ManchesterHero from "../../../components/locations/seo/ManchesterHero";
-import ManchesterTestimonials from "../../../components/locations/seo/ManchesterTestimonials";
 import CaseStudiesLink from "../../../components/locations/seo/CaseStudiesLink";
 import { MapPin } from "lucide-react";
 
@@ -66,8 +65,6 @@ const ManchesterSEO = () => {
           </div>
         </div>
       </section>
-
-      <ManchesterTestimonials />
 
       {/* Core SEO Services */}
       <section className="py-20 relative">
