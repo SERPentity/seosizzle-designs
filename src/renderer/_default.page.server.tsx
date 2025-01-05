@@ -18,7 +18,6 @@ export async function render(pageContext: PageContextServer) {
     </PageShell>
   );
 
-  // Get head tags from React Helmet
   const helmet = Helmet.renderStatic();
 
   const documentHtml = escapeInject`<!DOCTYPE html>
@@ -54,7 +53,6 @@ export async function render(pageContext: PageContextServer) {
   return {
     documentHtml,
     pageContext: {
-      // This helps search engines understand the page's title
       title: helmet.title.toString() || 'SEO Snafu | Expert SEO & Web Design Services'
     }
   };

@@ -1,11 +1,10 @@
-import React from 'react';
 import { PageContextProvider } from '../renderer/usePageContext';
 import Index from './Index';
 import type { PageContext } from '../renderer/types';
 import { Helmet } from 'react-helmet';
 
-export function Page() {
-  return (
+const pageContext: PageContext = {
+  Page: () => (
     <>
       <Helmet>
         <title>SEO Snafu | Expert SEO & Web Design Services</title>
@@ -16,12 +15,7 @@ export function Page() {
       </Helmet>
       <Index />
     </>
-  );
-}
-
-// This ensures proper typing for the page context
-const pageContext: PageContext = {
-  Page,
+  ),
   pageProps: {},
   urlPathname: '/',
   exports: {
@@ -32,10 +26,4 @@ const pageContext: PageContext = {
   }
 };
 
-export default function IndexPage() {
-  return (
-    <PageContextProvider pageContext={pageContext}>
-      <Page />
-    </PageContextProvider>
-  );
-}
+export default pageContext;
