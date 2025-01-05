@@ -1,42 +1,20 @@
-import { Helmet } from "react-helmet";
 import Navigation from "../../components/Navigation";
+import { Building2, Users, BarChart, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 const ServiceBusiness = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Service Business Website Design UK | Professional Service Websites</title>
-        <meta 
-          name="description" 
-          content="Professional website design for service businesses. Custom service pages, booking systems, and lead generation features. Convert visitors into clients." 
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://seosnafu.co.uk/web-design/service-business" />
-        
-        <meta property="og:title" content="Service Business Website Design UK | Professional Service Websites" />
-        <meta property="og:description" content="Professional website design for service businesses. Custom service pages, booking systems, and lead generation features." />
-        <meta property="og:url" content="https://seosnafu.co.uk/web-design/service-business" />
+        <title>Service Business Website Design | Professional Web Solutions</title>
+        <meta name="description" content="Custom website design solutions for service-based businesses. Create a professional online presence that attracts clients and grows your service business." />
+        <meta property="og:title" content="Service Business Website Design | Professional Web Solutions" />
+        <meta property="og:description" content="Custom website design solutions for service-based businesses. Create a professional online presence that attracts clients and grows your service business." />
+        <meta property="og:image" content="/lovable-uploads/photo-1649972904349-6e44c42644a7.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_GB" />
-        
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Service Business Website Design",
-              "description": "Professional website design services for service-based businesses",
-              "provider": {
-                "@type": "Organization",
-                "name": "SEO Snafu",
-                "url": "https://seosnafu.co.uk"
-              },
-              "areaServed": "United Kingdom",
-              "serviceType": "Service Business Web Design"
-            }
-          `}
-        </script>
+        <link rel="canonical" href="https://seosizzle.com/web-design/service-business" />
       </Helmet>
 
       <Navigation />

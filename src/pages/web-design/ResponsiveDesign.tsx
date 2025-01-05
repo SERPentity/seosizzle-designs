@@ -1,42 +1,20 @@
-import { Helmet } from "react-helmet";
 import Navigation from "../../components/Navigation";
+import { Smartphone, Laptop, Monitor, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 const ResponsiveDesign = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Responsive Web Design Services UK | Mobile-First Design</title>
-        <meta 
-          name="description" 
-          content="Expert responsive web design services ensuring your website looks perfect on all devices. Mobile-first approach, seamless user experience, and modern design principles." 
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://seosnafu.co.uk/web-design/responsive-design" />
-        
-        <meta property="og:title" content="Responsive Web Design Services UK | Mobile-First Design" />
-        <meta property="og:description" content="Expert responsive web design services ensuring your website looks perfect on all devices. Mobile-first approach, seamless user experience." />
-        <meta property="og:url" content="https://seosnafu.co.uk/web-design/responsive-design" />
+        <title>Responsive Web Design Services | Mobile-First Development</title>
+        <meta name="description" content="Create websites that look and perform beautifully across all devices. Expert responsive web design services focused on mobile-first development and optimal user experience." />
+        <meta property="og:title" content="Responsive Web Design Services | Mobile-First Development" />
+        <meta property="og:description" content="Create websites that look and perform beautifully across all devices. Expert responsive web design services focused on mobile-first development and optimal user experience." />
+        <meta property="og:image" content="/lovable-uploads/photo-1488590528505-98d2b5aba04b.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_GB" />
-        
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Responsive Web Design Services",
-              "description": "Expert responsive web design services ensuring your website looks perfect on all devices",
-              "provider": {
-                "@type": "Organization",
-                "name": "SEO Snafu",
-                "url": "https://seosnafu.co.uk"
-              },
-              "areaServed": "United Kingdom",
-              "serviceType": "Responsive Web Design"
-            }
-          `}
-        </script>
+        <link rel="canonical" href="https://seosizzle.com/web-design/responsive-design" />
       </Helmet>
 
       <Navigation />

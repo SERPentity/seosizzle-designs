@@ -1,4 +1,6 @@
 import Navigation from "../../components/Navigation";
+import { ArrowRight, MapPin, Search, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Breadcrumbs from "../../components/Breadcrumbs";
 

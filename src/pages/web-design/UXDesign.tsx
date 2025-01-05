@@ -1,42 +1,20 @@
-import { Helmet } from "react-helmet";
 import Navigation from "../../components/Navigation";
+import { Users, Target, BarChart3, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 const UXDesign = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>UX Design Services UK | User Experience Design</title>
-        <meta 
-          name="description" 
-          content="Professional UX design services focused on creating intuitive, user-friendly websites. Data-driven design decisions, user research, and conversion optimization." 
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://seosnafu.co.uk/web-design/ux-design" />
-        
-        <meta property="og:title" content="UX Design Services UK | User Experience Design" />
-        <meta property="og:description" content="Professional UX design services focused on creating intuitive, user-friendly websites. Data-driven design decisions and conversion optimization." />
-        <meta property="og:url" content="https://seosnafu.co.uk/web-design/ux-design" />
+        <title>UX Design Services | User Experience Optimization</title>
+        <meta name="description" content="Create intuitive, user-centered designs that delight and convert. Expert UX design services focused on improving user satisfaction and driving business results." />
+        <meta property="og:title" content="UX Design Services | User Experience Optimization" />
+        <meta property="og:description" content="Create intuitive, user-centered designs that delight and convert. Expert UX design services focused on improving user satisfaction and driving business results." />
+        <meta property="og:image" content="/lovable-uploads/photo-1487058792275-0ad4aaf24ca7.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_GB" />
-        
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "UX Design Services",
-              "description": "Professional UX design services focused on creating intuitive, user-friendly websites",
-              "provider": {
-                "@type": "Organization",
-                "name": "SEO Snafu",
-                "url": "https://seosnafu.co.uk"
-              },
-              "areaServed": "United Kingdom",
-              "serviceType": "UX Design"
-            }
-          `}
-        </script>
+        <link rel="canonical" href="https://seosizzle.com/web-design/ux-design" />
       </Helmet>
 
       <Navigation />

@@ -1,52 +1,22 @@
-import { Helmet } from "react-helmet";
 import Navigation from "../../components/Navigation";
+import { Monitor, Paintbrush, Code, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 const WebDesign = () => {
-  const basePrice = "£999";
-  
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Web Design Services UK | Professional Website Design</title>
-        <meta 
-          name="description" 
-          content="Professional web design services in the UK. Custom website design, responsive development, and SEO-friendly websites that convert. Free web design consultation available." 
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://seosnafu.co.uk/web-design" />
-        
-        <meta property="og:title" content="Web Design Services UK | Professional Website Design" />
-        <meta property="og:description" content="Professional web design services in the UK. Custom website design, responsive development, and SEO-friendly websites that convert." />
-        <meta property="og:url" content="https://seosnafu.co.uk/web-design" />
+        <title>Professional Web Design Services | Custom Website Development</title>
+        <meta name="description" content="Transform your online presence with our professional web design services. Custom website development, responsive design, and user-focused solutions for businesses." />
+        <meta property="og:title" content="Professional Web Design Services | Custom Website Development" />
+        <meta property="og:description" content="Transform your online presence with our professional web design services. Custom website development, responsive design, and user-focused solutions for businesses." />
+        <meta property="og:image" content="/lovable-uploads/photo-1486312338219-ce68d2c6f44d.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_GB" />
-        
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Web Design Services",
-              "description": "Professional web design services in the UK",
-              "provider": {
-                "@type": "Organization",
-                "name": "SEO Snafu",
-                "url": "https://seosnafu.co.uk"
-              },
-              "areaServed": "United Kingdom",
-              "serviceType": "Web Design",
-              "offers": {
-                "@type": "Offer",
-                "price": "${basePrice.replace('£', '')}",
-                "priceCurrency": "GBP",
-                "availability": "https://schema.org/InStock"
-              }
-            }
-          `}
-        </script>
+        <link rel="canonical" href="https://seosizzle.com/web-design" />
       </Helmet>
-
+      
       <Navigation />
       <Breadcrumbs />
       
