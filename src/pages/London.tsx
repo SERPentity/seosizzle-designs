@@ -1,11 +1,13 @@
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const London = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      <Breadcrumbs />
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">

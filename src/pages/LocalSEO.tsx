@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import Breadcrumbs from "../components/Breadcrumbs";
 import { CheckCircle, ArrowRight, MapPin, Star, Search, Users, Building2, BarChart } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -60,8 +61,9 @@ const LocalSEO = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
+      <Breadcrumbs />
       
-      <main className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <main className="pt-16 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <section className="text-center mb-16 animate-fade-up">
             <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-6">
