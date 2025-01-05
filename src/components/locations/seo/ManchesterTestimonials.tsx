@@ -3,14 +3,14 @@ import { Award } from "lucide-react";
 const ManchesterTestimonials = () => {
   const testimonials = [
     {
-      quote: "Their SEO strategies have revolutionized our online presence in Manchester. We've seen a 180% increase in organic traffic since working with them.",
-      author: "Michael Roberts",
-      role: "CEO, Manchester Digital Solutions"
+      quote: "Working with this SEO team transformed our Manchester-based property management business. Their local SEO expertise helped us dominate the property management searches in Greater Manchester.",
+      author: "David Thompson",
+      role: "Director, Thompson Property Management Ltd"
     },
     {
-      quote: "The most effective SEO agency in Manchester. They helped us achieve first page rankings for all our key services within 6 months.",
-      author: "Emma Wilson",
-      role: "Marketing Director, Northern Tech Hub"
+      quote: "As a Manchester startup, we needed to establish our online presence quickly. Their SEO strategies helped us achieve first-page rankings for our key services within the first 6 months.",
+      author: "Sarah Mitchell",
+      role: "Founder, Digital Innovations Manchester"
     }
   ];
 
