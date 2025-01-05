@@ -51,11 +51,6 @@ export const serviceMenuItems = [
         description: "Build authority with quality backlinks",
         path: "/link-building",
       },
-      {
-        name: "London SEO Services",
-        description: "Expert SEO services in London",
-        path: "/seo-services/london",
-      },
     ],
   },
   {
@@ -85,11 +80,6 @@ export const serviceMenuItems = [
         name: "Service Business",
         description: "Websites for service providers",
         path: "/service-business",
-      },
-      {
-        name: "London Web Design",
-        description: "Professional web design in London",
-        path: "/web-design/london",
       },
     ],
   },
