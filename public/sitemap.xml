@@ -1,116 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
     <loc>https://seosnafu.co.uk/</loc>
     <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/services</loc>
     <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/about</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/contact</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/locations</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
+
   <!-- SEO Services -->
   <url>
     <loc>https://seosnafu.co.uk/seo</loc>
     <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/seo/technical-seo</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/seo/local-seo</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/seo/content-strategy</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/seo/audit</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/seo/competitor-analysis</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/seo/link-building</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/seo/social-media</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
+
   <!-- Web Design -->
   <url>
     <loc>https://seosnafu.co.uk/web-design</loc>
     <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/web-design/responsive-design</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/web-design/ux-design</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/web-design/ecommerce</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/web-design/service-business</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
+
   <!-- Case Studies -->
   <url>
     <loc>https://seosnafu.co.uk/case-studies</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/case-studies/stair-guys-ltd</loc>
     <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/case-studies/bio-uk-fuels</loc>
     <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
+
   <!-- Location Pages -->
   <url>
     <loc>https://seosnafu.co.uk/locations/seo/london</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/locations/seo/birmingham</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/locations/seo/manchester</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
+  </url>
+  <url>
+    <loc>https://seosnafu.co.uk/locations/seo/bristol</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
+  </url>
+  <url>
+    <loc>https://seosnafu.co.uk/locations/seo/sheffield</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
+  </url>
+  <url>
+    <loc>https://seosnafu.co.uk/locations/seo/leeds</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
+  </url>
+  <url>
+    <loc>https://seosnafu.co.uk/locations/seo/liverpool</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
+  </url>
+  <url>
+    <loc>https://seosnafu.co.uk/locations/seo/newcastle</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
+  </url>
+  <url>
+    <loc>https://seosnafu.co.uk/locations/seo/southampton</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/locations/web-design/london</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
+
   <!-- Legal Pages -->
   <url>
     <loc>https://seosnafu.co.uk/privacy-policy</loc>
     <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
   <url>
     <loc>https://seosnafu.co.uk/terms-of-service</loc>
     <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+    <lastmod>2024-03-14</lastmod>
   </url>
 </urlset>

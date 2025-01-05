@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://seosnafu.co.uk/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Disallow patterns
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*?*
+
+# Allow patterns
+Allow: /*.html$
+Allow: /*.htm$
+Allow: /*.php$
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+Allow: /public/
