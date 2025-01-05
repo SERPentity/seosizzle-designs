@@ -24,7 +24,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-gradient-to-b from-black to-primary">
+    <section className="pt-32 pb-16 sm:py-24 bg-gradient-to-b from-black to-primary mt-[-4rem] sm:mt-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">SEO-First Approach</h2>
