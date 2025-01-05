@@ -1,8 +1,10 @@
-import Navigation from "../../../components/Navigation";
-import { ArrowRight, CheckCircle, MapPin, Trophy, Users, Search, Star } from "lucide-react";
-import { Link } from "react-router-dom";
-import Breadcrumbs from "../../../components/Breadcrumbs";
 import { Helmet } from "react-helmet";
+import Navigation from "../../../components/Navigation";
+import Breadcrumbs from "../../../components/Breadcrumbs";
+import LondonHero from "../../../components/locations/seo/LondonHero";
+import LondonTestimonials from "../../../components/locations/seo/LondonTestimonials";
+import { ArrowRight, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const LondonSEO = () => {
   return (
@@ -35,55 +37,61 @@ const LondonSEO = () => {
       <Navigation />
       <Breadcrumbs />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/10" />
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center animate-fade-up">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-              London SEO Services | Expert SEO Agency
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Award-winning London SEO agency helping businesses dominate search rankings with data-driven strategies and proven results. Serving Central London, Greater London, and surrounding areas.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Get Your Free SEO Audit
-              <ArrowRight className="ml-2" size={20} />
-            </Link>
+      <LondonHero />
+
+      {/* Case Studies Preview */}
+      <section className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">Featured London SEO Success Stories</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="group relative overflow-hidden rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src="/lovable-uploads/12058831-a3de-4815-a87e-dbf5c93b0263.png"
+                  alt="Bio UK Fuels Case Study"
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <div className="text-sm text-blue-400 mb-2">Waste Management</div>
+                <h3 className="text-2xl font-bold mb-3">Bio UK Fuels</h3>
+                <p className="text-gray-300 mb-4">How we helped the UK's leading cooking oil recycling company achieve 312% growth in organic leads and nationwide coverage</p>
+                <Link
+                  to="/case-studies/bio-uk-fuels"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  View Case Study
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src="/lovable-uploads/e8dce3f1-6ee8-44ed-a3a1-e4cd46489d54.png"
+                  alt="The Stair Guys Ltd Case Study"
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <div className="text-sm text-blue-400 mb-2">Home Improvement</div>
+                <h3 className="text-2xl font-bold mb-3">The Stair Guys Ltd</h3>
+                <p className="text-gray-300 mb-4">How we helped a local stair installation company achieve #1 rankings and increase their keyword visibility by 350+ terms</p>
+                <Link
+                  to="/case-studies/stair-guys-ltd"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  View Case Study
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10 text-center">
-              <Search className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">9.4M+</h3>
-              <p className="text-gray-300">Monthly Local Searches</p>
-            </div>
-            <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10 text-center">
-              <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">8.9M</h3>
-              <p className="text-gray-300">London Population</p>
-            </div>
-            <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10 text-center">
-              <Trophy className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">1M+</h3>
-              <p className="text-gray-300">London Businesses</p>
-            </div>
-            <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10 text-center">
-              <Star className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">98%</h3>
-              <p className="text-gray-300">Client Satisfaction</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <LondonTestimonials />
 
       {/* Core SEO Services */}
       <section className="py-20 relative">
@@ -175,7 +183,7 @@ const LondonSEO = () => {
           </div>
         </div>
       </section>
-
+      
       {/* London Market Insights */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -207,7 +215,7 @@ const LondonSEO = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Areas We Serve */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -235,7 +243,7 @@ const LondonSEO = () => {
           </div>
         </div>
       </section>
-
+      
       {/* FAQ Section for SEO */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -268,7 +276,7 @@ const LondonSEO = () => {
           </div>
         </div>
       </section>
-
+      
       {/* CTA Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
