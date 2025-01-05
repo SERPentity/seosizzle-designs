@@ -7,9 +7,9 @@ const Index = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const backgroundImages = [
-    "https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&fit=crop&w=2000&q=80",
-    "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?auto=format&fit=crop&w=2000&q=80",
-    "https://images.unsplash.com/photo-1551038247-3d9af20df552?auto=format&fit=crop&w=2000&q=80"
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80", // SEO analytics image
+    "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80", // Web design workspace
+    "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=2000&q=80"  // Digital marketing
   ];
 
   useEffect(() => {
@@ -48,36 +48,57 @@ const Index = () => {
           <div className="space-y-8 max-w-4xl">
             {/* Greeting */}
             <p className="text-lg text-gray-300 animate-fade-up">
-              👋 Hi, we're a creative studio
+              Transform Your Online Presence
             </p>
             
             {/* Main Heading */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">
-                A web design and branding agency
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+                Expert SEO & Web Design Solutions
               </span>
             </h1>
+
+            {/* Subheading */}
+            <p className="text-xl text-gray-300 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+              Boost your rankings and captivate your audience with stunning designs that convert
+            </p>
             
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               <Link
-                to="/work"
+                to="/services"
                 className="group relative px-8 py-4 bg-white text-black rounded-full overflow-hidden hover:scale-105 transition-all duration-300"
               >
                 <span className="relative z-10 flex items-center">
-                  View our work
+                  Explore Services
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-gray-200 to-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
               
               <Link
                 to="/contact"
                 className="group px-8 py-4 border border-white/30 rounded-full hover:bg-white/10 transition-all duration-300 flex items-center"
               >
-                Meet the team
+                Get Free SEO Audit
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
+            </div>
+
+            {/* Key Features */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 animate-fade-up" style={{ animationDelay: "0.5s" }}>
+              <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
+                <h3 className="text-xl font-semibold mb-2">SEO Excellence</h3>
+                <p className="text-gray-400">Data-driven strategies to boost your search rankings</p>
+              </div>
+              <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
+                <h3 className="text-xl font-semibold mb-2">Creative Design</h3>
+                <p className="text-gray-400">Stunning websites that capture your brand essence</p>
+              </div>
+              <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
+                <h3 className="text-xl font-semibold mb-2">Results Driven</h3>
+                <p className="text-gray-400">Measurable improvements in traffic and conversions</p>
+              </div>
             </div>
           </div>
         </div>
