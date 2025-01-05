@@ -1,7 +1,11 @@
-import { ArrowRight, Search, Globe, Users, ChartBar, Award } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import ServicesSection from "../components/home/ServicesSection";
+import WhyUsSection from "../components/home/WhyUsSection";
+import StatsSection from "../components/home/StatsSection";
+import TestimonialsSection from "../components/home/TestimonialsSection";
+import CTASection from "../components/home/CTASection";
 import { useState, useEffect } from "react";
 
 const Index = () => {
@@ -47,7 +51,7 @@ const Index = () => {
         {/* Main Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
           <div className="space-y-8 max-w-4xl">
-            {/* Greeting */}
+            {/* Hero Content */}
             <p className="text-lg text-gray-300 animate-fade-up">
               Transform Your Online Presence
             </p>
@@ -111,93 +115,17 @@ const Index = () => {
       {/* Services Section */}
       <ServicesSection />
 
+      {/* Why Us Section */}
+      <WhyUsSection />
+
       {/* Stats Section */}
-      <section className="py-24 bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { number: "500+", label: "Clients Served" },
-              { number: "98%", label: "Client Satisfaction" },
-              { number: "250%", label: "Average ROI" },
-              { number: "24/7", label: "Support" }
-            ].map((stat, index) => (
-              <div 
-                key={index}
-                className="text-center p-6 rounded-lg backdrop-blur-sm bg-white/5 border border-white/10"
-              >
-                <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <StatsSection />
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-b from-primary to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Client Success Stories</h2>
-            <p className="text-xl text-gray-300">What our clients say about us</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                quote: "SEOsnafu transformed our online presence. Our traffic increased by 200% in just 3 months!",
-                author: "Sarah Johnson",
-                role: "Marketing Director"
-              },
-              {
-                quote: "The best investment we've made. Their web design work is outstanding and the results speak for themselves.",
-                author: "Michael Chen",
-                role: "CEO"
-              },
-              {
-                quote: "Professional, responsive, and incredibly skilled. They delivered beyond our expectations.",
-                author: "Emma Williams",
-                role: "E-commerce Manager"
-              }
-            ].map((testimonial, index) => (
-              <div 
-                key={index}
-                className="p-8 rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10"
-              >
-                <div className="mb-6">
-                  <Award className="text-yellow-400" size={32} />
-                </div>
-                <blockquote className="text-lg text-gray-300 mb-6">"{testimonial.quote}"</blockquote>
-                <div className="text-white font-semibold">{testimonial.author}</div>
-                <div className="text-gray-400">{testimonial.role}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialsSection />
 
       {/* CTA Section */}
-      <section className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Grow Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Get started with a free SEO audit and discover how we can help you achieve your digital goals
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-white rounded-full hover:opacity-90 transition-opacity"
-            >
-              Get Your Free SEO Audit
-            </Link>
-            <Link
-              to="/services"
-              className="px-8 py-4 border border-white/30 text-white rounded-full hover:bg-white/10 transition-all duration-300"
-            >
-              View All Services
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection />
     </div>
   );
 };
