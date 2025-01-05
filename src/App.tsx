@@ -23,6 +23,7 @@ import EcommerceDesign from "./pages/EcommerceDesign";
 import ServiceBusiness from "./pages/ServiceBusiness";
 import CaseStudies from "./pages/CaseStudies";
 import StairGuysCase from "./pages/StairGuysCase";
+import BioUKFuelsCase from "./pages/BioUKFuelsCase";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/service-business" element={<ServiceBusiness />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/stair-guys-ltd" element={<StairGuysCase />} />
+          <Route path="/case-studies/bio-uk-fuels" element={<BioUKFuelsCase />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

@@ -12,13 +12,12 @@ const CaseStudies = () => {
       image: "https://images.unsplash.com/photo-1439337153520-7082a56a81f4?auto=format&fit=crop&w=800&q=80",
       slug: "stair-guys-ltd"
     },
-    // Placeholder for future case studies
     {
-      title: "Coming Soon",
-      description: "More success stories from our valued clients",
-      industry: "Various",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
-      slug: ""
+      title: "Bio UK Fuels",
+      description: "How we helped the UK's leading cooking oil recycling company achieve 312% growth in organic leads and nationwide coverage",
+      industry: "Waste Management",
+      image: "/lovable-uploads/12058831-a3de-4815-a87e-dbf5c93b0263.png",
+      slug: "bio-uk-fuels"
     }
   ];
 
