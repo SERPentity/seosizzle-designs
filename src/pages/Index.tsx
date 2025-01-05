@@ -91,18 +91,18 @@ const Index = () => {
             </div>
 
             {/* Key Features */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 animate-fade-up" style={{ animationDelay: "0.5s" }}>
-              <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
-                <h3 className="text-xl font-semibold mb-2">SEO Excellence</h3>
-                <p className="text-gray-400">Data-driven strategies to boost your search rankings</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 sm:mt-20 animate-fade-up" style={{ animationDelay: "0.5s" }}>
+              <div className="backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">SEO Excellence</h3>
+                <p className="text-sm sm:text-base text-gray-400">Data-driven strategies to boost your search rankings</p>
               </div>
-              <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
-                <h3 className="text-xl font-semibold mb-2">Creative Design</h3>
-                <p className="text-gray-400">Stunning websites that capture your brand essence</p>
+              <div className="backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">Creative Design</h3>
+                <p className="text-sm sm:text-base text-gray-400">Stunning websites that capture your brand essence</p>
               </div>
-              <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
-                <h3 className="text-xl font-semibold mb-2">Results Driven</h3>
-                <p className="text-gray-400">Measurable improvements in traffic and conversions</p>
+              <div className="backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-2xl border border-white/10">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">Results Driven</h3>
+                <p className="text-sm sm:text-base text-gray-400">Measurable improvements in traffic and conversions</p>
               </div>
             </div>
           </div>
