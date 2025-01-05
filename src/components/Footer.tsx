@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone, Facebook, Twitter, Linkedin, Globe } from "lucide-react";
+import { Mail, Phone, Facebook, Twitter, Linkedin, Globe } from "lucide-react";
 import { seoServices, webDesignServices } from "../data/serviceMenuData";
 
 const Footer = () => {
@@ -15,18 +15,14 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">SEO Sizzle Designs</h3>
             <p className="text-gray-400">Transforming businesses through expert SEO and stunning web design solutions.</p>
             <div className="space-y-2">
-              <a href="mailto:info@seosizzle.com" className="flex items-center text-gray-400 hover:text-blue-400">
+              <a href="mailto:seosnafu@gmail.com" className="flex items-center text-gray-400 hover:text-blue-400">
                 <Mail className="h-4 w-4 mr-2" />
-                info@seosizzle.com
+                seosnafu@gmail.com
               </a>
-              <a href="tel:+442012345678" className="flex items-center text-gray-400 hover:text-blue-400">
+              <a href="tel:07590505601" className="flex items-center text-gray-400 hover:text-blue-400">
                 <Phone className="h-4 w-4 mr-2" />
-                +44 20 1234 5678
+                07590505601
               </a>
-              <div className="flex items-center text-gray-400">
-                <MapPin className="h-4 w-4 mr-2" />
-                London, UK
-              </div>
             </div>
           </div>
 

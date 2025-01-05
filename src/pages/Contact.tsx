@@ -63,11 +63,11 @@ const Contact = () => {
                 <div className="space-y-4">
                   <div className="flex items-center text-gray-300">
                     <Phone className="text-blue-400 mr-3" size={20} />
-                    <span>0800 123 4567</span>
+                    <span>07590505601</span>
                   </div>
                   <div className="flex items-center text-gray-300">
                     <Mail className="text-blue-400 mr-3" size={20} />
-                    <span>hello@seosnafu.com</span>
+                    <span>seosnafu@gmail.com</span>
                   </div>
                 </div>
               </div>
@@ -75,8 +75,8 @@ const Contact = () => {
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-8 rounded-2xl">
                 <h2 className="text-2xl font-bold mb-6">Office Hours</h2>
                 <div className="space-y-2 text-gray-300">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday - Sunday: Closed</p>
+                  <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                  <p>Sunday: Closed</p>
                 </div>
               </div>
             </div>
