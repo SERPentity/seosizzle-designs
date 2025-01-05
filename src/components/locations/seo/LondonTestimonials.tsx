@@ -1,4 +1,4 @@
-import { Award } from "lucide-react";
+import { Award, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const LondonTestimonials = () => {
