@@ -27,7 +27,6 @@ import StairGuysCase from "./pages/StairGuysCase";
 import BioUKFuelsCase from "./pages/BioUKFuelsCase";
 import LondonSEO from "./pages/locations/seo/LondonSEO";
 import LondonWebDesign from "./pages/locations/web-design/LondonWebDesign";
-import Manchester from "./pages/Manchester";
 
 const queryClient = new QueryClient();
 
@@ -61,7 +60,6 @@ const App = () => (
           <Route path="/case-studies/bio-uk-fuels" element={<BioUKFuelsCase />} />
           <Route path="/seo-services/london" element={<LondonSEO />} />
           <Route path="/web-design/london" element={<LondonWebDesign />} />
-          <Route path="/manchester" element={<Manchester />} />
         </Routes>
         <Footer />
       </BrowserRouter>

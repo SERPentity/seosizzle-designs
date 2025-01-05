@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 
 const Locations = () => {
   const locations = [
-    { name: "London", path: "/london" },
-    { name: "Manchester", path: "/manchester" },
+    { name: "London", path: "/seo-services/london" }
   ];
 
   return (
