@@ -36,9 +36,9 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="text-gray-400 mb-2">Email: hello@seosnafu.com</p>
-            <p className="text-gray-400 mb-2">Phone: +44 (0) 123 456 789</p>
-            <p className="text-gray-400">Address: 123 SEO Street, London, UK</p>
+            <p className="text-gray-400 mb-2">Email: seosnafu@gmail.com</p>
+            <p className="text-gray-400 mb-2">Tel: 07590505601</p>
+            <p className="text-gray-400">Hours: 9am to 8pm Mon-Sat</p>
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-gray-800">
