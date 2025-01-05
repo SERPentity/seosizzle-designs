@@ -71,23 +71,25 @@ const About = () => {
                   !isFlipped ? "invisible" : ""
                 }`}>
                   <div className="flex flex-col h-full">
-                    <div className="space-y-4 flex-grow">
-                      <h3 className="text-2xl font-bold text-yellow-300">SNAFU Explained</h3>
-                      <p className="text-gray-200 leading-relaxed">
-                        SNAFU is a military acronym that stands for "Situation Normal: All F***ed Up." 
-                        It originated during WWII, reflecting how chaos was the normal state of affairs.
-                      </p>
-                      <p className="text-gray-200 leading-relaxed">
-                        In the context of websites, it's sadly still relevant - most sites are in a 
-                        state of SEO chaos. That's where we come in: we transform this "normal" 
-                        situation into exceptional results.
-                      </p>
-                      <p className="text-yellow-300 font-bold text-lg mt-4">
-                        We take websites from F*cked Up to Fixed Up!
-                      </p>
-                    </div>
-                    <div className="text-sm text-yellow-200 text-center animate-bounce mt-4">
-                      Click to flip back →
+                    <div className="flex flex-col justify-between flex-grow">
+                      <div className="space-y-4">
+                        <h3 className="text-2xl font-bold text-yellow-300">SNAFU Explained</h3>
+                        <p className="text-gray-200 leading-relaxed">
+                          SNAFU is a military acronym that stands for "Situation Normal: All F***ed Up." 
+                          It originated during WWII, reflecting how chaos was the normal state of affairs.
+                        </p>
+                        <p className="text-gray-200 leading-relaxed">
+                          In the context of websites, it's sadly still relevant - most sites are in a 
+                          state of SEO chaos. That's where we come in: we transform this "normal" 
+                          situation into exceptional results.
+                        </p>
+                        <p className="text-yellow-300 font-bold text-lg mt-4">
+                          We take websites from F*cked Up to Fixed Up!
+                        </p>
+                      </div>
+                      <div className="text-sm text-yellow-200 text-center animate-bounce mt-4">
+                        Click to flip back →
+                      </div>
                     </div>
                   </div>
                 </div>
