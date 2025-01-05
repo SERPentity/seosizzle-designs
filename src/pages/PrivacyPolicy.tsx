@@ -1,9 +1,19 @@
+import { Helmet } from "react-helmet";
 import Navigation from "../components/Navigation";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Privacy Policy | SEO Snafu Digital Marketing Agency</title>
+        <meta name="description" content="Our privacy policy outlines how we collect, use, and protect your personal information. Learn about your data rights and our commitment to privacy." />
+        <meta property="og:title" content="Privacy Policy | SEO Snafu Digital Marketing Agency" />
+        <meta property="og:description" content="Our privacy policy outlines how we collect, use, and protect your personal information. Learn about your data rights and our commitment to privacy." />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+      
       <Navigation />
       <Breadcrumbs />
       

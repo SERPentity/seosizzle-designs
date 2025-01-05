@@ -2,16 +2,24 @@ import { Helmet } from "react-helmet";
 import Navigation from "../../../components/Navigation";
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import ManchesterHero from "../../../components/locations/seo/ManchesterHero";
-import ManchesterTestimonials from "../../../components/locations/seo/ManchesterTestimonials";
+import LocationKeyContent from "../../../components/locations/seo/LocationKeyContent";
+import LocationServices from "../../../components/locations/seo/LocationServices";
+import LocationFAQ from "../../../components/locations/seo/LocationFAQ";
 import CaseStudiesLink from "../../../components/locations/seo/CaseStudiesLink";
 import { MapPin } from "lucide-react";
+import ManchesterTestimonials from "../../../components/locations/seo/ManchesterTestimonials";
 
 const ManchesterSEO = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Manchester SEO Services | Expert SEO Agency Manchester</title>
+        <title>Manchester SEO Services | Expert SEO Agency Manchester | From £360</title>
         <meta name="description" content="Leading Manchester SEO agency delivering proven results. Our expert SEO services help Manchester businesses achieve top Google rankings. Free SEO audit available." />
+        <meta property="og:title" content="Manchester SEO Services | Expert SEO Agency Manchester" />
+        <meta property="og:description" content="Leading Manchester SEO agency delivering proven results. Our expert SEO services help Manchester businesses achieve top Google rankings." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=1200&h=630&q=80" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
           {`
             {
@@ -19,11 +27,11 @@ const ManchesterSEO = () => {
               "@type": "LocalBusiness",
               "name": "Manchester SEO Services",
               "description": "Expert SEO services in Manchester helping businesses achieve top Google rankings",
+              "priceRange": "Monthly SEO packages start from £360 per month",
               "areaServed": {
                 "@type": "City",
                 "name": "Manchester"
               },
-              "priceRange": "Monthly SEO packages start from £360 per month",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Manchester",

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Navigation from "../components/Navigation";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
@@ -59,6 +60,16 @@ const Locations = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>UK SEO & Web Design Services | Local Digital Marketing Experts</title>
+        <meta name="description" content="Expert SEO and web design services across major UK cities including London, Manchester, Birmingham, and more. Local digital marketing solutions tailored to your area." />
+        <meta property="og:title" content="UK SEO & Web Design Services | Local Digital Marketing Experts" />
+        <meta property="og:description" content="Expert SEO and web design services across major UK cities including London, Manchester, Birmingham, and more. Local digital marketing solutions tailored to your area." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&w=1200&h=630&q=80" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
       <Navigation />
       <Breadcrumbs />
       

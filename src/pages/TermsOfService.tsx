@@ -1,9 +1,19 @@
+import { Helmet } from "react-helmet";
 import Navigation from "../components/Navigation";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Terms of Service | SEO Snafu Digital Marketing Agency</title>
+        <meta name="description" content="Read our terms of service to understand the agreement between you and SEO Snafu. Learn about our services, responsibilities, and policies." />
+        <meta property="og:title" content="Terms of Service | SEO Snafu Digital Marketing Agency" />
+        <meta property="og:description" content="Read our terms of service to understand the agreement between you and SEO Snafu. Learn about our services, responsibilities, and policies." />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+
       <Navigation />
       <Breadcrumbs />
       

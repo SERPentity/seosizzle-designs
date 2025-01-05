@@ -15,20 +15,12 @@ const SheffieldSEO = () => {
     <div className="min-h-screen bg-black text-white">
       <Helmet>
         <title>{`${cityName} SEO Services | Expert SEO Agency ${cityName} | From ${basePrice}`}</title>
-        <meta 
-          name="description" 
-          content={`Leading ${cityName} SEO agency delivering proven results. Our expert SEO services help ${cityName} businesses achieve top Google rankings. Packages from ${basePrice}/month. Free SEO audit available.`}
-        />
-        <meta name="keywords" content={`SEO ${cityName}, ${cityName} SEO services, ${cityName} SEO agency, ${cityName} SEO company, local SEO ${cityName}, digital marketing ${cityName}`} />
-        <meta name="robots" content="index, follow" />
+        <meta name="description" content={`Leading ${cityName} SEO agency delivering proven results. Our expert SEO services help ${cityName} businesses achieve top Google rankings. Free SEO audit available.`} />
         <meta property="og:title" content={`${cityName} SEO Services | Expert SEO Agency ${cityName}`} />
-        <meta 
-          property="og:description" 
-          content={`Leading ${cityName} SEO agency delivering proven results. Our expert SEO services help ${cityName} businesses achieve top Google rankings. Free SEO audit available.`}
-        />
+        <meta property="og:description" content={`Leading ${cityName} SEO agency delivering proven results. Our expert SEO services help ${cityName} businesses achieve top Google rankings.`} />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?auto=format&fit=crop&w=1200&h=630&q=80" />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_GB" />
-        <link rel="canonical" href={`https://yourdomain.com/seo-services/${cityName.toLowerCase()}`} />
+        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
           {`
             {
@@ -45,23 +37,6 @@ const SheffieldSEO = () => {
                 "@type": "PostalAddress",
                 "addressLocality": "${cityName}",
                 "addressCountry": "UK"
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "87"
-              },
-              "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday"
-                ],
-                "opens": "09:00",
-                "closes": "17:30"
               }
             }
           `}

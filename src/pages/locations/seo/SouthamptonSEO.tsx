@@ -12,8 +12,13 @@ const SouthamptonSEO = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Southampton SEO Services | Expert SEO Agency Southampton</title>
+        <title>Southampton SEO Services | Expert SEO Agency Southampton | From £360</title>
         <meta name="description" content="Leading Southampton SEO agency delivering proven results. Our expert SEO services help Southampton businesses achieve top Google rankings. Free SEO audit available." />
+        <meta property="og:title" content="Southampton SEO Services | Expert SEO Agency Southampton" />
+        <meta property="og:description" content="Leading Southampton SEO agency delivering proven results. Our expert SEO services help Southampton businesses achieve top Google rankings." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1200&h=630&q=80" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
           {`
             {
@@ -21,11 +26,11 @@ const SouthamptonSEO = () => {
               "@type": "LocalBusiness",
               "name": "Southampton SEO Services",
               "description": "Expert SEO services in Southampton helping businesses achieve top Google rankings",
+              "priceRange": "Monthly SEO packages start from £360 per month",
               "areaServed": {
                 "@type": "City",
                 "name": "Southampton"
               },
-              "priceRange": "Monthly SEO packages start from £360 per month",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Southampton",
