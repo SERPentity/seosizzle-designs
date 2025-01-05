@@ -1,7 +1,7 @@
 import Navigation from "../components/Navigation";
 import Breadcrumbs from "../components/Breadcrumbs";
-import { MapPin, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { MapPin, ArrowRight } from "lucide-react";
 
 const Locations = () => {
   const locationServices = [
@@ -9,6 +9,16 @@ const Locations = () => {
       name: "London SEO Services", 
       path: "/seo-services/london",
       description: "Expert SEO services tailored for London businesses"
+    },
+    { 
+      name: "Birmingham SEO Services", 
+      path: "/seo-services/birmingham",
+      description: "Specialized SEO solutions for Birmingham businesses"
+    },
+    { 
+      name: "Manchester SEO Services", 
+      path: "/seo-services/manchester",
+      description: "Strategic SEO services for Manchester businesses"
     },
     { 
       name: "London Web Design", 
@@ -22,7 +32,7 @@ const Locations = () => {
       <Navigation />
       <Breadcrumbs />
       
-      <div className="pt-16 pb-16 px-4 sm:px-6 lg:px-8">
+      <main className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-up">
             <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-6">
@@ -58,7 +68,7 @@ const Locations = () => {
             ))}
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };
