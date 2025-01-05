@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
           <p className="text-xl text-gray-300">Real results from our satisfied clients</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {[
             {
               quote: "Working with Martin and His team has propelled Bio UK Fuels online presence to new heights, reaching over 10k visitors per month and generating over 4000 leads from new customers in 12 months",
