@@ -9,6 +9,13 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
+  conditions = {Role = ["crawler"]}
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[redirects]]
   from = "https://www.seosnafu.co.uk/*"
@@ -36,3 +43,4 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Robots-Tag = "all"

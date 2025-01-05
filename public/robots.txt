@@ -14,14 +14,7 @@ Allow: /contact
 Sitemap: https://seosnafu.co.uk/sitemap.xml
 
 # Crawl-delay
-Crawl-delay: 10
-
-# Disallow patterns
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /*.xml$
+Crawl-delay: 5
 
 # Asset paths
 Allow: /images/
@@ -29,3 +22,8 @@ Allow: /css/
 Allow: /js/
 Allow: /assets/
 Allow: /public/
+
+# Disallow patterns
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
