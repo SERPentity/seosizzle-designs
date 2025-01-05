@@ -39,52 +39,29 @@ const LondonSEO = () => {
       
       <LondonHero />
 
-      {/* Case Studies Preview */}
+      {/* Key SEO Content Section - Placed high for Google crawlers */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Featured London SEO Success Stories</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="group relative overflow-hidden rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10">
-              <div className="aspect-video overflow-hidden">
-                <img 
-                  src="/lovable-uploads/12058831-a3de-4815-a87e-dbf5c93b0263.png"
-                  alt="Bio UK Fuels Case Study"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                />
+          <div className="prose prose-invert max-w-none">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-3xl font-bold mb-6">London SEO Expertise</h2>
+                <p className="text-gray-300 mb-6">
+                  As London's premier SEO agency, we understand the unique challenges of ranking in one of the world's most competitive digital markets. Our London-based SEO experts combine local market knowledge with cutting-edge SEO techniques to deliver exceptional results for businesses across the capital.
+                </p>
+                <p className="text-gray-300 mb-6">
+                  We specialize in helping London businesses achieve and maintain top search engine rankings through data-driven strategies, comprehensive technical optimization, and content that resonates with your local audience.
+                </p>
               </div>
-              <div className="p-6">
-                <div className="text-sm text-blue-400 mb-2">Waste Management</div>
-                <h3 className="text-2xl font-bold mb-3">Bio UK Fuels</h3>
-                <p className="text-gray-300 mb-4">How we helped the UK's leading cooking oil recycling company achieve 312% growth in organic leads and nationwide coverage</p>
-                <Link
-                  to="/case-studies/bio-uk-fuels"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  View Case Study
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="group relative overflow-hidden rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10">
-              <div className="aspect-video overflow-hidden">
-                <img 
-                  src="/lovable-uploads/e8dce3f1-6ee8-44ed-a3a1-e4cd46489d54.png"
-                  alt="The Stair Guys Ltd Case Study"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <div className="text-sm text-blue-400 mb-2">Home Improvement</div>
-                <h3 className="text-2xl font-bold mb-3">The Stair Guys Ltd</h3>
-                <p className="text-gray-300 mb-4">How we helped a local stair installation company achieve #1 rankings and increase their keyword visibility by 350+ terms</p>
-                <Link
-                  to="/case-studies/stair-guys-ltd"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  View Case Study
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+              <div>
+                <h2 className="text-3xl font-bold mb-6">Why Choose Our London SEO Services?</h2>
+                <ul className="list-disc pl-6 text-gray-300 space-y-4">
+                  <li>Specialized knowledge of London's competitive digital landscape</li>
+                  <li>Proven track record of improving local search visibility</li>
+                  <li>Comprehensive technical SEO audits and optimization</li>
+                  <li>Local content strategy tailored to London audiences</li>
+                  <li>Transparent reporting and measurable results</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -183,39 +160,7 @@ const LondonSEO = () => {
           </div>
         </div>
       </section>
-      
-      {/* London Market Insights */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">London SEO Expertise</h2>
-          <div className="prose prose-invert max-w-none">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-bold mb-4">Why Choose Our London SEO Agency?</h3>
-                <p className="text-gray-300 mb-6">
-                  As London's premier SEO agency, we understand the unique challenges of ranking in one of the world's most competitive digital markets. Our London-based SEO experts combine local market knowledge with cutting-edge SEO techniques to deliver exceptional results.
-                </p>
-                <p className="text-gray-300 mb-6">
-                  We've helped businesses across London, from startups in Tech City to established enterprises in the Square Mile, achieve and maintain top search engine rankings. Our approach is data-driven, transparent, and focused on delivering measurable ROI.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-4">London SEO Success Stories</h3>
-                <p className="text-gray-300 mb-6">
-                  Our proven track record includes helping London businesses achieve:
-                </p>
-                <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li>300% increase in organic traffic</li>
-                  <li>200% growth in qualified leads</li>
-                  <li>Top 3 rankings for competitive keywords</li>
-                  <li>50% reduction in cost per acquisition</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
+
       {/* Areas We Serve */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -244,7 +189,7 @@ const LondonSEO = () => {
         </div>
       </section>
       
-      {/* FAQ Section for SEO */}
+      {/* FAQ Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions About London SEO</h2>
