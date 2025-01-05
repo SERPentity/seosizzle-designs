@@ -24,7 +24,7 @@ const SheffieldSEO = () => {
                 "@type": "City",
                 "name": "Sheffield"
               },
-              "priceRange": "££",
+              "priceRange": "Monthly SEO packages start from £360 per month",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Sheffield",

@@ -25,7 +25,7 @@ const SouthamptonSEO = () => {
                 "@type": "City",
                 "name": "Southampton"
               },
-              "priceRange": "££",
+              "priceRange": "Monthly SEO packages start from £360 per month",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Southampton",

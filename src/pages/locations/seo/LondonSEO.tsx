@@ -26,7 +26,7 @@ const LondonSEO = () => {
                 "@type": "City",
                 "name": "London"
               },
-              "priceRange": "££",
+              "priceRange": "Monthly SEO packages start from £360 per month",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "London",

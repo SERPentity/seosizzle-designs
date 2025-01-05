@@ -25,7 +25,7 @@ const NewcastleSEO = () => {
                 "@type": "City",
                 "name": "Newcastle"
               },
-              "priceRange": "££",
+              "priceRange": "Monthly SEO packages start from £360 per month",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Newcastle",
