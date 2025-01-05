@@ -24,6 +24,8 @@ import ServiceBusiness from "./pages/ServiceBusiness";
 import CaseStudies from "./pages/CaseStudies";
 import StairGuysCase from "./pages/StairGuysCase";
 import BioUKFuelsCase from "./pages/BioUKFuelsCase";
+import LondonSEO from "./pages/locations/seo/LondonSEO";
+import LondonWebDesign from "./pages/locations/web-design/LondonWebDesign";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +57,8 @@ const App = () => (
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/stair-guys-ltd" element={<StairGuysCase />} />
           <Route path="/case-studies/bio-uk-fuels" element={<BioUKFuelsCase />} />
+          <Route path="/seo-services/london" element={<LondonSEO />} />
+          <Route path="/web-design/london" element={<LondonWebDesign />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
