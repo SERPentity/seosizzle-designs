@@ -1,54 +1,80 @@
+import { Helmet } from "react-helmet";
 import Navigation from "../../components/Navigation";
-import { Smartphone, Laptop, Monitor, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 const ResponsiveDesign = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Responsive Web Design Services UK | Mobile-First Design</title>
+        <meta 
+          name="description" 
+          content="Expert responsive web design services ensuring your website looks perfect on all devices. Mobile-first approach, seamless user experience, and modern design principles." 
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://seosnafu.co.uk/web-design/responsive-design" />
+        
+        <meta property="og:title" content="Responsive Web Design Services UK | Mobile-First Design" />
+        <meta property="og:description" content="Expert responsive web design services ensuring your website looks perfect on all devices. Mobile-first approach, seamless user experience." />
+        <meta property="og:url" content="https://seosnafu.co.uk/web-design/responsive-design" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_GB" />
+        
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "Responsive Web Design Services",
+              "description": "Expert responsive web design services ensuring your website looks perfect on all devices",
+              "provider": {
+                "@type": "Organization",
+                "name": "SEO Snafu",
+                "url": "https://seosnafu.co.uk"
+              },
+              "areaServed": "United Kingdom",
+              "serviceType": "Responsive Web Design"
+            }
+          `}
+        </script>
+      </Helmet>
+
       <Navigation />
       <Breadcrumbs />
       
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-fade-up">
-            <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-6">
-              Responsive Web Design
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Websites that look and perform beautifully across all devices
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
-              <Smartphone className="text-blue-400 mb-4" size={32} />
-              <h3 className="text-xl font-semibold mb-3">Mobile First</h3>
-              <p className="text-gray-300">Optimized for the growing mobile audience</p>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <h1 className="text-4xl md:text-5xl font-bold mb-8">Responsive Web Design Services</h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-xl text-gray-300 mb-8">
+            Ensure your website looks and functions perfectly on all devices with our responsive web design services.
+            We use mobile-first design principles to create seamless user experiences across all screen sizes.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
+            <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+              <h2 className="text-2xl font-bold mb-4">Responsive Design Features</h2>
+              <ul className="space-y-4 text-gray-300">
+                <li>• Mobile-first approach</li>
+                <li>• Fluid grid layouts</li>
+                <li>• Flexible images</li>
+                <li>• Media queries</li>
+                <li>• Touch-friendly navigation</li>
+              </ul>
             </div>
-            <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
-              <Laptop className="text-purple-400 mb-4" size={32} />
-              <h3 className="text-xl font-semibold mb-3">Tablet Ready</h3>
-              <p className="text-gray-300">Perfect viewing on tablets and iPads</p>
+            
+            <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+              <h2 className="text-2xl font-bold mb-4">Benefits</h2>
+              <ul className="space-y-4 text-gray-300">
+                <li>• Improved user experience</li>
+                <li>• Better SEO rankings</li>
+                <li>• Increased conversion rates</li>
+                <li>• Wider audience reach</li>
+                <li>• Future-proof design</li>
+              </ul>
             </div>
-            <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
-              <Monitor className="text-pink-400 mb-4" size={32} />
-              <h3 className="text-xl font-semibold mb-3">Desktop Optimized</h3>
-              <p className="text-gray-300">Full-featured experience on larger screens</p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full hover:opacity-90 transition-opacity"
-            >
-              Get Started
-              <ArrowRight className="ml-2" size={20} />
-            </Link>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

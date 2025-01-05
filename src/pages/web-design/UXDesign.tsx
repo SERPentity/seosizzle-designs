@@ -1,54 +1,80 @@
+import { Helmet } from "react-helmet";
 import Navigation from "../../components/Navigation";
-import { Users, Target, BarChart3, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 const UXDesign = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>UX Design Services UK | User Experience Design</title>
+        <meta 
+          name="description" 
+          content="Professional UX design services focused on creating intuitive, user-friendly websites. Data-driven design decisions, user research, and conversion optimization." 
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://seosnafu.co.uk/web-design/ux-design" />
+        
+        <meta property="og:title" content="UX Design Services UK | User Experience Design" />
+        <meta property="og:description" content="Professional UX design services focused on creating intuitive, user-friendly websites. Data-driven design decisions and conversion optimization." />
+        <meta property="og:url" content="https://seosnafu.co.uk/web-design/ux-design" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_GB" />
+        
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "UX Design Services",
+              "description": "Professional UX design services focused on creating intuitive, user-friendly websites",
+              "provider": {
+                "@type": "Organization",
+                "name": "SEO Snafu",
+                "url": "https://seosnafu.co.uk"
+              },
+              "areaServed": "United Kingdom",
+              "serviceType": "UX Design"
+            }
+          `}
+        </script>
+      </Helmet>
+
       <Navigation />
       <Breadcrumbs />
       
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-fade-up">
-            <h1 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-6">
-              User Experience Design
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Creating intuitive, user-centered designs that delight and convert
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
-              <Users className="text-blue-400 mb-4" size={32} />
-              <h3 className="text-xl font-semibold mb-3">User Research</h3>
-              <p className="text-gray-300">Understanding your users' needs and behaviors</p>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <h1 className="text-4xl md:text-5xl font-bold mb-8">UX Design Services</h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-xl text-gray-300 mb-8">
+            Create intuitive, user-friendly websites that convert with our professional UX design services.
+            We combine user research, data analysis, and design best practices to deliver exceptional user experiences.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
+            <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+              <h2 className="text-2xl font-bold mb-4">UX Design Services</h2>
+              <ul className="space-y-4 text-gray-300">
+                <li>• User research</li>
+                <li>• Usability testing</li>
+                <li>• Information architecture</li>
+                <li>• Wireframing</li>
+                <li>• Prototyping</li>
+              </ul>
             </div>
-            <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
-              <Target className="text-purple-400 mb-4" size={32} />
-              <h3 className="text-xl font-semibold mb-3">Usability Testing</h3>
-              <p className="text-gray-300">Ensuring your design works for real users</p>
+            
+            <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
+              <h2 className="text-2xl font-bold mb-4">Benefits</h2>
+              <ul className="space-y-4 text-gray-300">
+                <li>• Higher conversion rates</li>
+                <li>• Reduced bounce rates</li>
+                <li>• Improved user satisfaction</li>
+                <li>• Better brand perception</li>
+                <li>• Increased customer loyalty</li>
+              </ul>
             </div>
-            <div className="backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
-              <BarChart3 className="text-pink-400 mb-4" size={32} />
-              <h3 className="text-xl font-semibold mb-3">Analytics & Optimization</h3>
-              <p className="text-gray-300">Data-driven design improvements</p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full hover:opacity-90 transition-opacity"
-            >
-              Improve Your UX
-              <ArrowRight className="ml-2" size={20} />
-            </Link>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

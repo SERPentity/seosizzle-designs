@@ -3,6 +3,8 @@ import Navigation from "../../components/Navigation";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 const WebDesign = () => {
+  const basePrice = "£999";
+  
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
@@ -14,13 +16,12 @@ const WebDesign = () => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://seosnafu.co.uk/web-design" />
         
-        {/* Open Graph Tags */}
         <meta property="og:title" content="Web Design Services UK | Professional Website Design" />
         <meta property="og:description" content="Professional web design services in the UK. Custom website design, responsive development, and SEO-friendly websites that convert." />
         <meta property="og:url" content="https://seosnafu.co.uk/web-design" />
         <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_GB" />
         
-        {/* Schema Markup */}
         <script type="application/ld+json">
           {`
             {
@@ -37,7 +38,7 @@ const WebDesign = () => {
               "serviceType": "Web Design",
               "offers": {
                 "@type": "Offer",
-                "price": "999.00",
+                "price": "${basePrice.replace('£', '')}",
                 "priceCurrency": "GBP",
                 "availability": "https://schema.org/InStock"
               }

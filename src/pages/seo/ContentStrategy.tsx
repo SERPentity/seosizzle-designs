@@ -3,6 +3,8 @@ import Navigation from "../../components/Navigation";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 const ContentStrategy = () => {
+  const basePrice = "£360";
+  
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
@@ -14,13 +16,12 @@ const ContentStrategy = () => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://seosnafu.co.uk/seo/content-strategy" />
         
-        {/* Open Graph Tags */}
         <meta property="og:title" content="Content Strategy Services | SEO Content Creation & Strategy" />
         <meta property="og:description" content="Expert content strategy services to boost your SEO rankings. Data-driven content creation, keyword research, and content optimization services." />
         <meta property="og:url" content="https://seosnafu.co.uk/seo/content-strategy" />
         <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_GB" />
         
-        {/* Schema Markup */}
         <script type="application/ld+json">
           {`
             {
@@ -37,7 +38,7 @@ const ContentStrategy = () => {
               "serviceType": "Content Strategy",
               "offers": {
                 "@type": "Offer",
-                "price": "360.00",
+                "price": "${basePrice.replace('£', '')}",
                 "priceCurrency": "GBP",
                 "availability": "https://schema.org/InStock"
               }
