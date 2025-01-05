@@ -1,17 +1,40 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-  const navItems = [
+  const mainNavItems = [
     { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
-    { name: "Locations", path: "/locations" },
-    { name: "SEO Audit", path: "/seo-audit" },
     { name: "About", path: "/about" },
+    { name: "Locations", path: "/locations" },
     { name: "Contact", path: "/contact" },
+  ];
+
+  const serviceItems = [
+    {
+      category: "SEO Services",
+      items: [
+        { name: "Technical SEO", path: "/technical-seo" },
+        { name: "Local SEO", path: "/local-seo" },
+        { name: "Content Strategy", path: "/content-strategy" },
+        { name: "SEO Audit", path: "/seo-audit" },
+        { name: "Competitor Analysis", path: "/competitor-analysis" },
+        { name: "Link Building", path: "/link-building" },
+        { name: "Social Media", path: "/social-media" },
+      ]
+    },
+    {
+      category: "Web Design",
+      items: [
+        { name: "Web Design", path: "/web-design" },
+        { name: "Responsive Design", path: "/responsive-design" },
+        { name: "UX Design", path: "/ux-design" },
+        { name: "E-commerce Design", path: "/ecommerce-design" },
+      ]
+    }
   ];
 
   return (
@@ -30,15 +53,48 @@ const Navigation = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
+              {mainNavItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="text-gray-300 hover:text-white transition-all duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-blue-400 after:via-purple-400 after:to-pink-400 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                  className="text-gray-300 hover:text-white transition-all duration-300"
                 >
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="flex items-center text-gray-300 hover:text-white transition-all duration-300"
+                >
+                  Services
+                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="absolute left-0 mt-2 w-64 rounded-xl backdrop-blur-md bg-black/90 border border-white/10 shadow-xl">
+                    {serviceItems.map((category) => (
+                      <div key={category.category} className="py-2">
+                        <div className="px-4 py-2 text-sm font-semibold text-gray-400">
+                          {category.category}
+                        </div>
+                        {category.items.map((item) => (
+                          <Link
+                            key={item.path}
+                            to={item.path}
+                            className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5"
+                            onClick={() => setIsServicesOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Mobile Navigation Button */}
@@ -57,7 +113,7 @@ const Navigation = () => {
           {isOpen && (
             <div className="md:hidden animate-fade-in">
               <div className="pt-2 pb-3 space-y-1 backdrop-blur-md bg-black/50 rounded-lg mt-2 mb-4">
-                {navItems.map((item) => (
+                {mainNavItems.map((item) => (
                   <Link
                     key={item.name}
                     to={item.path}
@@ -66,6 +122,25 @@ const Navigation = () => {
                   >
                     {item.name}
                   </Link>
+                ))}
+                
+                {/* Mobile Services Menu */}
+                {serviceItems.map((category) => (
+                  <div key={category.category} className="px-4 py-2">
+                    <div className="text-sm font-semibold text-gray-400 mb-2">
+                      {category.category}
+                    </div>
+                    {category.items.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
                 ))}
               </div>
             </div>
