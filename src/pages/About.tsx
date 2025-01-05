@@ -1,13 +1,16 @@
 import Navigation from "../components/Navigation";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, AlertOctagon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { useState } from "react";
+import { Card } from "@/components/ui/card";
 
 const About = () => {
   const { register, handleSubmit, reset } = useForm();
+  const [isFlipped, setIsFlipped] = useState(false);
 
   const onSubmit = (data: any) => {
     console.log(data);
@@ -35,6 +38,47 @@ const About = () => {
               We transform underperforming websites into SEO powerhouses. While 99% of websites never make it to page one, 
               we specialize in breaking that cycle and putting our clients ahead of the competition.
             </p>
+          </div>
+
+          {/* SNAFU Explanation Card */}
+          <div className="max-w-md mx-auto mb-16">
+            <div className="relative preserve-3d cursor-pointer" style={{ perspective: "1000px" }}>
+              <Card
+                className={`w-full p-6 transition-transform duration-700 transform-style-preserve-3d relative ${
+                  isFlipped ? "rotate-y-180" : ""
+                }`}
+                onClick={() => setIsFlipped(!isFlipped)}
+              >
+                {/* Front of card */}
+                <div className={`absolute w-full h-full backface-hidden ${
+                  isFlipped ? "invisible" : ""
+                }`}>
+                  <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                    <AlertOctagon className="w-12 h-12 text-yellow-500" />
+                    <h3 className="text-xl font-bold text-gray-800">What does SNAFU mean?</h3>
+                    <p className="text-gray-600">Click to reveal the military origin<br />(Contains explicit content)</p>
+                  </div>
+                </div>
+
+                {/* Back of card */}
+                <div className={`absolute w-full h-full backface-hidden rotate-y-180 ${
+                  !isFlipped ? "invisible" : ""
+                }`}>
+                  <div className="text-gray-800 space-y-4">
+                    <h3 className="text-xl font-bold mb-2">SNAFU Explained</h3>
+                    <p>
+                      SNAFU is a military acronym that stands for "Situation Normal: All F***ed Up." 
+                      It originated during WWII, reflecting how chaos was the normal state of affairs.
+                    </p>
+                    <p>
+                      In the context of websites, it's sadly still relevant - most sites are in a 
+                      state of SEO chaos. That's where we come in: we transform this "normal" 
+                      situation into exceptional results.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
