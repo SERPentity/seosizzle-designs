@@ -70,8 +70,8 @@ const About = () => {
                 <div className={`absolute w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-8 ${
                   !isFlipped ? "invisible" : ""
                 }`}>
-                  <div className="flex flex-col justify-between h-full">
-                    <div className="space-y-4">
+                  <div className="flex flex-col h-full">
+                    <div className="space-y-4 flex-grow">
                       <h3 className="text-2xl font-bold text-yellow-300">SNAFU Explained</h3>
                       <p className="text-gray-200 leading-relaxed">
                         SNAFU is a military acronym that stands for "Situation Normal: All F***ed Up." 
@@ -82,11 +82,11 @@ const About = () => {
                         state of SEO chaos. That's where we come in: we transform this "normal" 
                         situation into exceptional results.
                       </p>
-                      <p className="text-yellow-300 font-bold text-lg">
+                      <p className="text-yellow-300 font-bold text-lg mt-4">
                         We take websites from F*cked Up to Fixed Up!
                       </p>
                     </div>
-                    <div className="text-sm text-yellow-200 text-center animate-bounce">
+                    <div className="text-sm text-yellow-200 text-center animate-bounce mt-4">
                       Click to flip back →
                     </div>
                   </div>
