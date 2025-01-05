@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import FlippingCard from "../components/FlippingCard";
 
 const About = () => {
   return (
@@ -27,6 +28,9 @@ const About = () => {
               We're a team of passionate digital experts committed to helping businesses succeed online
             </p>
           </article>
+
+          {/* Adding the Flipping Card here */}
+          <FlippingCard />
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-8 rounded-2xl">
