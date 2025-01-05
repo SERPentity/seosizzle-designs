@@ -1,11 +1,13 @@
 import Navigation from "../components/Navigation";
 import { Users, Target, BarChart3, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const UXDesign = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
+      <Breadcrumbs />
       
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

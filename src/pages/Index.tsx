@@ -7,6 +7,7 @@ import StatsSection from "../components/home/StatsSection";
 import TestimonialsSection from "../components/home/TestimonialsSection";
 import CTASection from "../components/home/CTASection";
 import { useState, useEffect } from "react";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const Index = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -27,6 +28,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <Navigation />
+      <Breadcrumbs />
       
       {/* Hero Section */}
       <section className="relative min-h-screen pt-16 md:pt-0">

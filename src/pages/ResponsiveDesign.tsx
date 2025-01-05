@@ -1,11 +1,13 @@
 import Navigation from "../components/Navigation";
 import { Smartphone, Laptop, Monitor, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const ResponsiveDesign = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
+      <Breadcrumbs />
       
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

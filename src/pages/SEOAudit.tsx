@@ -5,6 +5,7 @@ import { Button } from "../components/ui/button";
 import { useToast } from "../components/ui/use-toast";
 import { Loader2, CheckCircle2 } from "lucide-react";
 import Confetti from 'react-confetti';
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const SEOAudit = () => {
   const [url, setUrl] = useState("");
@@ -71,6 +72,7 @@ const SEOAudit = () => {
         numberOfPieces={200}
       />}
       <Navigation />
+      <Breadcrumbs />
       
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
