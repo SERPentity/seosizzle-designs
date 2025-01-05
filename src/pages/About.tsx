@@ -82,6 +82,9 @@ const About = () => {
                         state of SEO chaos. That's where we come in: we transform this "normal" 
                         situation into exceptional results.
                       </p>
+                      <p className="text-yellow-300 font-bold mt-4 text-lg">
+                        We take websites from F*cked Up to Fixed Up!
+                      </p>
                     </div>
                     <div className="text-sm text-yellow-200 text-center animate-bounce">
                       Click to flip back →
