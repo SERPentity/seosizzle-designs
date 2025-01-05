@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import Navigation from "../components/Navigation";
 import Breadcrumbs from "../components/Breadcrumbs";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import FlippingCard from "../components/FlippingCard";
 
@@ -39,38 +39,53 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-8 rounded-2xl">
-              <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+              <h2 className="text-2xl font-bold mb-4">Meet Martin Simpkins</h2>
+              <p className="text-gray-300 mb-4">
+                I'm a serial entrepreneur with multiple successful business ventures under my belt. What sets me apart? I've been in your shoes. I've built and scaled businesses from the ground up, generating over a million pounds in leads through SEO strategies I developed and refined for my own companies.
+              </p>
               <p className="text-gray-300">
-                To empower businesses with data-driven SEO strategies and stunning web designs that drive real results. We believe in transparency, innovation, and measurable success.
+                Unlike traditional digital agencies staffed by designers fresh out of university with theoretical knowledge, I bring real-world business experience to the table. I understand the challenges you face because I've faced them myself. This practical experience is what enables me to deliver exceptional results for my clients.
               </p>
             </div>
             <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-8 rounded-2xl">
-              <h2 className="text-2xl font-bold mb-4">Our Approach</h2>
+              <h2 className="text-2xl font-bold mb-4">My Approach</h2>
+              <p className="text-gray-300 mb-4">
+                When you work with me, you're not just getting another SEO consultant – you're getting a business partner who understands the complete picture. I've spent years perfecting SEO strategies that actually work in the real world, not just in theory.
+              </p>
               <p className="text-gray-300">
-                We combine technical expertise with creative innovation to deliver customized solutions that help our clients stand out in their competitive landscapes.
+                My success comes from combining technical SEO expertise with practical business acumen. I don't just focus on rankings – I focus on generating real leads and revenue for your business. This comprehensive approach is why my clients consistently achieve outstanding results.
               </p>
             </div>
           </div>
 
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-8">Why Choose Us</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl">
-                <h3 className="text-xl font-semibold mb-3">Expert Team</h3>
-                <p className="text-gray-300">
-                  Our specialists bring years of experience in SEO, web design, and digital marketing.
-                </p>
+            <h2 className="text-3xl font-bold text-center mb-8">The SEOsnafu Difference</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl space-y-4">
+                <div className="flex items-center gap-3">
+                  <Check className="text-green-400" />
+                  <p className="text-gray-300">Proven track record of generating £1M+ in leads through SEO</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="text-green-400" />
+                  <p className="text-gray-300">Real business owner perspective on digital marketing</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="text-green-400" />
+                  <p className="text-gray-300">Practical strategies that deliver measurable results</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="text-green-400" />
+                  <p className="text-gray-300">Deep understanding of business environments and market dynamics</p>
+                </div>
               </div>
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl">
-                <h3 className="text-xl font-semibold mb-3">Proven Results</h3>
-                <p className="text-gray-300">
-                  We've helped numerous businesses achieve significant growth through our services.
+                <h3 className="text-xl font-semibold mb-3">Why Choose Us</h3>
+                <p className="text-gray-300 mb-4">
+                  Our specialists bring years of experience in SEO, web design, and digital marketing. We've helped numerous businesses achieve significant growth through our services.
                 </p>
-              </div>
-              <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl">
-                <h3 className="text-xl font-semibold mb-3">Transparent Process</h3>
                 <p className="text-gray-300">
-                  We keep you informed every step of the way with clear communication and reporting.
+                  We keep you informed every step of the way with clear communication and reporting. Our transparent process ensures you always know exactly what we're doing and why.
                 </p>
               </div>
             </div>
@@ -89,36 +104,6 @@ const About = () => {
                 Get Started
                 <ArrowRight className="ml-2" />
               </Link>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-3xl font-bold text-center mb-8">Our Values</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl">
-                <h3 className="text-xl font-semibold mb-3">Innovation</h3>
-                <p className="text-gray-300">
-                  We stay ahead of industry trends and continuously evolve our strategies to deliver the best results.
-                </p>
-              </div>
-              <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl">
-                <h3 className="text-xl font-semibold mb-3">Excellence</h3>
-                <p className="text-gray-300">
-                  We're committed to delivering exceptional quality in everything we do.
-                </p>
-              </div>
-              <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl">
-                <h3 className="text-xl font-semibold mb-3">Integrity</h3>
-                <p className="text-gray-300">
-                  We believe in honest communication and ethical business practices.
-                </p>
-              </div>
-              <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-6 rounded-2xl">
-                <h3 className="text-xl font-semibold mb-3">Client Success</h3>
-                <p className="text-gray-300">
-                  Your success is our success. We're dedicated to helping you achieve your goals.
-                </p>
-              </div>
             </div>
           </section>
         </div>
