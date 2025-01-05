@@ -23,11 +23,13 @@ const StairGuysCase = () => {
   ];
 
   const results = [
+    "Completely eliminated Google Ads spend while maintaining lead generation",
+    "Now outranking major staircase industry competitors for key terms",
     "Achieved 593 keyword rankings in the UK market alone",
-    "Generated 918 monthly organic visitors worldwide",
+    "Generated 918 monthly organic visitors worldwide at zero cost",
     "Secured 55% market share in the UK with 507 monthly visitors",
     "Expanded reach to international markets including India (132 visitors) and US (100 visitors)",
-    "Established global presence with visitors from multiple countries"
+    "Established sustainable organic lead generation without paid advertising"
   ];
 
   return (
@@ -38,8 +40,8 @@ const StairGuysCase = () => {
       <main className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <CaseHero 
-            title="Revolutionizing Online Presence - The Stair Guys Journey"
-            description="How we took The Stair Guys from zero to ranking for 593+ keywords and 918 monthly organic visitors"
+            title="From Paid Ads to Organic Success - The Stair Guys Journey"
+            description="How we helped The Stair Guys eliminate Google Ads spend while outperforming industry giants with 593+ keyword rankings and 918 monthly organic visitors"
             image="/lovable-uploads/d2a9804f-afdf-46e7-bd6e-7213b2384dbb.png"
           />
 
@@ -98,7 +100,7 @@ const StairGuysCase = () => {
           </div>
 
           <CaseContent 
-            challenge="The Stair Guys needed to establish a strong digital presence in the highly competitive staircase industry. Starting from zero online visibility, they needed to compete with established brands while targeting both UK and international markets."
+            challenge="The Stair Guys were heavily dependent on expensive Google Ads for lead generation, struggling to compete with established industry giants. They needed to break free from paid advertising while building a sustainable organic presence that could rival larger competitors."
             solution={solution}
             results={results}
           />
@@ -106,7 +108,7 @@ const StairGuysCase = () => {
           {/* Testimonial */}
           <div className="bg-white/5 rounded-2xl p-8 animate-fade-up mt-16">
             <blockquote className="text-xl text-gray-300 italic mb-6">
-              "We noticed an increase in leads within weeks of working with Martin and his team! Working alongside Martin has opened my eyes to what is possible for my business online. My company is now on the first page of Google and is competing with the top staircase brands in the industry."
+              "We noticed an increase in leads within weeks of working with Martin and his team! Working alongside Martin has opened my eyes to what is possible for my business online. My company is now on the first page of Google, competing with the top staircase brands in the industry, and best of all - we no longer need to spend money on Google Ads!"
             </blockquote>
             <div className="flex items-center">
               <div className="ml-4">
