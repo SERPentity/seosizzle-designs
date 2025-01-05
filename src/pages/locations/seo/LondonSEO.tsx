@@ -18,7 +18,7 @@ const LondonSEO = () => {
               London SEO Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Dominate London's competitive market with our data-driven SEO strategies tailored for businesses in the capital
+              Expert SEO agency in London helping businesses dominate search rankings with data-driven strategies and proven results
             </p>
             <Link
               to="/contact"
@@ -31,7 +31,6 @@ const LondonSEO = () => {
         </div>
       </section>
 
-      {/* Local Stats Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
@@ -54,45 +53,75 @@ const LondonSEO = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Core SEO Services */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">London SEO Services</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
-              <h3 className="text-2xl font-bold mb-4">Local SEO Domination</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <CheckCircle className="text-blue-400 mr-3 mt-1" size={20} />
-                  <span>Google Business Profile optimization</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-blue-400 mr-3 mt-1" size={20} />
-                  <span>Local citation building</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-blue-400 mr-3 mt-1" size={20} />
-                  <span>London-specific keyword targeting</span>
-                </li>
-              </ul>
+          <h2 className="text-3xl font-bold text-center mb-12">Comprehensive SEO Services in London</h2>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">Local SEO London</h3>
+                <p className="text-gray-300 mb-4">
+                  Specialized local SEO services helping London businesses dominate local search results. We optimize your Google Business Profile, build local citations, and implement location-specific keyword strategies.
+                </p>
+              </div>
+
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">Technical SEO London</h3>
+                <p className="text-gray-300 mb-4">
+                  Comprehensive technical SEO audits and optimization services ensuring your website meets Google's latest requirements. We focus on site speed, mobile optimization, and technical infrastructure.
+                </p>
+              </div>
+
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">E-commerce SEO London</h3>
+                <p className="text-gray-300 mb-4">
+                  Specialized e-commerce SEO strategies to increase product visibility and sales. Perfect for London's online retailers looking to boost their digital presence.
+                </p>
+              </div>
             </div>
-            <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
-              <h3 className="text-2xl font-bold mb-4">Technical Excellence</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <CheckCircle className="text-purple-400 mr-3 mt-1" size={20} />
-                  <span>Mobile optimization</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-purple-400 mr-3 mt-1" size={20} />
-                  <span>Site speed enhancement</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-purple-400 mr-3 mt-1" size={20} />
-                  <span>Schema markup implementation</span>
-                </li>
-              </ul>
+
+            <div className="space-y-8">
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">Content Strategy London</h3>
+                <p className="text-gray-300 mb-4">
+                  Data-driven content strategies that target London's market-specific keywords and topics. We create engaging, SEO-optimized content that converts.
+                </p>
+              </div>
+
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">Link Building Services London</h3>
+                <p className="text-gray-300 mb-4">
+                  Strategic link building campaigns focusing on quality London-based and industry-relevant backlinks to boost your website's authority.
+                </p>
+              </div>
+
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">SEO Consulting London</h3>
+                <p className="text-gray-300 mb-4">
+                  Expert SEO consultation services for London businesses seeking strategic guidance and implementation support for their digital marketing efforts.
+                </p>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* London Market Insights */}
+      <section className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">London SEO Expertise</h2>
+          <div className="prose prose-invert max-w-none">
+            <p className="text-gray-300 mb-6">
+              As London's premier SEO agency, we understand the unique challenges of ranking in one of the world's most competitive digital markets. Our London-based SEO experts combine local market knowledge with cutting-edge SEO techniques to deliver exceptional results.
+            </p>
+            <p className="text-gray-300 mb-6">
+              We've helped businesses across London, from startups in Tech City to established enterprises in the Square Mile, achieve and maintain top search engine rankings. Our approach is data-driven, transparent, and focused on delivering measurable ROI.
+            </p>
+            <p className="text-gray-300">
+              Whether you're a local business targeting specific London boroughs or a larger organization competing city-wide, our SEO strategies are tailored to your specific needs and market conditions.
+            </p>
           </div>
         </div>
       </section>

@@ -15,10 +15,10 @@ const LondonWebDesign = () => {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center animate-fade-up">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-              London Web Design Agency
+              Professional Web Design London
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Creating stunning, conversion-focused websites for London's most ambitious businesses
+              Award-winning web design agency in London creating stunning, conversion-focused websites for businesses across the capital
             </p>
             <Link
               to="/contact"
@@ -27,6 +27,61 @@ const LondonWebDesign = () => {
               Start Your Project
               <ArrowRight className="ml-2" size={20} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Services Section */}
+      <section className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">Web Design Services in London</h2>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">E-commerce Website Design London</h3>
+                <p className="text-gray-300 mb-4">
+                  Custom e-commerce solutions designed to drive sales and enhance user experience for London businesses. Our e-commerce websites are built with secure payment gateways, inventory management, and mobile-first design principles.
+                </p>
+              </div>
+
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">WordPress Web Design London</h3>
+                <p className="text-gray-300 mb-4">
+                  Expert WordPress development services delivering customized, scalable, and user-friendly websites. Perfect for London businesses seeking a powerful content management system.
+                </p>
+              </div>
+
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">Responsive Web Design London</h3>
+                <p className="text-gray-300 mb-4">
+                  Mobile-first web design ensuring your website looks and performs perfectly across all devices. Essential for reaching London's tech-savvy audience.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">Corporate Web Design London</h3>
+                <p className="text-gray-300 mb-4">
+                  Professional web design services for London's corporate sector. We create sophisticated, brand-aligned websites that establish credibility and drive business growth.
+                </p>
+              </div>
+
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">UX Design Services London</h3>
+                <p className="text-gray-300 mb-4">
+                  User-centered design approach focusing on creating intuitive, engaging web experiences. We help London businesses improve conversion rates through strategic UX design.
+                </p>
+              </div>
+
+              <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4">Bespoke Web Design London</h3>
+                <p className="text-gray-300 mb-4">
+                  Custom web design solutions tailored to your specific business needs. We create unique, branded websites that help London businesses stand out in a competitive market.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -54,60 +109,20 @@ const LondonWebDesign = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* London-Specific Content */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Web Design Services</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
-              <h3 className="text-2xl font-bold mb-4">Design Services</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <CheckCircle className="text-blue-400 mr-3 mt-1" size={20} />
-                  <span>Custom website design</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-blue-400 mr-3 mt-1" size={20} />
-                  <span>E-commerce solutions</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-blue-400 mr-3 mt-1" size={20} />
-                  <span>Mobile-first approach</span>
-                </li>
-              </ul>
-            </div>
-            <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-white/10">
-              <h3 className="text-2xl font-bold mb-4">Development Features</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <CheckCircle className="text-purple-400 mr-3 mt-1" size={20} />
-                  <span>SEO-friendly development</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-purple-400 mr-3 mt-1" size={20} />
-                  <span>Fast loading speeds</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-purple-400 mr-3 mt-1" size={20} />
-                  <span>Security implementation</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Areas We Serve */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Areas We Serve in London</h2>
-          <div className="grid md:grid-cols-4 gap-4 text-center">
-            {["Central London", "North London", "South London", "East London", "West London", "City of London", "Canary Wharf", "Westminster"].map((area) => (
-              <div key={area} className="backdrop-blur-sm bg-white/5 p-4 rounded-lg border border-white/10">
-                <MapPin className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-                <span>{area}</span>
-              </div>
-            ))}
+          <h2 className="text-3xl font-bold text-center mb-12">Web Design Agency in London</h2>
+          <div className="prose prose-invert max-w-none">
+            <p className="text-gray-300 mb-6">
+              As a leading web design agency in London, we understand the unique challenges and opportunities of the city's diverse business landscape. From startups in Shoreditch to established corporations in the City, our web design services are tailored to meet the specific needs of London-based businesses.
+            </p>
+            <p className="text-gray-300 mb-6">
+              Our London web design team combines creative excellence with technical expertise to deliver websites that not only look stunning but also drive real business results. We stay ahead of the latest web design trends while ensuring your website maintains timeless appeal and functionality.
+            </p>
+            <p className="text-gray-300">
+              Whether you're a small business in Camden or a large enterprise in Canary Wharf, our web design services in London are scalable to meet your needs. We pride ourselves on creating websites that reflect London's dynamic business environment while delivering measurable results for your organization.
+            </p>
           </div>
         </div>
       </section>
