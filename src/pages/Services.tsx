@@ -7,6 +7,7 @@ const Services = () => {
     {
       title: "Technical SEO",
       description: "Optimize your website's technical foundation for better rankings",
+      path: "/technical-seo",
       features: [
         "Site Structure Optimization",
         "Speed Optimization",
@@ -17,6 +18,7 @@ const Services = () => {
     {
       title: "Local SEO",
       description: "Dominate local search results and attract nearby customers",
+      path: "/local-seo",
       features: [
         "Google Business Profile Optimization",
         "Local Citation Building",
@@ -27,6 +29,7 @@ const Services = () => {
     {
       title: "Content Strategy",
       description: "Create content that ranks and converts",
+      path: "/content-strategy",
       features: [
         "Keyword Research",
         "Content Planning",
@@ -53,8 +56,9 @@ const Services = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
+                to={service.path}
                 className="group p-8 rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -68,13 +72,10 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
-                >
+                <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
                   Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
+                </div>
+              </Link>
             ))}
           </div>
 
