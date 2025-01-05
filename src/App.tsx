@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Locations from "./pages/Locations";
+import TechnicalSEO from "./pages/TechnicalSEO";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/locations" element={<Locations />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/technical-seo" element={<TechnicalSEO />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
