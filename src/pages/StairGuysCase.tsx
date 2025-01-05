@@ -5,7 +5,7 @@ import CaseStats from "../components/case-studies/CaseStats";
 import CaseContent from "../components/case-studies/CaseContent";
 import { Link } from "react-router-dom";
 import { ChartContainer, ChartTooltip } from "@/components/ui/chart";
-import { Area, AreaChart, XAxis, YAxis, ResponsiveContainer } from "recharts";
+import { Area, AreaChart, XAxis, YAxis } from "recharts";
 
 const StairGuysCase = () => {
   const keywordData = [
@@ -58,52 +58,50 @@ const StairGuysCase = () => {
 
           <CaseStats />
 
-          {/* Keyword Growth Chart */}
-          <div className="mt-16 p-6 rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10">
-            <h3 className="text-2xl font-bold mb-6">Keyword Growth Over Time</h3>
-            <div className="h-[400px] w-full">
-              <ChartContainer
-                config={{
-                  keywords: {
-                    theme: {
-                      light: "rgb(96, 165, 250)",
-                      dark: "rgb(96, 165, 250)",
-                    },
-                  },
-                }}
-              >
-                <AreaChart data={keywordData}>
-                  <defs>
-                    <linearGradient id="colorKeywords" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#60A5FA" stopOpacity={0.3}/>
-                      <stop offset="95%" stopColor="#60A5FA" stopOpacity={0}/>
-                    </linearGradient>
-                  </defs>
-                  <XAxis 
-                    dataKey="month" 
-                    stroke="#94A3B8"
-                    tickLine={false}
-                  />
-                  <YAxis 
-                    stroke="#94A3B8"
-                    tickLine={false}
-                    axisLine={false}
-                  />
-                  <ChartTooltip />
-                  <Area
-                    type="monotone"
-                    dataKey="keywords"
-                    stroke="#60A5FA"
-                    fillOpacity={1}
-                    fill="url(#colorKeywords)"
-                  />
-                </AreaChart>
-              </ChartContainer>
+          {/* SEMrush Data Visualization Section */}
+          <div className="space-y-12 mt-16">
+            {/* Keyword Rankings Graph */}
+            <div className="rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 p-6">
+              <h3 className="text-2xl font-bold mb-4">Keyword Growth Over Time</h3>
+              <div className="aspect-[16/9] w-full">
+                <img 
+                  src="/semrush-keyword-graph.png" 
+                  alt="SEMrush Keyword Growth Graph"
+                  className="w-full h-full object-contain rounded-lg"
+                />
+              </div>
+              <p className="mt-4 text-gray-400 text-sm">Source: SEMrush Analytics</p>
+            </div>
+
+            {/* Traffic Overview */}
+            <div className="rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 p-6">
+              <h3 className="text-2xl font-bold mb-4">Traffic Distribution</h3>
+              <div className="aspect-[16/9] w-full">
+                <img 
+                  src="/semrush-traffic-graph.png" 
+                  alt="SEMrush Traffic Distribution"
+                  className="w-full h-full object-contain rounded-lg"
+                />
+              </div>
+              <p className="mt-4 text-gray-400 text-sm">Source: SEMrush Analytics</p>
+            </div>
+
+            {/* Position Tracking */}
+            <div className="rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 p-6">
+              <h3 className="text-2xl font-bold mb-4">Keyword Position Tracking</h3>
+              <div className="aspect-[16/9] w-full">
+                <img 
+                  src="/semrush-position-tracking.png" 
+                  alt="SEMrush Position Tracking"
+                  className="w-full h-full object-contain rounded-lg"
+                />
+              </div>
+              <p className="mt-4 text-gray-400 text-sm">Source: SEMrush Analytics</p>
             </div>
           </div>
 
-          {/* Traffic Distribution */}
-          <div className="grid md:grid-cols-5 gap-4 mt-8">
+          {/* Traffic Distribution Cards */}
+          <div className="grid md:grid-cols-5 gap-4 mt-12">
             {Object.entries(trafficData).map(([country, visitors]) => (
               <div key={country} className="p-6 rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 text-center">
                 <div className="text-gray-400 mb-2 capitalize">{country}</div>
