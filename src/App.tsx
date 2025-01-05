@@ -11,23 +11,34 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Locations from "./pages/Locations";
-import TechnicalSEO from "./pages/TechnicalSEO";
-import LocalSEO from "./pages/LocalSEO";
-import ContentStrategy from "./pages/ContentStrategy";
-import SEOAudit from "./pages/SEOAudit";
-import CompetitorAnalysis from "./pages/CompetitorAnalysis";
-import LinkBuilding from "./pages/LinkBuilding";
-import SocialMedia from "./pages/SocialMedia";
-import WebDesign from "./pages/WebDesign";
-import ResponsiveDesign from "./pages/ResponsiveDesign";
-import UXDesign from "./pages/UXDesign";
-import EcommerceDesign from "./pages/EcommerceDesign";
-import ServiceBusiness from "./pages/ServiceBusiness";
+
+// SEO Services Routes
+import SEOServices from "./pages/seo/SEOServices";
+import TechnicalSEO from "./pages/seo/TechnicalSEO";
+import LocalSEO from "./pages/seo/LocalSEO";
+import ContentStrategy from "./pages/seo/ContentStrategy";
+import SEOAudit from "./pages/seo/SEOAudit";
+import CompetitorAnalysis from "./pages/seo/CompetitorAnalysis";
+import LinkBuilding from "./pages/seo/LinkBuilding";
+import SocialMedia from "./pages/seo/SocialMedia";
+
+// Web Design Routes
+import WebDesign from "./pages/web-design/WebDesign";
+import ResponsiveDesign from "./pages/web-design/ResponsiveDesign";
+import UXDesign from "./pages/web-design/UXDesign";
+import EcommerceDesign from "./pages/web-design/EcommerceDesign";
+import ServiceBusiness from "./pages/web-design/ServiceBusiness";
+
+// Case Studies
 import CaseStudies from "./pages/CaseStudies";
 import StairGuysCase from "./pages/StairGuysCase";
 import BioUKFuelsCase from "./pages/BioUKFuelsCase";
+
+// Legal Pages
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+
+// Location Pages
 import LondonSEO from "./pages/locations/seo/LondonSEO";
 import BirminghamSEO from "./pages/locations/seo/BirminghamSEO";
 import ManchesterSEO from "./pages/locations/seo/ManchesterSEO";
@@ -54,33 +65,44 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/locations" element={<Locations />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/technical-seo" element={<TechnicalSEO />} />
-          <Route path="/local-seo" element={<LocalSEO />} />
-          <Route path="/content-strategy" element={<ContentStrategy />} />
-          <Route path="/seo-audit" element={<SEOAudit />} />
-          <Route path="/competitor-analysis" element={<CompetitorAnalysis />} />
-          <Route path="/link-building" element={<LinkBuilding />} />
-          <Route path="/social-media" element={<SocialMedia />} />
+          
+          {/* SEO Services Routes */}
+          <Route path="/seo" element={<SEOServices />} />
+          <Route path="/seo/technical-seo" element={<TechnicalSEO />} />
+          <Route path="/seo/local-seo" element={<LocalSEO />} />
+          <Route path="/seo/content-strategy" element={<ContentStrategy />} />
+          <Route path="/seo/audit" element={<SEOAudit />} />
+          <Route path="/seo/competitor-analysis" element={<CompetitorAnalysis />} />
+          <Route path="/seo/link-building" element={<LinkBuilding />} />
+          <Route path="/seo/social-media" element={<SocialMedia />} />
+          
+          {/* Web Design Routes */}
           <Route path="/web-design" element={<WebDesign />} />
-          <Route path="/responsive-design" element={<ResponsiveDesign />} />
-          <Route path="/ux-design" element={<UXDesign />} />
-          <Route path="/ecommerce-design" element={<EcommerceDesign />} />
-          <Route path="/service-business" element={<ServiceBusiness />} />
+          <Route path="/web-design/responsive-design" element={<ResponsiveDesign />} />
+          <Route path="/web-design/ux-design" element={<UXDesign />} />
+          <Route path="/web-design/ecommerce" element={<EcommerceDesign />} />
+          <Route path="/web-design/service-business" element={<ServiceBusiness />} />
+          
+          {/* Case Studies */}
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/stair-guys-ltd" element={<StairGuysCase />} />
           <Route path="/case-studies/bio-uk-fuels" element={<BioUKFuelsCase />} />
+          
+          {/* Legal Pages */}
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
-          <Route path="/seo-services/london" element={<LondonSEO />} />
-          <Route path="/seo-services/birmingham" element={<BirminghamSEO />} />
-          <Route path="/seo-services/manchester" element={<ManchesterSEO />} />
-          <Route path="/web-design/london" element={<LondonWebDesign />} />
-          <Route path="/seo-services/bristol" element={<BristolSEO />} />
-          <Route path="/seo-services/sheffield" element={<SheffieldSEO />} />
-          <Route path="/seo-services/leeds" element={<LeedsSEO />} />
-          <Route path="/seo-services/liverpool" element={<LiverpoolSEO />} />
-          <Route path="/seo-services/newcastle" element={<NewcastleSEO />} />
-          <Route path="/seo-services/southampton" element={<SouthamptonSEO />} />
+          
+          {/* Location Pages */}
+          <Route path="/locations/seo/london" element={<LondonSEO />} />
+          <Route path="/locations/seo/birmingham" element={<BirminghamSEO />} />
+          <Route path="/locations/seo/manchester" element={<ManchesterSEO />} />
+          <Route path="/locations/web-design/london" element={<LondonWebDesign />} />
+          <Route path="/locations/seo/bristol" element={<BristolSEO />} />
+          <Route path="/locations/seo/sheffield" element={<SheffieldSEO />} />
+          <Route path="/locations/seo/leeds" element={<LeedsSEO />} />
+          <Route path="/locations/seo/liverpool" element={<LiverpoolSEO />} />
+          <Route path="/locations/seo/newcastle" element={<NewcastleSEO />} />
+          <Route path="/locations/seo/southampton" element={<SouthamptonSEO />} />
         </Routes>
         <CookieConsent />
         <Footer />
