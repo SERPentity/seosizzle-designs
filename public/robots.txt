@@ -1,6 +1,15 @@
 User-agent: *
 Allow: /
 
+# Core Content Paths
+Allow: /case-studies/
+Allow: /seo/
+Allow: /web-design/
+Allow: /locations/
+Allow: /services
+Allow: /about
+Allow: /contact
+
 # Sitemaps
 Sitemap: https://seosnafu.co.uk/sitemap.xml
 
@@ -13,12 +22,8 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /*.json$
 Disallow: /*.xml$
-Disallow: /*?*
 
-# Allow patterns
-Allow: /*.html$
-Allow: /*.htm$
-Allow: /*.php$
+# Asset paths
 Allow: /images/
 Allow: /css/
 Allow: /js/
