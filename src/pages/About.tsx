@@ -44,7 +44,7 @@ const About = () => {
           <div className="max-w-md mx-auto mb-16 relative z-10">
             <div 
               className="relative preserve-3d cursor-pointer hover:scale-105 transition-transform duration-300" 
-              style={{ perspective: "1000px", height: "300px" }}
+              style={{ perspective: "1000px", height: "400px" }}
               onClick={() => setIsFlipped(!isFlipped)}
             >
               <Card
@@ -53,42 +53,42 @@ const About = () => {
                 }`}
               >
                 {/* Front of card */}
-                <div className={`absolute w-full h-full backface-hidden bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 ${
+                <div className={`absolute w-full h-full backface-hidden bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-6 ${
                   isFlipped ? "invisible" : ""
                 }`}>
                   <div className="flex flex-col justify-between h-full">
-                    <div className="flex flex-col items-center justify-center space-y-6 text-center text-white">
-                      <AlertOctagon className="w-16 h-16 text-yellow-300 animate-pulse" />
-                      <h3 className="text-2xl font-bold">Curious About Our Name?</h3>
-                      <p className="text-lg">Click to reveal the military origin of "SNAFU"<br /><span className="text-yellow-300">(Contains explicit content)</span></p>
+                    <div className="flex flex-col items-center justify-center space-y-4 text-center text-white">
+                      <AlertOctagon className="w-12 h-12 text-yellow-300 animate-pulse" />
+                      <h3 className="text-xl font-bold">Curious About Our Name?</h3>
+                      <p className="text-base">Click to reveal the military origin of "SNAFU"<br /><span className="text-yellow-300">(Contains explicit content)</span></p>
                     </div>
-                    <div className="text-sm text-yellow-200 text-center animate-bounce">
+                    <div className="text-sm text-yellow-200 text-center animate-bounce mt-2">
                       Click to flip →
                     </div>
                   </div>
                 </div>
 
                 {/* Back of card */}
-                <div className={`absolute w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-8 ${
+                <div className={`absolute w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-6 ${
                   !isFlipped ? "invisible" : ""
                 }`}>
                   <div className="flex flex-col justify-between h-full">
-                    <div className="space-y-4">
-                      <h3 className="text-2xl font-bold text-yellow-300">SNAFU Explained</h3>
-                      <p className="text-gray-200 leading-relaxed">
+                    <div className="space-y-3">
+                      <h3 className="text-xl font-bold text-yellow-300">SNAFU Explained</h3>
+                      <p className="text-sm text-gray-200 leading-relaxed">
                         SNAFU is a military acronym that stands for "Situation Normal: All F***ed Up." 
                         It originated during WWII, reflecting how chaos was the normal state of affairs.
                       </p>
-                      <p className="text-gray-200 leading-relaxed">
+                      <p className="text-sm text-gray-200 leading-relaxed">
                         In the context of websites, it's sadly still relevant - most sites are in a 
                         state of SEO chaos. That's where we come in: we transform this "normal" 
                         situation into exceptional results.
                       </p>
-                      <p className="text-yellow-300 font-bold text-lg">
+                      <p className="text-base text-yellow-300 font-bold">
                         We take websites from F*cked Up to Fixed Up!
                       </p>
                     </div>
-                    <div className="text-sm text-yellow-200 text-center animate-bounce">
+                    <div className="text-sm text-yellow-200 text-center animate-bounce mt-2">
                       Click to flip back →
                     </div>
                   </div>
