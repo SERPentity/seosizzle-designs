@@ -85,8 +85,8 @@ const LondonWebDesign = () => {
                 "Their web design work helped us establish a strong online presence. 
                 The website they created perfectly represents our brand and has helped us grow our business."
               </blockquote>
-              <div className="text-white font-semibold">James Wilson</div>
-              <div className="text-gray-400">Managing Director, Bio UK Fuels</div>
+              <div className="text-white font-semibold">Tony Reynolds</div>
+              <div className="text-gray-400">Director, Bio UK Fuels Ltd</div>
             </div>
           </div>
         </div>
