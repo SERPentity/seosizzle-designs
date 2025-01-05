@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
       includeAssetsImportedByServer: true,
       extensions: [{
         npmPackageName: 'vite-plugin-ssr',
-        pageFilesSrc: 'page/*'
+        pageFilesSrc: '/page/*'
       }]
     }),
     mode === 'development' && componentTagger(),
