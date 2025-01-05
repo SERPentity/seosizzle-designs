@@ -4,21 +4,8 @@ import CaseHero from "../components/case-studies/CaseHero";
 import CaseStats from "../components/case-studies/CaseStats";
 import CaseContent from "../components/case-studies/CaseContent";
 import { Link } from "react-router-dom";
-import { ChartContainer, ChartTooltip } from "@/components/ui/chart";
-import { Area, AreaChart, XAxis, YAxis } from "recharts";
 
 const StairGuysCase = () => {
-  const keywordData = [
-    { month: "Apr", keywords: 0 },
-    { month: "May", keywords: 50 },
-    { month: "Jun", keywords: 150 },
-    { month: "Jul", keywords: 250 },
-    { month: "Aug", keywords: 350 },
-    { month: "Sep", keywords: 450 },
-    { month: "Oct", keywords: 550 },
-    { month: "Nov", keywords: 593 },
-  ];
-
   const trafficData = {
     worldwide: 918,
     uk: 507,
@@ -63,32 +50,38 @@ const StairGuysCase = () => {
             {/* Organic Traffic Growth */}
             <div className="rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 p-8">
               <h3 className="text-2xl font-bold mb-6">Organic Traffic Growth</h3>
-              <div className="relative aspect-[21/9] w-full bg-black/40 rounded-lg overflow-hidden">
+              <div className="relative aspect-[21/9] w-full bg-gradient-to-b from-black/20 to-black/5 rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/7dfadee9-ea44-47f5-b68c-ac67a6184d9e.png"
-                  alt="SEMrush Organic Traffic Growth"
-                  className="w-full h-full object-contain absolute inset-0"
+                  src="/lovable-uploads/70cf1a9b-1742-43d2-81eb-80d8a0fd2fa8.png"
+                  alt="SEMrush Organic Traffic Growth showing increase to 507 monthly visitors"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="mt-4 flex items-center justify-between text-sm">
                 <p className="text-gray-400">Source: SEMrush Analytics</p>
-                <p className="text-blue-400">507 Monthly Organic Visitors</p>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-blue-400"></div>
+                  <p className="text-blue-400">507 Monthly Organic Visitors</p>
+                </div>
               </div>
             </div>
 
             {/* Keyword Rankings Distribution */}
             <div className="rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 p-8">
               <h3 className="text-2xl font-bold mb-6">Keyword Rankings Growth</h3>
-              <div className="relative aspect-[21/9] w-full bg-black/40 rounded-lg overflow-hidden">
+              <div className="relative aspect-[21/9] w-full bg-gradient-to-b from-black/20 to-black/5 rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/7ce63f4a-ae11-44af-81fe-fde16f1dc085.png"
-                  alt="SEMrush Keyword Rankings Distribution"
-                  className="w-full h-full object-contain absolute inset-0"
+                  src="/lovable-uploads/3f9f98d4-c96e-45fa-959c-b537725398d3.png"
+                  alt="SEMrush Keyword Rankings showing growth to 593 keywords"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="mt-4 flex items-center justify-between text-sm">
                 <p className="text-gray-400">Source: SEMrush Analytics</p>
-                <p className="text-blue-400">593 Total Keywords</p>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-blue-400"></div>
+                  <p className="text-blue-400">593 Total Keywords</p>
+                </div>
               </div>
             </div>
           </div>
