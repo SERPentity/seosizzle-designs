@@ -13,7 +13,7 @@ const About = () => {
               About SEOsnafu
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
-              Leading the way in SEO and web design excellence
+              Real Business Experience. Real SEO Results.
             </p>
             <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500 mb-4 animate-fade-up" style={{ animationDelay: "0.1s" }}>
               From Situation F*cked Up to Situation Fixed Up
@@ -24,34 +24,56 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-8 rounded-2xl animate-fade-up">
-              <h2 className="text-2xl font-bold mb-6">Our Mission</h2>
+              <h2 className="text-2xl font-bold mb-6">Meet Martin Simpkins</h2>
+              <p className="text-gray-300 mb-4">
+                I'm a serial entrepreneur with multiple successful business ventures under my belt. What sets me apart? 
+                I've been in your shoes. I've built and scaled businesses from the ground up, generating over a million 
+                pounds in leads through SEO strategies I developed and refined for my own companies.
+              </p>
               <p className="text-gray-300">
-                At SEOsnafu, we combine technical expertise with creative innovation
-                to deliver outstanding results for our clients. Our approach to SEO
-                and web design is built on years of experience and a deep
-                understanding of digital marketing.
+                Unlike traditional digital agencies staffed by designers fresh out of university with theoretical knowledge, 
+                I bring real-world business experience to the table. I understand the challenges you face because I've faced 
+                them myself. This practical experience is what enables me to deliver exceptional results for my clients.
               </p>
             </div>
 
             <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-8 rounded-2xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <h2 className="text-2xl font-bold mb-6">Why Choose Us</h2>
+              <h2 className="text-2xl font-bold mb-6">The SEOsnafu Difference</h2>
               <ul className="space-y-4">
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="text-blue-400 mr-3" size={20} />
-                  <span>Expert SEO strategies that deliver results</span>
+                  <CheckCircle className="text-blue-400 mr-3 flex-shrink-0" size={20} />
+                  <span>Proven track record of generating £1M+ in leads through SEO</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="text-blue-400 mr-3" size={20} />
-                  <span>Custom web design solutions</span>
+                  <CheckCircle className="text-blue-400 mr-3 flex-shrink-0" size={20} />
+                  <span>Real business owner perspective on digital marketing</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="text-blue-400 mr-3" size={20} />
-                  <span>Proven track record of success</span>
+                  <CheckCircle className="text-blue-400 mr-3 flex-shrink-0" size={20} />
+                  <span>Practical strategies that deliver measurable results</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="text-blue-400 mr-3 flex-shrink-0" size={20} />
+                  <span>Deep understanding of business environments and market dynamics</span>
                 </li>
               </ul>
             </div>
+          </div>
+
+          <div className="backdrop-blur-sm bg-white/5 border border-white/10 p-8 rounded-2xl animate-fade-up">
+            <h2 className="text-2xl font-bold mb-6">My Approach</h2>
+            <p className="text-gray-300 mb-4">
+              When you work with me, you're not just getting another SEO consultant – you're getting a business partner 
+              who understands the complete picture. I've spent years perfecting SEO strategies that actually work in 
+              the real world, not just in theory.
+            </p>
+            <p className="text-gray-300">
+              My success comes from combining technical SEO expertise with practical business acumen. I don't just focus 
+              on rankings – I focus on generating real leads and revenue for your business. This comprehensive approach 
+              is why my clients consistently achieve outstanding results.
+            </p>
           </div>
         </div>
       </div>
