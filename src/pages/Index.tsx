@@ -29,7 +29,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section className="relative min-h-screen pt-16 md:pt-0">
         {/* Background Images */}
         {backgroundImages.map((image, index) => (
           <div
@@ -49,15 +49,15 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20" />
         
         {/* Main Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
-          <div className="space-y-8 max-w-4xl">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center min-h-screen">
+          <div className="space-y-8 max-w-4xl pt-16 md:pt-0">
             {/* Hero Content */}
             <p className="text-lg text-gray-300 animate-fade-up">
               Transform Your Online Presence
             </p>
             
             {/* Main Heading */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight animate-fade-up" style={{ animationDelay: "0.2s" }}>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
                 Expert SEO & Web Design Solutions
               </span>
@@ -112,7 +112,6 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
       </section>
 
-      {/* Services Section */}
       <ServicesSection />
 
       {/* Why Us Section */}
