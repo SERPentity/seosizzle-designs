@@ -19,7 +19,7 @@ const WhyUsSection = () => {
         />
       </LampContainer>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-64">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl font-bold text-white mb-4">Why "SEOsnafu"?</h2>
           <p className="text-xl text-gray-300">Because the state of most websites' rankings is... well, let's just say there's room for improvement!</p>
