@@ -1,11 +1,25 @@
 import { Shield, Target, Zap, ChartBarIcon, Frown, Smile } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
 import { Link } from "react-router-dom";
+import { LampContainer } from "../ui/lamp";
+import { motion } from "framer-motion";
 
 const WhyUsSection = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-black to-primary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-gradient-to-b from-black to-primary relative">
+      <LampContainer className="absolute inset-0">
+        <motion.div
+          initial={{ opacity: 0.5, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+        />
+      </LampContainer>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl font-bold text-white mb-4">Why "SEOsnafu"?</h2>
           <p className="text-xl text-gray-300">Because the state of most websites' rankings is... well, let's just say there's room for improvement!</p>
