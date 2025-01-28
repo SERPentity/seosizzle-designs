@@ -145,7 +145,7 @@ const Index = () => {
         />
         
         <div className="flex flex-col md:flex-row h-full">
-          <div className="flex-1 p-8 relative z-20 flex flex-col justify-center">
+          <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
             <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
               Next-Gen SEO Tools
             </h2>
@@ -180,7 +180,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="flex-1 relative h-[500px] md:h-full scale-[0.55] md:scale-[0.65] -mt-32 md:mt-0 z-10 md:z-20">
+          <div className="flex-1 relative h-[600px] md:h-full scale-100 md:scale-[0.65] mt-8 md:mt-0 z-20">
             <SplineScene 
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
