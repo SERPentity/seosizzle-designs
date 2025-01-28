@@ -154,10 +154,10 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button 
-                variant="solid" 
+                variant="default" 
                 size="lg"
                 onClick={() => window.location.href = '/seo/technical-seo'}
-                className="text-white hover:text-white"
+                className="text-white hover:text-white border-white/20"
               >
                 Technical SEO
               </Button>
@@ -165,7 +165,7 @@ const Index = () => {
                 variant="default" 
                 size="lg"
                 onClick={() => window.location.href = '/seo/local-seo'}
-                className="text-white hover:text-white"
+                className="text-white hover:text-white border-white/20"
               >
                 Local SEO
               </Button>
