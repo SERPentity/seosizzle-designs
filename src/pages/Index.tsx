@@ -9,6 +9,9 @@ import CTASection from "../components/home/CTASection";
 import { useState, useEffect } from "react";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Helmet } from "react-helmet";
+import { SplineScene } from "../components/ui/splite";
+import { Card } from "../components/ui/card";
+import { Spotlight } from "../components/ui/spotlight";
 
 const Index = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -132,6 +135,32 @@ const Index = () => {
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
       </article>
+
+      {/* 3D Robot Section */}
+      <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden mx-auto max-w-7xl my-12">
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="white"
+        />
+        
+        <div className="flex h-full flex-col md:flex-row">
+          <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
+            <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+              Next-Gen SEO Tools
+            </h2>
+            <p className="mt-4 text-neutral-300 max-w-lg">
+              Experience the future of SEO with our cutting-edge tools and AI-powered solutions that help your business stay ahead of the competition.
+            </p>
+          </div>
+
+          <div className="flex-1 relative">
+            <SplineScene 
+              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+      </Card>
 
       <ServicesSection />
       <WhyUsSection />
