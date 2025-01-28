@@ -180,7 +180,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="flex-1 relative h-[400px] md:h-full scale-[0.65] md:scale-75 -mt-20 md:mt-0">
+          <div className="flex-1 relative h-[500px] md:h-full scale-[0.55] md:scale-[0.65] -mt-32 md:mt-0">
             <SplineScene 
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
