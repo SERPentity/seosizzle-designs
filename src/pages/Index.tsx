@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet";
 import { SplineScene } from "../components/ui/splite";
 import { Card } from "../components/ui/card";
 import { Spotlight } from "../components/ui/spotlight";
+import { Button } from "../components/ui/neon-button";
 
 const Index = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -151,6 +152,29 @@ const Index = () => {
             <p className="mt-4 text-neutral-300 max-w-lg">
               Experience the future of SEO with our cutting-edge tools and AI-powered solutions that help your business stay ahead of the competition.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <Button 
+                variant="solid" 
+                size="lg"
+                onClick={() => window.location.href = '/seo/technical-seo'}
+              >
+                Technical SEO
+              </Button>
+              <Button 
+                variant="default" 
+                size="lg"
+                onClick={() => window.location.href = '/seo/local-seo'}
+              >
+                Local SEO
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="lg"
+                onClick={() => window.location.href = '/seo/content-strategy'}
+              >
+                Content Strategy
+              </Button>
+            </div>
           </div>
 
           <div className="flex-1 relative">
