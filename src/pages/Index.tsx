@@ -138,7 +138,7 @@ const Index = () => {
       </article>
 
       {/* 3D Robot Section */}
-      <Card className="w-full min-h-[600px] bg-black/[0.96] relative overflow-hidden mx-auto max-w-7xl my-12">
+      <Card className="w-full min-h-[600px] md:min-h-[700px] bg-black/[0.96] relative overflow-hidden mx-auto max-w-7xl my-12">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill="white"
@@ -180,7 +180,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="flex-1 relative h-[300px] md:h-auto">
+          <div className="flex-1 relative h-[400px] md:h-full scale-[0.65] md:scale-75 -mt-20 md:mt-0">
             <SplineScene 
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
