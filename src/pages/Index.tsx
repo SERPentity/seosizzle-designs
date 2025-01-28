@@ -138,13 +138,13 @@ const Index = () => {
       </article>
 
       {/* 3D Robot Section */}
-      <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden mx-auto max-w-7xl my-12">
+      <Card className="w-full min-h-[600px] bg-black/[0.96] relative overflow-hidden mx-auto max-w-7xl my-12">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill="white"
         />
         
-        <div className="flex h-full flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row h-full">
           <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
             <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
               Next-Gen SEO Tools
@@ -154,9 +154,10 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button 
-                variant="solid" 
+                variant="default" 
                 size="lg"
                 onClick={() => window.location.href = '/seo/technical-seo'}
+                className="text-white hover:text-white border-white/20"
               >
                 Technical SEO
               </Button>
@@ -164,6 +165,7 @@ const Index = () => {
                 variant="default" 
                 size="lg"
                 onClick={() => window.location.href = '/seo/local-seo'}
+                className="text-white hover:text-white border-white/20"
               >
                 Local SEO
               </Button>
@@ -171,13 +173,14 @@ const Index = () => {
                 variant="ghost" 
                 size="lg"
                 onClick={() => window.location.href = '/seo/content-strategy'}
+                className="text-white hover:text-white border-white/20"
               >
                 Content Strategy
               </Button>
             </div>
           </div>
 
-          <div className="flex-1 relative">
+          <div className="flex-1 relative h-[300px] md:h-auto">
             <SplineScene 
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
