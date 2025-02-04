@@ -3,10 +3,15 @@ import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 import { useState } from "react";
 
 const SBConstruction = () => {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [customService, setCustomService] = useState("");
+  const [customServices, setCustomServices] = useState<string[]>([]);
 
   const constructionServices = [
     "New Build Construction",
@@ -27,6 +32,14 @@ const SBConstruction = () => {
         ? [...prev, service]
         : prev.filter(s => s !== service)
     );
+  };
+
+  const handleAddCustomService = () => {
+    if (customService.trim() && !customServices.includes(customService.trim())) {
+      setCustomServices(prev => [...prev, customService.trim()]);
+      setSelectedServices(prev => [...prev, customService.trim()]);
+      setCustomService("");
+    }
   };
 
   return (
@@ -76,6 +89,42 @@ const SBConstruction = () => {
                 </Label>
               </div>
             ))}
+            
+            {customServices.map((service) => (
+              <div key={service} className="flex items-center space-x-2">
+                <Checkbox 
+                  id={service}
+                  checked={selectedServices.includes(service)}
+                  onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)}
+                />
+                <Label 
+                  htmlFor={service}
+                  className="text-neutral-200 cursor-pointer"
+                >
+                  {service}
+                </Label>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold text-neutral-50 mb-4">Add Custom Services</h3>
+            <div className="flex gap-2">
+              <Input
+                placeholder="Enter additional service..."
+                value={customService}
+                onChange={(e) => setCustomService(e.target.value)}
+                className="bg-neutral-900 border-neutral-800 text-neutral-100"
+              />
+              <Button 
+                onClick={handleAddCustomService}
+                variant="outline"
+                className="border-neutral-800 text-neutral-100"
+              >
+                <Plus className="w-4 h-4 mr-2" />
+                Add Service
+              </Button>
+            </div>
           </div>
         </Card>
       </main>
