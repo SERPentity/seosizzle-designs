@@ -1,13 +1,11 @@
 import { SplineScene } from "@/components/ui/splite";
 import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
-import Navigation from "@/components/Navigation";
 
 const SBConstruction = () => {
   return (
     <div className="min-h-screen bg-black">
-      <Navigation />
-      <main className="pt-16 container mx-auto px-4">
+      <main className="container mx-auto px-4">
         <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden mt-8">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
