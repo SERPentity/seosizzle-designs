@@ -97,7 +97,11 @@ const DesignPreferences = ({
 
         {selectedSources.includes('upload') && (
           <div className="ml-6 space-y-4">
+            <Label htmlFor="image-upload" className="text-neutral-50 block mb-2">
+              {uploadedImages.length > 0 ? 'Upload more images' : 'Choose an image'}
+            </Label>
             <Input
+              id="image-upload"
               type="file"
               accept="image/*"
               multiple
