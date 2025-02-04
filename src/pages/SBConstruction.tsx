@@ -288,7 +288,7 @@ const SBConstruction = () => {
 
           <div className="mt-8">
             <h3 className="text-lg font-semibold text-neutral-50 mb-4">Add Custom Areas</h3>
-            <p className="text-neutral-400 mb-4">If you cover any large towns on the edge like Doncaster, Nottingham or Hull let me know here, maybe you consider them for certain jobs? Let me know.</p>
+            <p className="text-neutral-400 mb-4">Do you cover major cities like Doncaster, Nottingham, or Hull for specific projects?</p>
             <div className="flex gap-2">
               <Input
                 placeholder="Enter additional area..."
