@@ -18,7 +18,7 @@ const SBConstruction = () => {
   const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
   const [customAreas, setCustomAreas] = useState<string[]>([]);
   const [keywords, setKeywords] = useState<string[]>([]);
-  const [colorSource, setColorSource] = useState<string>("existing");
+  const [colorSources, setColorSources] = useState<string[]>([]);
   const [websiteUrl, setWebsiteUrl] = useState<string>("");
   const [brandingNotes, setBrandingNotes] = useState<string>("");
 
@@ -41,7 +41,7 @@ const SBConstruction = () => {
           setCustomAreas={setCustomAreas}
         />
         <DesignPreferences 
-          onColorSourceChange={setColorSource}
+          onColorSourceChange={setColorSources}
           onWebsiteUrlChange={setWebsiteUrl}
           onBrandingNotesChange={setBrandingNotes}
         />
