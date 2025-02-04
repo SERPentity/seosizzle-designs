@@ -312,7 +312,7 @@ const SBConstruction = () => {
               <Button 
                 onClick={handleAddCustomArea}
                 variant="outline"
-                className="border-neutral-800 text-neutral-100"
+                className="border-neutral-800 text-neutral-100 hover:bg-neutral-800"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Add Area
