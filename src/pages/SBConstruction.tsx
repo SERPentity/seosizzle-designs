@@ -1,17 +1,26 @@
-import { SplineScene } from "@/components/ui/splite";
 import { Card } from "@/components/ui/card";
+import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import { Toggle } from "@/components/ui/toggle";
+import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
+
+interface ServiceDetail {
+  name: string;
+  isPriority: boolean;
+  description: string;
+}
 
 const SBConstruction = () => {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [customService, setCustomService] = useState("");
   const [customServices, setCustomServices] = useState<string[]>([]);
+  const [serviceDetails, setServiceDetails] = useState<{ [key: string]: ServiceDetail }>({});
 
   const constructionServices = [
     "New Build Construction",
@@ -32,14 +41,54 @@ const SBConstruction = () => {
         ? [...prev, service]
         : prev.filter(s => s !== service)
     );
+
+    if (checked && !serviceDetails[service]) {
+      setServiceDetails(prev => ({
+        ...prev,
+        [service]: {
+          name: service,
+          isPriority: false,
+          description: ""
+        }
+      }));
+    }
   };
 
   const handleAddCustomService = () => {
     if (customService.trim() && !customServices.includes(customService.trim())) {
-      setCustomServices(prev => [...prev, customService.trim()]);
-      setSelectedServices(prev => [...prev, customService.trim()]);
+      const newService = customService.trim();
+      setCustomServices(prev => [...prev, newService]);
+      setSelectedServices(prev => [...prev, newService]);
+      setServiceDetails(prev => ({
+        ...prev,
+        [newService]: {
+          name: newService,
+          isPriority: false,
+          description: ""
+        }
+      }));
       setCustomService("");
     }
+  };
+
+  const handlePriorityToggle = (service: string) => {
+    setServiceDetails(prev => ({
+      ...prev,
+      [service]: {
+        ...prev[service],
+        isPriority: !prev[service].isPriority
+      }
+    }));
+  };
+
+  const handleDescriptionChange = (service: string, description: string) => {
+    setServiceDetails(prev => ({
+      ...prev,
+      [service]: {
+        ...prev[service],
+        description
+      }
+    }));
   };
 
   return (
@@ -126,6 +175,36 @@ const SBConstruction = () => {
               </Button>
             </div>
           </div>
+
+          {selectedServices.length > 0 && (
+            <div className="mt-12">
+              <h3 className="text-2xl font-semibold text-neutral-50 mb-6">Service Details</h3>
+              <p className="text-neutral-400 mb-6">For each selected service, indicate if it's a priority and add any relevant details:</p>
+              
+              <div className="space-y-8">
+                {selectedServices.map((service) => (
+                  <div key={`detail-${service}`} className="p-6 rounded-lg border border-neutral-800">
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-lg font-medium text-neutral-100">{service}</h4>
+                      <Toggle
+                        pressed={serviceDetails[service]?.isPriority}
+                        onPressedChange={() => handlePriorityToggle(service)}
+                        className="data-[state=on]:bg-green-500"
+                      >
+                        {serviceDetails[service]?.isPriority ? "Priority" : "Not Priority"}
+                      </Toggle>
+                    </div>
+                    <Textarea
+                      placeholder="Add details about this service (e.g., specializations, experience, preferred projects)..."
+                      value={serviceDetails[service]?.description || ""}
+                      onChange={(e) => handleDescriptionChange(service, e.target.value)}
+                      className="bg-neutral-900 border-neutral-800 text-neutral-100 min-h-[100px]"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </Card>
       </main>
     </div>
