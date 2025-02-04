@@ -14,13 +14,13 @@ const KeywordSection = ({ keywords, setKeywords }: KeywordSectionProps) => {
 
   const handleAddKeyword = () => {
     if (newKeyword.trim() && !keywords.includes(newKeyword.trim())) {
-      setKeywords(prev => [...prev, newKeyword.trim()]);
+      setKeywords([...keywords, newKeyword.trim()]);
       setNewKeyword("");
     }
   };
 
   const handleRemoveKeyword = (keywordToRemove: string) => {
-    setKeywords(prev => prev.filter(keyword => keyword !== keywordToRemove));
+    setKeywords(keywords.filter(keyword => keyword !== keywordToRemove));
   };
 
   return (

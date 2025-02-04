@@ -43,18 +43,18 @@ const ServiceAreas = ({
   ];
 
   const handleAreaChange = (area: string, checked: boolean) => {
-    setSelectedAreas(prev => 
-      checked 
-        ? [...prev, area]
-        : prev.filter(a => a !== area)
-    );
+    if (checked) {
+      setSelectedAreas([...selectedAreas, area]);
+    } else {
+      setSelectedAreas(selectedAreas.filter(a => a !== area));
+    }
   };
 
   const handleAddCustomArea = () => {
     if (customArea.trim() && !customAreas.includes(customArea.trim())) {
       const newArea = customArea.trim();
-      setCustomAreas(prev => [...prev, newArea]);
-      setSelectedAreas(prev => [...prev, newArea]);
+      setCustomAreas([...customAreas, newArea]);
+      setSelectedAreas([...selectedAreas, newArea]);
       setCustomArea("");
     }
   };

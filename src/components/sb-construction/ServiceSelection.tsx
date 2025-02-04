@@ -47,59 +47,58 @@ const ServiceSelection = ({
   ];
 
   const handleServiceChange = (service: string, checked: boolean) => {
-    setSelectedServices(prev => 
-      checked 
-        ? [...prev, service]
-        : prev.filter(s => s !== service)
-    );
-
-    if (checked && !serviceDetails[service]) {
-      setServiceDetails(prev => ({
-        ...prev,
-        [service]: {
-          name: service,
-          isPriority: false,
-          description: ""
-        }
-      }));
+    if (checked) {
+      setSelectedServices([...selectedServices, service]);
+      if (!serviceDetails[service]) {
+        setServiceDetails({
+          ...serviceDetails,
+          [service]: {
+            name: service,
+            isPriority: false,
+            description: ""
+          }
+        });
+      }
+    } else {
+      setSelectedServices(selectedServices.filter(s => s !== service));
     }
   };
 
   const handleAddCustomService = () => {
     if (customService.trim() && !customServices.includes(customService.trim())) {
       const newService = customService.trim();
-      setCustomServices(prev => [...prev, newService]);
-      setSelectedServices(prev => [...prev, newService]);
-      setServiceDetails(prev => ({
-        ...prev,
+      setCustomServices([...customServices, newService]);
+      setSelectedServices([...selectedServices, newService]);
+      setServiceDetails({
+        ...serviceDetails,
         [newService]: {
           name: newService,
           isPriority: false,
           description: ""
         }
-      }));
+      });
       setCustomService("");
     }
   };
 
   const handlePriorityToggle = (service: string) => {
-    setServiceDetails(prev => ({
-      ...prev,
+    setServiceDetails({
+      ...serviceDetails,
       [service]: {
-        ...prev[service],
-        isPriority: !prev[service].isPriority
+        ...serviceDetails[service],
+        isPriority: !serviceDetails[service].isPriority
       }
-    }));
+    });
   };
 
   const handleDescriptionChange = (service: string, description: string) => {
-    setServiceDetails(prev => ({
-      ...prev,
+    setServiceDetails({
+      ...serviceDetails,
       [service]: {
-        ...prev[service],
+        ...serviceDetails[service],
         description
       }
-    }));
+    });
   };
 
   return (
