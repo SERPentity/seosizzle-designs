@@ -222,7 +222,7 @@ const SBConstruction = () => {
               <Button 
                 onClick={handleAddCustomService}
                 variant="outline"
-                className="border-neutral-800 text-neutral-100"
+                className="border-neutral-800 text-neutral-100 hover:bg-neutral-800"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Add Service
@@ -344,7 +344,7 @@ const SBConstruction = () => {
               <Button 
                 onClick={handleAddKeyword}
                 variant="outline"
-                className="border-neutral-800 text-neutral-100"
+                className="border-neutral-800 text-neutral-100 hover:bg-neutral-800"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Add Keyword
