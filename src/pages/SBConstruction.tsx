@@ -5,7 +5,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
+import { Plus, X } from "lucide-react";
 import { Toggle } from "@/components/ui/toggle";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
@@ -24,6 +24,8 @@ const SBConstruction = () => {
   const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
   const [customArea, setCustomArea] = useState("");
   const [customAreas, setCustomAreas] = useState<string[]>([]);
+  const [keywords, setKeywords] = useState<string[]>([]);
+  const [newKeyword, setNewKeyword] = useState("");
 
   const constructionServices = [
     "New Build Construction",
@@ -132,6 +134,17 @@ const SBConstruction = () => {
     }
   };
 
+  const handleAddKeyword = () => {
+    if (newKeyword.trim() && !keywords.includes(newKeyword.trim())) {
+      setKeywords(prev => [...prev, newKeyword.trim()]);
+      setNewKeyword("");
+    }
+  };
+
+  const handleRemoveKeyword = (keywordToRemove: string) => {
+    setKeywords(prev => prev.filter(keyword => keyword !== keywordToRemove));
+  };
+
   return (
     <div className="min-h-screen bg-black">
       <main className="container mx-auto px-4">
@@ -158,7 +171,7 @@ const SBConstruction = () => {
             </div>
           </div>
         </Card>
-
+        
         <Card className="w-full p-8 bg-black/[0.96] relative mt-8 animate-fade-up">
           <h2 className="text-2xl font-semibold text-neutral-50 mb-6">What services do you provide?</h2>
           <p className="text-neutral-400 mb-6">Select all the construction services that your company offers:</p>
@@ -247,7 +260,7 @@ const SBConstruction = () => {
             </div>
           )}
         </Card>
-
+        
         <Card className="w-full p-8 bg-black/[0.96] relative mt-8 animate-fade-up">
           <h2 className="text-2xl font-semibold text-neutral-50 mb-6">Service Areas</h2>
           <p className="text-neutral-400 mb-6">Select all the areas where you provide your construction services:</p>
@@ -305,6 +318,57 @@ const SBConstruction = () => {
                 Add Area
               </Button>
             </div>
+          </div>
+        </Card>
+
+        <Card className="w-full p-8 bg-black/[0.96] relative mt-8 animate-fade-up">
+          <h2 className="text-2xl font-semibold text-neutral-50 mb-6">Target Keywords (Optional)</h2>
+          <p className="text-neutral-400 mb-6">
+            What search terms would you like your business to rank for? For example: "construction company lincoln" or "house extensions grantham"
+          </p>
+
+          <div className="space-y-4">
+            <div className="flex gap-2">
+              <Input
+                placeholder="Enter keyword or phrase..."
+                value={newKeyword}
+                onChange={(e) => setNewKeyword(e.target.value)}
+                className="bg-neutral-900 border-neutral-800 text-neutral-100"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    handleAddKeyword();
+                  }
+                }}
+              />
+              <Button 
+                onClick={handleAddKeyword}
+                variant="outline"
+                className="border-neutral-800 text-neutral-100"
+              >
+                <Plus className="w-4 h-4 mr-2" />
+                Add Keyword
+              </Button>
+            </div>
+
+            {keywords.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-4">
+                {keywords.map((keyword) => (
+                  <div
+                    key={keyword}
+                    className="flex items-center gap-2 bg-neutral-800 text-neutral-100 px-3 py-1 rounded-full"
+                  >
+                    <span>{keyword}</span>
+                    <button
+                      onClick={() => handleRemoveKeyword(keyword)}
+                      className="text-neutral-400 hover:text-neutral-200"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </Card>
       </main>
