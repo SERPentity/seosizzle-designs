@@ -288,9 +288,10 @@ const SBConstruction = () => {
 
           <div className="mt-8">
             <h3 className="text-lg font-semibold text-neutral-50 mb-4">Add Custom Areas</h3>
+            <p className="text-neutral-400 mb-4">If you cover any large towns on the edge like Doncaster, Nottingham or Hull let me know here, maybe you consider them for certain jobs? Let me know.</p>
             <div className="flex gap-2">
               <Input
-                placeholder="If you cover any large towns on the edge like Doncaster, Nottingham or Hull let me know here, maybe you consider them for certain jobs? Let me know."
+                placeholder="Enter additional area..."
                 value={customArea}
                 onChange={(e) => setCustomArea(e.target.value)}
                 className="bg-neutral-900 border-neutral-800 text-neutral-100"
