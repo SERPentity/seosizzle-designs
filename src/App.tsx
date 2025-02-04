@@ -49,6 +49,7 @@ import LeedsSEO from "./pages/locations/seo/LeedsSEO";
 import LiverpoolSEO from "./pages/locations/seo/LiverpoolSEO";
 import NewcastleSEO from "./pages/locations/seo/NewcastleSEO";
 import SouthamptonSEO from "./pages/locations/seo/SouthamptonSEO";
+import SBConstruction from "./pages/SBConstruction";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/locations" element={<Locations />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/sb-construction" element={<SBConstruction />} />
           
           {/* SEO Services Routes */}
           <Route path="/seo" element={<SEOServices />} />

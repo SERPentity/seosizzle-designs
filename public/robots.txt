@@ -10,6 +10,9 @@ Allow: /services
 Allow: /about
 Allow: /contact
 
+# Non-indexable paths
+Disallow: /sb-construction
+
 # Sitemaps
 Sitemap: https://seosnafu.co.uk/sitemap.xml
 
