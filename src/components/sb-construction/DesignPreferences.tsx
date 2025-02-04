@@ -17,14 +17,21 @@ const DesignPreferences = ({
   onBrandingNotesChange
 }: DesignPreferencesProps) => {
   const [selectedSources, setSelectedSources] = useState<string[]>([]);
+  const [websiteUrls, setWebsiteUrls] = useState<string[]>(['']);
 
   const handleColorSourceChange = (source: string, checked: boolean) => {
     let newSources = [...selectedSources];
     
     if (checked) {
       newSources.push(source);
+      if (source === 'reference') {
+        setWebsiteUrls(['', '']); // Initialize with two empty fields when reference is selected
+      }
     } else {
       newSources = newSources.filter(s => s !== source);
+      if (source === 'reference') {
+        setWebsiteUrls([]); // Clear website URLs when reference is unselected
+      }
     }
     
     setSelectedSources(newSources);
@@ -37,6 +44,13 @@ const DesignPreferences = ({
       // Handle file upload logic here
       console.log("Files selected:", files);
     }
+  };
+
+  const handleWebsiteUrlChange = (index: number, value: string) => {
+    const newUrls = [...websiteUrls];
+    newUrls[index] = value;
+    setWebsiteUrls(newUrls);
+    onWebsiteUrlChange(newUrls.join(',')); // Send all URLs as comma-separated string
   };
 
   return (
@@ -90,17 +104,38 @@ const DesignPreferences = ({
           </Label>
         </div>
 
-        <div className="mt-6">
-          <Label htmlFor="website-url" className="text-neutral-50 block mb-2">
-            Website URL (if applicable)
-          </Label>
-          <Input
-            id="website-url"
-            placeholder="https://example.com"
-            onChange={(e) => onWebsiteUrlChange(e.target.value)}
-            className="bg-neutral-900 border-neutral-800 text-neutral-100"
-          />
-        </div>
+        {selectedSources.includes('reference') && (
+          <div className="ml-6 space-y-4">
+            {websiteUrls.map((url, index) => (
+              <div key={index} className="mt-2">
+                <Label htmlFor={`website-url-${index}`} className="text-neutral-50 block mb-2">
+                  Reference Website URL {index + 1}
+                </Label>
+                <Input
+                  id={`website-url-${index}`}
+                  placeholder="https://example.com"
+                  value={url}
+                  onChange={(e) => handleWebsiteUrlChange(index, e.target.value)}
+                  className="bg-neutral-900 border-neutral-800 text-neutral-100"
+                />
+              </div>
+            ))}
+          </div>
+        )}
+
+        {selectedSources.includes('existing') && (
+          <div className="mt-6">
+            <Label htmlFor="website-url" className="text-neutral-50 block mb-2">
+              Existing Website URL
+            </Label>
+            <Input
+              id="website-url"
+              placeholder="https://example.com"
+              onChange={(e) => onWebsiteUrlChange(e.target.value)}
+              className="bg-neutral-900 border-neutral-800 text-neutral-100"
+            />
+          </div>
+        )}
 
         <div className="mt-6">
           <Label htmlFor="branding-notes" className="text-neutral-50 block mb-2">
