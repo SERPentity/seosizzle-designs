@@ -4,7 +4,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
-import { X } from "lucide-react";
+import ImageUploadSection from "./ImageUploadSection";
+import WebsiteReferenceSection from "./WebsiteReferenceSection";
 
 interface DesignPreferencesProps {
   onColorSourceChange: (source: string[]) => void;
@@ -19,7 +20,6 @@ const DesignPreferences = ({
 }: DesignPreferencesProps) => {
   const [selectedSources, setSelectedSources] = useState<string[]>([]);
   const [websiteUrls, setWebsiteUrls] = useState<string[]>(['']);
-  const [uploadedImages, setUploadedImages] = useState<{ file: File; preview: string }[]>([]);
 
   const handleColorSourceChange = (source: string, checked: boolean) => {
     let newSources = [...selectedSources];
@@ -27,12 +27,12 @@ const DesignPreferences = ({
     if (checked) {
       newSources.push(source);
       if (source === 'reference') {
-        setWebsiteUrls(['', '']); // Initialize with two empty fields when reference is selected
+        setWebsiteUrls(['', '']);
       }
     } else {
       newSources = newSources.filter(s => s !== source);
       if (source === 'reference') {
-        setWebsiteUrls([]); // Clear website URLs when reference is unselected
+        setWebsiteUrls([]);
       }
     }
     
@@ -40,31 +40,11 @@ const DesignPreferences = ({
     onColorSourceChange(newSources);
   };
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (files && files.length > 0) {
-      const newImages = Array.from(files).map(file => ({
-        file,
-        preview: URL.createObjectURL(file)
-      }));
-      setUploadedImages(prev => [...prev, ...newImages]);
-    }
-  };
-
-  const removeImage = (index: number) => {
-    setUploadedImages(prev => {
-      const newImages = [...prev];
-      URL.revokeObjectURL(newImages[index].preview); // Clean up the URL object
-      newImages.splice(index, 1);
-      return newImages;
-    });
-  };
-
   const handleWebsiteUrlChange = (index: number, value: string) => {
     const newUrls = [...websiteUrls];
     newUrls[index] = value;
     setWebsiteUrls(newUrls);
-    onWebsiteUrlChange(newUrls.join(',')); // Send all URLs as comma-separated string
+    onWebsiteUrlChange(newUrls.join(','));
   };
 
   return (
@@ -96,38 +76,11 @@ const DesignPreferences = ({
         </div>
 
         {selectedSources.includes('upload') && (
-          <div className="ml-6 space-y-4">
-            <Label htmlFor="image-upload" className="text-neutral-50 block mb-2">
-              {uploadedImages.length > 0 ? 'Upload more images' : 'Choose an image'}
-            </Label>
-            <Input
-              id="image-upload"
-              type="file"
-              accept="image/*"
-              multiple
-              onChange={handleImageUpload}
-              className="bg-neutral-900 border-neutral-800 text-neutral-100"
-            />
-            {uploadedImages.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-2">
-                {uploadedImages.map((image, index) => (
-                  <div key={index} className="relative group">
-                    <img
-                      src={image.preview}
-                      alt={`Upload ${index + 1}`}
-                      className="w-16 h-16 object-cover rounded"
-                    />
-                    <button
-                      onClick={() => removeImage(index)}
-                      className="absolute -top-2 -right-2 bg-red-500 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
-                    >
-                      <X className="w-3 h-3 text-white" />
-                    </button>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          <ImageUploadSection 
+            onImagesChange={(images) => {
+              // Handle images change if needed
+            }} 
+          />
         )}
 
         <div className="flex items-center space-x-2">
@@ -142,22 +95,10 @@ const DesignPreferences = ({
         </div>
 
         {selectedSources.includes('reference') && (
-          <div className="ml-6 space-y-4">
-            {websiteUrls.map((url, index) => (
-              <div key={index} className="mt-2">
-                <Label htmlFor={`website-url-${index}`} className="text-neutral-50 block mb-2">
-                  Reference Website URL {index + 1}
-                </Label>
-                <Input
-                  id={`website-url-${index}`}
-                  placeholder="https://example.com"
-                  value={url}
-                  onChange={(e) => handleWebsiteUrlChange(index, e.target.value)}
-                  className="bg-neutral-900 border-neutral-800 text-neutral-100"
-                />
-              </div>
-            ))}
-          </div>
+          <WebsiteReferenceSection 
+            websiteUrls={websiteUrls}
+            onWebsiteUrlChange={handleWebsiteUrlChange}
+          />
         )}
 
         {selectedSources.includes('existing') && (
