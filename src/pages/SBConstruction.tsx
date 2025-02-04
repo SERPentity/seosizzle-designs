@@ -3,6 +3,7 @@ import Hero from "@/components/sb-construction/Hero";
 import ServiceSelection from "@/components/sb-construction/ServiceSelection";
 import ServiceAreas from "@/components/sb-construction/ServiceAreas";
 import KeywordSection from "@/components/sb-construction/KeywordSection";
+import DesignPreferences from "@/components/sb-construction/DesignPreferences";
 
 interface ServiceDetail {
   name: string;
@@ -17,6 +18,9 @@ const SBConstruction = () => {
   const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
   const [customAreas, setCustomAreas] = useState<string[]>([]);
   const [keywords, setKeywords] = useState<string[]>([]);
+  const [colorSource, setColorSource] = useState<string>("existing");
+  const [websiteUrl, setWebsiteUrl] = useState<string>("");
+  const [brandingNotes, setBrandingNotes] = useState<string>("");
 
   return (
     <div className="min-h-screen bg-black">
@@ -35,6 +39,11 @@ const SBConstruction = () => {
           setSelectedAreas={setSelectedAreas}
           customAreas={customAreas}
           setCustomAreas={setCustomAreas}
+        />
+        <DesignPreferences 
+          onColorSourceChange={setColorSource}
+          onWebsiteUrlChange={setWebsiteUrl}
+          onBrandingNotesChange={setBrandingNotes}
         />
         <KeywordSection 
           keywords={keywords}
