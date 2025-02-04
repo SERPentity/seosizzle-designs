@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
+import { X } from "lucide-react";
 
 interface DesignPreferencesProps {
   onColorSourceChange: (source: string[]) => void;
@@ -18,6 +19,7 @@ const DesignPreferences = ({
 }: DesignPreferencesProps) => {
   const [selectedSources, setSelectedSources] = useState<string[]>([]);
   const [websiteUrls, setWebsiteUrls] = useState<string[]>(['']);
+  const [uploadedImages, setUploadedImages] = useState<{ file: File; preview: string }[]>([]);
 
   const handleColorSourceChange = (source: string, checked: boolean) => {
     let newSources = [...selectedSources];
@@ -41,9 +43,21 @@ const DesignPreferences = ({
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (files && files.length > 0) {
-      // Handle file upload logic here
-      console.log("Files selected:", files);
+      const newImages = Array.from(files).map(file => ({
+        file,
+        preview: URL.createObjectURL(file)
+      }));
+      setUploadedImages(prev => [...prev, ...newImages]);
     }
+  };
+
+  const removeImage = (index: number) => {
+    setUploadedImages(prev => {
+      const newImages = [...prev];
+      URL.revokeObjectURL(newImages[index].preview); // Clean up the URL object
+      newImages.splice(index, 1);
+      return newImages;
+    });
   };
 
   const handleWebsiteUrlChange = (index: number, value: string) => {
@@ -82,7 +96,7 @@ const DesignPreferences = ({
         </div>
 
         {selectedSources.includes('upload') && (
-          <div className="ml-6 mt-2">
+          <div className="ml-6 space-y-4">
             <Input
               type="file"
               accept="image/*"
@@ -90,6 +104,25 @@ const DesignPreferences = ({
               onChange={handleImageUpload}
               className="bg-neutral-900 border-neutral-800 text-neutral-100"
             />
+            {uploadedImages.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-2">
+                {uploadedImages.map((image, index) => (
+                  <div key={index} className="relative group">
+                    <img
+                      src={image.preview}
+                      alt={`Upload ${index + 1}`}
+                      className="w-16 h-16 object-cover rounded"
+                    />
+                    <button
+                      onClick={() => removeImage(index)}
+                      className="absolute -top-2 -right-2 bg-red-500 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                    >
+                      <X className="w-3 h-3 text-white" />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
