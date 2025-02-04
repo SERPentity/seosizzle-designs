@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { useState } from "react";
 
 interface DesignPreferencesProps {
   onColorSourceChange: (source: string[]) => void;
@@ -15,8 +16,27 @@ const DesignPreferences = ({
   onWebsiteUrlChange,
   onBrandingNotesChange
 }: DesignPreferencesProps) => {
+  const [selectedSources, setSelectedSources] = useState<string[]>([]);
+
   const handleColorSourceChange = (source: string, checked: boolean) => {
-    onColorSourceChange(source.split(','));
+    let newSources = [...selectedSources];
+    
+    if (checked) {
+      newSources.push(source);
+    } else {
+      newSources = newSources.filter(s => s !== source);
+    }
+    
+    setSelectedSources(newSources);
+    onColorSourceChange(newSources);
+  };
+
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (files && files.length > 0) {
+      // Handle file upload logic here
+      console.log("Files selected:", files);
+    }
   };
 
   return (
@@ -28,6 +48,7 @@ const DesignPreferences = ({
         <div className="flex items-center space-x-2">
           <Checkbox 
             id="existing"
+            checked={selectedSources.includes('existing')}
             onCheckedChange={(checked) => handleColorSourceChange("existing", checked as boolean)}
           />
           <Label htmlFor="existing" className="text-neutral-200">
@@ -38,6 +59,7 @@ const DesignPreferences = ({
         <div className="flex items-center space-x-2">
           <Checkbox 
             id="upload"
+            checked={selectedSources.includes('upload')}
             onCheckedChange={(checked) => handleColorSourceChange("upload", checked as boolean)}
           />
           <Label htmlFor="upload" className="text-neutral-200">
@@ -45,9 +67,22 @@ const DesignPreferences = ({
           </Label>
         </div>
 
+        {selectedSources.includes('upload') && (
+          <div className="ml-6 mt-2">
+            <Input
+              type="file"
+              accept="image/*"
+              multiple
+              onChange={handleImageUpload}
+              className="bg-neutral-900 border-neutral-800 text-neutral-100"
+            />
+          </div>
+        )}
+
         <div className="flex items-center space-x-2">
           <Checkbox 
             id="reference"
+            checked={selectedSources.includes('reference')}
             onCheckedChange={(checked) => handleColorSourceChange("reference", checked as boolean)}
           />
           <Label htmlFor="reference" className="text-neutral-200">
