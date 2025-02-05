@@ -44,7 +44,7 @@ const ImageUploadSection = ({ onImagesChange }: ImageUploadSectionProps) => {
         accept="image/*"
         multiple
         onChange={handleImageUpload}
-        className="bg-neutral-900 border-neutral-800 text-neutral-100"
+        className="bg-neutral-900 border-neutral-800 text-neutral-100 file:text-neutral-100 file:bg-neutral-800 file:border-0 file:px-4 file:py-2 file:mr-4 file:hover:bg-neutral-700 file:cursor-pointer file:transition-colors"
       />
       {uploadedImages.length > 0 && (
         <div className="flex flex-wrap gap-2 mt-2">
