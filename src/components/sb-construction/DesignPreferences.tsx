@@ -4,6 +4,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
+import { ChartContainer, ChartTooltip } from "@/components/ui/chart";
+import { Cell, Pie, PieChart } from "recharts";
+import { toast } from "sonner";
 import ImageUploadSection from "./ImageUploadSection";
 import WebsiteReferenceSection from "./WebsiteReferenceSection";
 
@@ -13,6 +16,17 @@ interface DesignPreferencesProps {
   onBrandingNotesChange: (notes: string) => void;
 }
 
+const colorPalette = [
+  { name: 'Neutral Gray', value: 1, color: '#8E9196' },
+  { name: 'Primary Purple', value: 1, color: '#9b87f5' },
+  { name: 'Soft Green', value: 1, color: '#F2FCE2' },
+  { name: 'Soft Yellow', value: 1, color: '#FEF7CD' },
+  { name: 'Ocean Blue', value: 1, color: '#0EA5E9' },
+  { name: 'Vivid Purple', value: 1, color: '#8B5CF6' },
+  { name: 'Magenta Pink', value: 1, color: '#D946EF' },
+  { name: 'Bright Orange', value: 1, color: '#F97316' },
+];
+
 const DesignPreferences = ({
   onColorSourceChange,
   onWebsiteUrlChange,
@@ -20,6 +34,7 @@ const DesignPreferences = ({
 }: DesignPreferencesProps) => {
   const [selectedSources, setSelectedSources] = useState<string[]>([]);
   const [websiteUrls, setWebsiteUrls] = useState<string[]>(['']);
+  const [selectedColors, setSelectedColors] = useState<string[]>([]);
 
   const handleColorSourceChange = (source: string, checked: boolean) => {
     let newSources = [...selectedSources];
@@ -45,6 +60,20 @@ const DesignPreferences = ({
     newUrls[index] = value;
     setWebsiteUrls(newUrls);
     onWebsiteUrlChange(newUrls.join(','));
+  };
+
+  const handleColorSelect = (color: string, name: string) => {
+    if (selectedColors.includes(color)) {
+      setSelectedColors(selectedColors.filter(c => c !== color));
+      toast.info(`Removed ${name} from selected colors`);
+    } else {
+      if (selectedColors.length >= 5) {
+        toast.warning("Maximum 5 colors can be selected");
+        return;
+      }
+      setSelectedColors([...selectedColors, color]);
+      toast.success(`Added ${name} to selected colors`);
+    }
   };
 
   return (
@@ -99,6 +128,61 @@ const DesignPreferences = ({
             websiteUrls={websiteUrls}
             onWebsiteUrlChange={handleWebsiteUrlChange}
           />
+        )}
+
+        <div className="flex items-center space-x-2">
+          <Checkbox 
+            id="colorPicker"
+            checked={selectedSources.includes('colorPicker')}
+            onCheckedChange={(checked) => handleColorSourceChange("colorPicker", checked as boolean)}
+          />
+          <Label htmlFor="colorPicker" className="text-neutral-200">
+            Choose from color palette
+          </Label>
+        </div>
+
+        {selectedSources.includes('colorPicker') && (
+          <div className="mt-6 p-4 bg-neutral-900 rounded-lg">
+            <p className="text-neutral-200 mb-4">Select up to 5 colors for your website (click on colors to select/deselect)</p>
+            <div className="flex justify-center mb-4">
+              <ChartContainer className="h-[300px] w-[300px]" config={{}}>
+                <PieChart>
+                  <Pie
+                    data={colorPalette}
+                    dataKey="value"
+                    nameKey="name"
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={100}
+                    innerRadius={60}
+                    onClick={(data) => handleColorSelect(data.color, data.name)}
+                  >
+                    {colorPalette.map((entry, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={entry.color}
+                        stroke={selectedColors.includes(entry.color) ? "#fff" : "transparent"}
+                        strokeWidth={selectedColors.includes(entry.color) ? 3 : 0}
+                        className="cursor-pointer hover:opacity-80 transition-opacity"
+                      />
+                    ))}
+                  </Pie>
+                  <ChartTooltip />
+                </PieChart>
+              </ChartContainer>
+            </div>
+            {selectedColors.length > 0 && (
+              <div className="flex flex-wrap gap-2 justify-center">
+                {selectedColors.map((color, index) => (
+                  <div
+                    key={index}
+                    className="w-8 h-8 rounded-full border-2 border-white"
+                    style={{ backgroundColor: color }}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
         )}
 
         {selectedSources.includes('existing') && (
