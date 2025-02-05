@@ -116,15 +116,12 @@ const SBConstruction = () => {
     const pdfBlob = await pdf(<PDFDocument data={formData} />).toBlob();
     const mailtoLink = `mailto:info@serpentity.co.uk?subject=Construction Requirements PDF&body=Please find attached my construction requirements.`;
     
-    // Create a temporary link to trigger the email client
     const a = document.createElement('a');
     a.href = mailtoLink;
     
-    // Create a temporary form for the file
     const formDataToSend = new FormData();
     formDataToSend.append('attachment', pdfBlob, 'construction-requirements.pdf');
     
-    // Open the email client
     window.open(mailtoLink, '_blank');
     toast.success("Email client opened! Please attach the downloaded PDF to your email.");
   };
