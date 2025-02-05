@@ -12,7 +12,7 @@ import DesignThemeSection from "@/components/sb-construction/DesignThemeSection"
 import AdditionalInfo from "@/components/sb-construction/AdditionalInfo";
 import PDFDocument from "@/components/sb-construction/PDFGenerator";
 import { useWindowSize } from "@/hooks/useWindowSize";
-import type { Database } from "@/integrations/supabase/types";
+import type { Database, Json } from "@/integrations/supabase/types";
 
 interface ServiceDetail {
   name: string;
@@ -52,7 +52,7 @@ const SBConstruction = () => {
       // Insert data into Supabase
       const submission: ConstructionSubmission = {
         selected_services: selectedServices,
-        service_details: serviceDetails as unknown as Json,
+        service_details: serviceDetails as Json,
         selected_areas: selectedAreas,
         keywords,
         color_sources: colorSources,
@@ -60,7 +60,7 @@ const SBConstruction = () => {
         branding_notes: brandingNotes,
         design_theme: designTheme,
         design_style: designStyle,
-        social_media: socialMedia as unknown as Json,
+        social_media: socialMedia as Json,
         project_timeline: projectTimeline,
         special_features: specialFeatures,
         business_hours: businessHours,
