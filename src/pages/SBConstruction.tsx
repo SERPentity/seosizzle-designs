@@ -5,6 +5,7 @@ import ServiceAreas from "@/components/sb-construction/ServiceAreas";
 import KeywordSection from "@/components/sb-construction/KeywordSection";
 import DesignPreferences from "@/components/sb-construction/DesignPreferences";
 import DesignThemeSection from "@/components/sb-construction/DesignThemeSection";
+import AdditionalInfo from "@/components/sb-construction/AdditionalInfo";
 
 interface ServiceDetail {
   name: string;
@@ -24,6 +25,11 @@ const SBConstruction = () => {
   const [brandingNotes, setBrandingNotes] = useState<string>("");
   const [designTheme, setDesignTheme] = useState("light");
   const [designStyle, setDesignStyle] = useState("modern");
+  const [socialMedia, setSocialMedia] = useState<{ [key: string]: string }>({});
+  const [projectTimeline, setProjectTimeline] = useState("");
+  const [specialFeatures, setSpecialFeatures] = useState("");
+  const [businessHours, setBusinessHours] = useState("");
+  const [providesEmergencyService, setProvidesEmergencyService] = useState(false);
 
   return (
     <div className="min-h-screen bg-black">
@@ -55,6 +61,13 @@ const SBConstruction = () => {
         <KeywordSection 
           keywords={keywords}
           setKeywords={setKeywords}
+        />
+        <AdditionalInfo
+          onSocialMediaChange={setSocialMedia}
+          onProjectTimelineChange={setProjectTimeline}
+          onSpecialFeaturesChange={setSpecialFeatures}
+          onBusinessHoursChange={setBusinessHours}
+          onEmergencyServiceChange={setProvidesEmergencyService}
         />
       </main>
     </div>
