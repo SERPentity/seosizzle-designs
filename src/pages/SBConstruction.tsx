@@ -13,6 +13,7 @@ import PDFDocument from "@/components/sb-construction/PDFGenerator";
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { Button } from "@/components/ui/button";
 import { PDFDownloadLink } from '@react-pdf/renderer';
+import { Mail } from "lucide-react";
 import type { Database } from "@/integrations/supabase/types";
 import type { Json } from "@/integrations/supabase/types";
 
@@ -111,6 +112,23 @@ const SBConstruction = () => {
     providesEmergencyService,
   };
 
+  const handleEmailPDF = async () => {
+    const blob = await pdf(<PDFDocument data={formData} />).toBlob();
+    const mailtoLink = `mailto:info@serpentity.co.uk?subject=Construction Requirements PDF&body=Please find attached my construction requirements.`;
+    
+    // Create a temporary link to trigger the email client
+    const a = document.createElement('a');
+    a.href = mailtoLink;
+    
+    // Create a temporary form for the file
+    const formData = new FormData();
+    formData.append('attachment', blob, 'construction-requirements.pdf');
+    
+    // Open the email client
+    window.open(mailtoLink, '_blank');
+    toast.success("Email client opened! Please attach the downloaded PDF to your email.");
+  };
+
   return (
     <div className="min-h-screen bg-black">
       {showConfetti && <Confetti width={width} height={height} />}
@@ -165,7 +183,7 @@ const SBConstruction = () => {
                 document={<PDFDocument data={formData} />}
                 fileName="construction-requirements.pdf"
               >
-                {({ loading }) => (
+                {({ blob, url, loading, error }) => (
                   <Button
                     onClick={handleConfetti}
                     disabled={loading}
@@ -175,6 +193,13 @@ const SBConstruction = () => {
                   </Button>
                 )}
               </PDFDownloadLink>
+              <Button
+                onClick={handleEmailPDF}
+                className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
+              >
+                <Mail className="w-5 h-5" />
+                Email PDF to Serpentity
+              </Button>
             </div>
           )}
         </div>
