@@ -1,1 +1,4 @@
 project_id = "ihxwvmunmcxpwjnjlduv"
+
+[functions.send-construction-pdf]
+verify_jwt = false
