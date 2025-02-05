@@ -12,12 +12,15 @@ import DesignThemeSection from "@/components/sb-construction/DesignThemeSection"
 import AdditionalInfo from "@/components/sb-construction/AdditionalInfo";
 import PDFDocument from "@/components/sb-construction/PDFGenerator";
 import { useWindowSize } from "@/hooks/useWindowSize";
+import type { Database } from "@/integrations/supabase/types";
 
 interface ServiceDetail {
   name: string;
   isPriority: boolean;
   description: string;
 }
+
+type ConstructionSubmission = Database['public']['Tables']['construction_submissions']['Insert']
 
 const SBConstruction = () => {
   const navigate = useNavigate();
@@ -32,13 +35,13 @@ const SBConstruction = () => {
   const [colorSources, setColorSources] = useState<string[]>([]);
   const [websiteUrl, setWebsiteUrl] = useState<string>("");
   const [brandingNotes, setBrandingNotes] = useState<string>("");
-  const [designTheme, setDesignTheme] = useState("light");
-  const [designStyle, setDesignStyle] = useState("modern");
+  const [designTheme, setDesignTheme] = useState<string>("light");
+  const [designStyle, setDesignStyle] = useState<string>("modern");
   const [socialMedia, setSocialMedia] = useState<{ [key: string]: string }>({});
-  const [projectTimeline, setProjectTimeline] = useState("");
-  const [specialFeatures, setSpecialFeatures] = useState("");
-  const [businessHours, setBusinessHours] = useState("");
-  const [providesEmergencyService, setProvidesEmergencyService] = useState(false);
+  const [projectTimeline, setProjectTimeline] = useState<string>("");
+  const [specialFeatures, setSpecialFeatures] = useState<string>("");
+  const [businessHours, setBusinessHours] = useState<string>("");
+  const [providesEmergencyService, setProvidesEmergencyService] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async () => {
@@ -47,24 +50,26 @@ const SBConstruction = () => {
 
     try {
       // Insert data into Supabase
+      const submission: ConstructionSubmission = {
+        selected_services: selectedServices,
+        service_details: serviceDetails as unknown as Json,
+        selected_areas: selectedAreas,
+        keywords,
+        color_sources: colorSources,
+        website_url: websiteUrl,
+        branding_notes: brandingNotes,
+        design_theme: designTheme,
+        design_style: designStyle,
+        social_media: socialMedia as unknown as Json,
+        project_timeline: projectTimeline,
+        special_features: specialFeatures,
+        business_hours: businessHours,
+        provides_emergency_service: providesEmergencyService,
+      };
+
       const { data, error } = await supabase
         .from('construction_submissions')
-        .insert({
-          selected_services: selectedServices,
-          service_details: serviceDetails,
-          selected_areas: selectedAreas,
-          keywords,
-          color_sources: colorSources,
-          website_url: websiteUrl,
-          branding_notes: brandingNotes,
-          design_theme: designTheme,
-          design_style: designStyle,
-          social_media: socialMedia,
-          project_timeline: projectTimeline,
-          special_features: specialFeatures,
-          business_hours: businessHours,
-          provides_emergency_service: providesEmergencyService,
-        })
+        .insert(submission)
         .select()
         .single();
 
@@ -78,7 +83,7 @@ const SBConstruction = () => {
       const emailResponse = await supabase.functions.invoke('send-construction-pdf', {
         body: {
           id: data.id,
-          pdfUrl: "PDF URL will be generated", // TODO: Implement PDF storage
+          pdfUrl: "PDF URL will be generated" // TODO: Implement PDF storage
         },
       });
 
