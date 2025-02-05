@@ -2,6 +2,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { X } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 interface ImageUploadSectionProps {
   onImagesChange: (images: { file: File; preview: string }[]) => void;
@@ -9,10 +10,21 @@ interface ImageUploadSectionProps {
 
 const ImageUploadSection = ({ onImagesChange }: ImageUploadSectionProps) => {
   const [uploadedImages, setUploadedImages] = useState<{ file: File; preview: string }[]>([]);
+  const { toast } = useToast();
+  const MAX_IMAGES = 7;
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (files && files.length > 0) {
+      if (uploadedImages.length + files.length > MAX_IMAGES) {
+        toast({
+          variant: "destructive",
+          title: "Upload limit exceeded",
+          description: `You can only upload a maximum of ${MAX_IMAGES} images. You currently have ${uploadedImages.length} images.`
+        });
+        return;
+      }
+
       const newImages = Array.from(files).map(file => ({
         file,
         preview: URL.createObjectURL(file)
@@ -65,6 +77,9 @@ const ImageUploadSection = ({ onImagesChange }: ImageUploadSectionProps) => {
           ))}
         </div>
       )}
+      <p className="text-neutral-400 text-sm">
+        {uploadedImages.length}/{MAX_IMAGES} images uploaded
+      </p>
     </div>
   );
 };
