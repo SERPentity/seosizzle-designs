@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-import useWindowSize from 'react-use/lib/useWindowSize';
 import Confetti from 'react-confetti';
 import { supabase } from "@/integrations/supabase/client";
 import Hero from "@/components/sb-construction/Hero";
@@ -12,6 +11,7 @@ import DesignPreferences from "@/components/sb-construction/DesignPreferences";
 import DesignThemeSection from "@/components/sb-construction/DesignThemeSection";
 import AdditionalInfo from "@/components/sb-construction/AdditionalInfo";
 import PDFDocument from "@/components/sb-construction/PDFGenerator";
+import { useWindowSize } from "@/hooks/useWindowSize";
 
 interface ServiceDetail {
   name: string;
@@ -49,24 +49,22 @@ const SBConstruction = () => {
       // Insert data into Supabase
       const { data, error } = await supabase
         .from('construction_submissions')
-        .insert([
-          {
-            selected_services: selectedServices,
-            service_details: serviceDetails,
-            selected_areas: selectedAreas,
-            keywords,
-            color_sources: colorSources,
-            website_url: websiteUrl,
-            branding_notes: brandingNotes,
-            design_theme: designTheme,
-            design_style: designStyle,
-            social_media: socialMedia,
-            project_timeline: projectTimeline,
-            special_features: specialFeatures,
-            business_hours: businessHours,
-            provides_emergency_service: providesEmergencyService,
-          }
-        ])
+        .insert({
+          selected_services: selectedServices,
+          service_details: serviceDetails,
+          selected_areas: selectedAreas,
+          keywords,
+          color_sources: colorSources,
+          website_url: websiteUrl,
+          branding_notes: brandingNotes,
+          design_theme: designTheme,
+          design_style: designStyle,
+          social_media: socialMedia,
+          project_timeline: projectTimeline,
+          special_features: specialFeatures,
+          business_hours: businessHours,
+          provides_emergency_service: providesEmergencyService,
+        })
         .select()
         .single();
 
