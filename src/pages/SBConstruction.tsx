@@ -12,7 +12,7 @@ import AdditionalInfo from "@/components/sb-construction/AdditionalInfo";
 import PDFDocument from "@/components/sb-construction/PDFGenerator";
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { Button } from "@/components/ui/button";
-import { PDFDownloadLink } from '@react-pdf/renderer';
+import { PDFDownloadLink, pdf } from '@react-pdf/renderer';
 import { Mail } from "lucide-react";
 import type { Database } from "@/integrations/supabase/types";
 import type { Json } from "@/integrations/supabase/types";
@@ -113,7 +113,7 @@ const SBConstruction = () => {
   };
 
   const handleEmailPDF = async () => {
-    const blob = await pdf(<PDFDocument data={formData} />).toBlob();
+    const pdfBlob = await pdf(<PDFDocument data={formData} />).toBlob();
     const mailtoLink = `mailto:info@serpentity.co.uk?subject=Construction Requirements PDF&body=Please find attached my construction requirements.`;
     
     // Create a temporary link to trigger the email client
@@ -121,8 +121,8 @@ const SBConstruction = () => {
     a.href = mailtoLink;
     
     // Create a temporary form for the file
-    const formData = new FormData();
-    formData.append('attachment', blob, 'construction-requirements.pdf');
+    const formDataToSend = new FormData();
+    formDataToSend.append('attachment', pdfBlob, 'construction-requirements.pdf');
     
     // Open the email client
     window.open(mailtoLink, '_blank');
@@ -183,7 +183,7 @@ const SBConstruction = () => {
                 document={<PDFDocument data={formData} />}
                 fileName="construction-requirements.pdf"
               >
-                {({ blob, url, loading, error }) => (
+                {({ loading }) => (
                   <Button
                     onClick={handleConfetti}
                     disabled={loading}
