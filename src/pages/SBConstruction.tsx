@@ -4,6 +4,7 @@ import ServiceSelection from "@/components/sb-construction/ServiceSelection";
 import ServiceAreas from "@/components/sb-construction/ServiceAreas";
 import KeywordSection from "@/components/sb-construction/KeywordSection";
 import DesignPreferences from "@/components/sb-construction/DesignPreferences";
+import DesignThemeSection from "@/components/sb-construction/DesignThemeSection";
 
 interface ServiceDetail {
   name: string;
@@ -21,6 +22,8 @@ const SBConstruction = () => {
   const [colorSources, setColorSources] = useState<string[]>([]);
   const [websiteUrl, setWebsiteUrl] = useState<string>("");
   const [brandingNotes, setBrandingNotes] = useState<string>("");
+  const [designTheme, setDesignTheme] = useState("light");
+  const [designStyle, setDesignStyle] = useState("modern");
 
   return (
     <div className="min-h-screen bg-black">
@@ -39,6 +42,10 @@ const SBConstruction = () => {
           setSelectedAreas={setSelectedAreas}
           customAreas={customAreas}
           setCustomAreas={setCustomAreas}
+        />
+        <DesignThemeSection 
+          onThemeChange={setDesignTheme}
+          onStyleChange={setDesignStyle}
         />
         <DesignPreferences 
           onColorSourceChange={setColorSources}
