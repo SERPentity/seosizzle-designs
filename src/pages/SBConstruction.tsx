@@ -13,7 +13,7 @@ import PDFDocument from "@/components/sb-construction/PDFGenerator";
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { Button } from "@/components/ui/button";
 import { PDFDownloadLink, pdf } from '@react-pdf/renderer';
-import { Mail } from "lucide-react";
+import { Mail, MessageSquare } from "lucide-react";
 import type { Database } from "@/integrations/supabase/types";
 import type { Json } from "@/integrations/supabase/types";
 
@@ -129,6 +129,11 @@ const SBConstruction = () => {
     toast.success("Email client opened! Please attach the downloaded PDF to your email.");
   };
 
+  const handleWhatsAppClick = () => {
+    const whatsappLink = `https://wa.me/447590505601?text=Hi, I have completed the construction questionnaire and would like to discuss my requirements.`;
+    window.open(whatsappLink, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-black">
       {showConfetti && <Confetti width={width} height={height} />}
@@ -178,7 +183,12 @@ const SBConstruction = () => {
               {isSubmitting ? "Submitting..." : "Complete Questionnaire"}
             </Button>
           ) : (
-            <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col items-center gap-6">
+              <div className="text-center space-y-2">
+                <h3 className="text-xl font-semibold text-white">Download and Share Your Requirements</h3>
+                <p className="text-gray-300">Please download your PDF and share it with us through email or WhatsApp</p>
+              </div>
+              
               <PDFDownloadLink
                 document={<PDFDocument data={formData} />}
                 fileName="construction-requirements.pdf"
@@ -193,13 +203,24 @@ const SBConstruction = () => {
                   </Button>
                 )}
               </PDFDownloadLink>
-              <Button
-                onClick={handleEmailPDF}
-                className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
-              >
-                <Mail className="w-5 h-5" />
-                Email PDF to Serpentity
-              </Button>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  onClick={handleEmailPDF}
+                  className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
+                >
+                  <Mail className="w-5 h-5" />
+                  Email PDF to Serpentity
+                </Button>
+
+                <Button
+                  onClick={handleWhatsAppClick}
+                  className="px-8 py-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors flex items-center gap-2"
+                >
+                  <MessageSquare className="w-5 h-5" />
+                  Contact via WhatsApp
+                </Button>
+              </div>
             </div>
           )}
         </div>
