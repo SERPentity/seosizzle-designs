@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import Confetti from 'react-confetti';
 import { supabase } from "@/integrations/supabase/client";
@@ -15,6 +14,7 @@ import { useWindowSize } from "@/hooks/useWindowSize";
 import { Button } from "@/components/ui/button";
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import type { Database } from "@/integrations/supabase/types";
+import type { Json } from "@/integrations/supabase/types";
 
 interface ServiceDetail {
   name: string;
@@ -25,7 +25,6 @@ interface ServiceDetail {
 type ConstructionSubmission = Database['public']['Tables']['construction_submissions']['Insert']
 
 const SBConstruction = () => {
-  const navigate = useNavigate();
   const { width, height } = useWindowSize();
   const [showConfetti, setShowConfetti] = useState(false);
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
