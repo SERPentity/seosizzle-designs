@@ -17,14 +17,33 @@ interface DesignPreferencesProps {
 }
 
 const colorPalette = [
-  { name: 'Neutral Gray', value: 1, color: '#8E9196' },
-  { name: 'Primary Purple', value: 1, color: '#9b87f5' },
-  { name: 'Soft Green', value: 1, color: '#F2FCE2' },
-  { name: 'Soft Yellow', value: 1, color: '#FEF7CD' },
+  // Vibrant Colors
   { name: 'Ocean Blue', value: 1, color: '#0EA5E9' },
   { name: 'Vivid Purple', value: 1, color: '#8B5CF6' },
   { name: 'Magenta Pink', value: 1, color: '#D946EF' },
   { name: 'Bright Orange', value: 1, color: '#F97316' },
+  { name: 'Emerald Green', value: 1, color: '#10B981' },
+  { name: 'Ruby Red', value: 1, color: '#EF4444' },
+  
+  // Neutral Tones
+  { name: 'Neutral Gray', value: 1, color: '#8E9196' },
+  { name: 'Charcoal', value: 1, color: '#403E43' },
+  { name: 'Slate', value: 1, color: '#64748B' },
+  { name: 'Warm Gray', value: 1, color: '#9CA3AF' },
+  
+  // Pastel Colors
+  { name: 'Soft Green', value: 1, color: '#F2FCE2' },
+  { name: 'Soft Yellow', value: 1, color: '#FEF7CD' },
+  { name: 'Soft Orange', value: 1, color: '#FEC6A1' },
+  { name: 'Soft Purple', value: 1, color: '#E5DEFF' },
+  { name: 'Soft Pink', value: 1, color: '#FFDEE2' },
+  { name: 'Soft Blue', value: 1, color: '#D3E4FD' },
+  
+  // Deep Colors
+  { name: 'Deep Purple', value: 1, color: '#6E59A5' },
+  { name: 'Deep Blue', value: 1, color: '#1E40AF' },
+  { name: 'Deep Green', value: 1, color: '#065F46' },
+  { name: 'Deep Red', value: 1, color: '#991B1B' },
 ];
 
 const DesignPreferences = ({
