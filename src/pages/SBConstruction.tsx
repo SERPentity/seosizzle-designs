@@ -14,7 +14,7 @@ import PDFDocument from "@/components/sb-construction/PDFGenerator";
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { Button } from "@/components/ui/button";
 import { PDFDownloadLink } from '@react-pdf/renderer';
-import type { Database, Json } from "@/integrations/supabase/types";
+import type { Database } from "@/integrations/supabase/types";
 
 interface ServiceDetail {
   name: string;
@@ -165,11 +165,11 @@ const SBConstruction = () => {
               <PDFDownloadLink
                 document={<PDFDocument data={formData} />}
                 fileName="construction-requirements.pdf"
-                className="inline-block"
               >
                 {({ loading }) => (
                   <Button
                     onClick={handleConfetti}
+                    disabled={loading}
                     className="px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                   >
                     {loading ? "Generating PDF..." : "🎉 Download PDF 🎉"}
