@@ -12,6 +12,8 @@ import DesignThemeSection from "@/components/sb-construction/DesignThemeSection"
 import AdditionalInfo from "@/components/sb-construction/AdditionalInfo";
 import PDFDocument from "@/components/sb-construction/PDFGenerator";
 import { useWindowSize } from "@/hooks/useWindowSize";
+import { Button } from "@/components/ui/button";
+import { PDFDownloadLink } from '@react-pdf/renderer';
 import type { Database, Json } from "@/integrations/supabase/types";
 
 interface ServiceDetail {
@@ -43,16 +45,16 @@ const SBConstruction = () => {
   const [businessHours, setBusinessHours] = useState<string>("");
   const [providesEmergencyService, setProvidesEmergencyService] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isComplete, setIsComplete] = useState(false);
 
   const handleSubmit = async () => {
     if (isSubmitting) return;
     setIsSubmitting(true);
 
     try {
-      // Insert data into Supabase
       const submission: ConstructionSubmission = {
         selected_services: selectedServices,
-        service_details: serviceDetails as Json,
+        service_details: serviceDetails as unknown as Json,
         selected_areas: selectedAreas,
         keywords,
         color_sources: colorSources,
@@ -60,14 +62,14 @@ const SBConstruction = () => {
         branding_notes: brandingNotes,
         design_theme: designTheme,
         design_style: designStyle,
-        social_media: socialMedia as Json,
+        social_media: socialMedia as unknown as Json,
         project_timeline: projectTimeline,
         special_features: specialFeatures,
         business_hours: businessHours,
         provides_emergency_service: providesEmergencyService,
       };
 
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('construction_submissions')
         .insert(submission)
         .select()
@@ -75,27 +77,8 @@ const SBConstruction = () => {
 
       if (error) throw error;
 
-      // Show success animation
-      setShowConfetti(true);
-      toast.success("Submission successful!");
-
-      // Send email with PDF
-      const emailResponse = await supabase.functions.invoke('send-construction-pdf', {
-        body: {
-          id: data.id,
-          pdfUrl: "PDF URL will be generated" // TODO: Implement PDF storage
-        },
-      });
-
-      if (emailResponse.error) {
-        console.error("Error sending email:", emailResponse.error);
-        toast.error("Submission saved but there was an error sending the email");
-      }
-
-      // Hide confetti after 5 seconds
-      setTimeout(() => {
-        setShowConfetti(false);
-      }, 5000);
+      setIsComplete(true);
+      toast.success("Questionnaire completed! You can now download your PDF.");
 
     } catch (error: any) {
       console.error("Error submitting form:", error);
@@ -103,6 +86,30 @@ const SBConstruction = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleConfetti = () => {
+    setShowConfetti(true);
+    setTimeout(() => {
+      setShowConfetti(false);
+    }, 5000);
+  };
+
+  const formData = {
+    selectedServices,
+    serviceDetails,
+    selectedAreas,
+    keywords,
+    colorSources,
+    websiteUrl,
+    brandingNotes,
+    designTheme,
+    designStyle,
+    socialMedia,
+    projectTimeline,
+    specialFeatures,
+    businessHours,
+    providesEmergencyService,
   };
 
   return (
@@ -144,14 +151,33 @@ const SBConstruction = () => {
           onBusinessHoursChange={setBusinessHours}
           onEmergencyServiceChange={setProvidesEmergencyService}
         />
-        <div className="mt-8 flex justify-center">
-          <button
-            onClick={handleSubmit}
-            disabled={isSubmitting}
-            className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
-          >
-            {isSubmitting ? "Submitting..." : "Submit Website Requirements"}
-          </button>
+        <div className="mt-8 flex flex-col items-center gap-4">
+          {!isComplete ? (
+            <Button
+              onClick={handleSubmit}
+              disabled={isSubmitting}
+              className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
+            >
+              {isSubmitting ? "Submitting..." : "Complete Questionnaire"}
+            </Button>
+          ) : (
+            <div className="flex flex-col items-center gap-4">
+              <PDFDownloadLink
+                document={<PDFDocument data={formData} />}
+                fileName="construction-requirements.pdf"
+                className="inline-block"
+              >
+                {({ loading }) => (
+                  <Button
+                    onClick={handleConfetti}
+                    className="px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                  >
+                    {loading ? "Generating PDF..." : "🎉 Download PDF 🎉"}
+                  </Button>
+                )}
+              </PDFDownloadLink>
+            </div>
+          )}
         </div>
       </main>
     </div>
