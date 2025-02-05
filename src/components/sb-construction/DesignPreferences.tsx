@@ -24,6 +24,8 @@ const colorPalette = [
   { name: 'Bright Orange', value: 1, color: '#F97316' },
   { name: 'Emerald Green', value: 1, color: '#10B981' },
   { name: 'Ruby Red', value: 1, color: '#EF4444' },
+  { name: 'Bright Yellow', value: 1, color: '#FACC15' },
+  { name: 'Sunshine Yellow', value: 1, color: '#FDE047' },
   
   // Neutral Tones
   { name: 'Neutral Gray', value: 1, color: '#8E9196' },
